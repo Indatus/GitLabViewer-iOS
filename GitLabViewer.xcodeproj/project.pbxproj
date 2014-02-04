@@ -27,6 +27,10 @@
 		5D8A586C18A1A44F00D1D2B7 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8A586A18A1A44F00D1D2B7 /* HomeViewController.m */; };
 		5D8A586F18A1A45A00D1D2B7 /* ProjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8A586E18A1A45A00D1D2B7 /* ProjectsViewController.m */; };
 		5D8A587018A1A45A00D1D2B7 /* ProjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8A586E18A1A45A00D1D2B7 /* ProjectsViewController.m */; };
+		5D8A587218A1AD6B00D1D2B7 /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D8A587118A1AD6B00D1D2B7 /* MainWindow_iPhone.xib */; };
+		5D8A587318A1AD6B00D1D2B7 /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D8A587118A1AD6B00D1D2B7 /* MainWindow_iPhone.xib */; };
+		5D8A587518A1AD8200D1D2B7 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D8A587418A1AD8200D1D2B7 /* MainWindow_iPad.xib */; };
+		5D8A587618A1AD8200D1D2B7 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D8A587418A1AD8200D1D2B7 /* MainWindow_iPad.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,8 @@
 		5D8A586A18A1A44F00D1D2B7 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		5D8A586D18A1A45A00D1D2B7 /* ProjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectsViewController.h; sourceTree = "<group>"; };
 		5D8A586E18A1A45A00D1D2B7 /* ProjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectsViewController.m; sourceTree = "<group>"; };
+		5D8A587118A1AD6B00D1D2B7 /* MainWindow_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow_iPhone.xib; sourceTree = "<group>"; };
+		5D8A587418A1AD8200D1D2B7 /* MainWindow_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow_iPad.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +130,8 @@
 			children = (
 				5D8A583118A19E6400D1D2B7 /* AppDelegate.h */,
 				5D8A583218A19E6400D1D2B7 /* AppDelegate.m */,
+				5D8A587118A1AD6B00D1D2B7 /* MainWindow_iPhone.xib */,
+				5D8A587418A1AD8200D1D2B7 /* MainWindow_iPad.xib */,
 				5D8A585118A19F2F00D1D2B7 /* ViewControllers */,
 				5D8A583418A19E6400D1D2B7 /* Images.xcassets */,
 				5D8A582918A19E6400D1D2B7 /* Supporting Files */,
@@ -266,6 +274,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D8A582D18A19E6400D1D2B7 /* InfoPlist.strings in Resources */,
+				5D8A587218A1AD6B00D1D2B7 /* MainWindow_iPhone.xib in Resources */,
+				5D8A587518A1AD8200D1D2B7 /* MainWindow_iPad.xib in Resources */,
 				5D8A583518A19E6400D1D2B7 /* Images.xcassets in Resources */,
 				5D8A585718A19F4400D1D2B7 /* LoginViewController.xib in Resources */,
 			);
@@ -275,7 +285,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D8A587318A1AD6B00D1D2B7 /* MainWindow_iPhone.xib in Resources */,
 				5D8A585818A19F4400D1D2B7 /* LoginViewController.xib in Resources */,
+				5D8A587618A1AD8200D1D2B7 /* MainWindow_iPad.xib in Resources */,
 				5D8A584618A19E6400D1D2B7 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
