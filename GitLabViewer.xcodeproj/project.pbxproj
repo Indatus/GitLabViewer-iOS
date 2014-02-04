@@ -19,6 +19,10 @@
 		5D8A583E18A19E6400D1D2B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8A582618A19E6400D1D2B7 /* UIKit.framework */; };
 		5D8A584618A19E6400D1D2B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D8A584418A19E6400D1D2B7 /* InfoPlist.strings */; };
 		5D8A584818A19E6400D1D2B7 /* GitLabViewerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8A584718A19E6400D1D2B7 /* GitLabViewerTests.m */; };
+		5D8A585518A19F4400D1D2B7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8A585318A19F4400D1D2B7 /* LoginViewController.m */; };
+		5D8A585618A19F4400D1D2B7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8A585318A19F4400D1D2B7 /* LoginViewController.m */; };
+		5D8A585718A19F4400D1D2B7 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D8A585418A19F4400D1D2B7 /* LoginViewController.xib */; };
+		5D8A585818A19F4400D1D2B7 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D8A585418A19F4400D1D2B7 /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,9 @@
 		5D8A584318A19E6400D1D2B7 /* GitLabViewerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GitLabViewerTests-Info.plist"; sourceTree = "<group>"; };
 		5D8A584518A19E6400D1D2B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5D8A584718A19E6400D1D2B7 /* GitLabViewerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GitLabViewerTests.m; sourceTree = "<group>"; };
+		5D8A585218A19F4400D1D2B7 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		5D8A585318A19F4400D1D2B7 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		5D8A585418A19F4400D1D2B7 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +116,7 @@
 			children = (
 				5D8A583118A19E6400D1D2B7 /* AppDelegate.h */,
 				5D8A583218A19E6400D1D2B7 /* AppDelegate.m */,
+				5D8A585118A19F2F00D1D2B7 /* ViewControllers */,
 				5D8A583418A19E6400D1D2B7 /* Images.xcassets */,
 				5D8A582918A19E6400D1D2B7 /* Supporting Files */,
 			);
@@ -142,6 +150,16 @@
 				5D8A584418A19E6400D1D2B7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5D8A585118A19F2F00D1D2B7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5D8A585218A19F4400D1D2B7 /* LoginViewController.h */,
+				5D8A585318A19F4400D1D2B7 /* LoginViewController.m */,
+				5D8A585418A19F4400D1D2B7 /* LoginViewController.xib */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +239,7 @@
 			files = (
 				5D8A582D18A19E6400D1D2B7 /* InfoPlist.strings in Resources */,
 				5D8A583518A19E6400D1D2B7 /* Images.xcassets in Resources */,
+				5D8A585718A19F4400D1D2B7 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D8A585818A19F4400D1D2B7 /* LoginViewController.xib in Resources */,
 				5D8A584618A19E6400D1D2B7 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,6 +261,7 @@
 			files = (
 				5D8A583318A19E6400D1D2B7 /* AppDelegate.m in Sources */,
 				5D8A582F18A19E6400D1D2B7 /* main.m in Sources */,
+				5D8A585518A19F4400D1D2B7 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D8A585618A19F4400D1D2B7 /* LoginViewController.m in Sources */,
 				5D8A584818A19E6400D1D2B7 /* GitLabViewerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,6 +465,7 @@
 				5D8A584D18A19E6400D1D2B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5D8A584E18A19E6400D1D2B7 /* Build configuration list for PBXNativeTarget "GitLabViewerTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +474,7 @@
 				5D8A585018A19E6400D1D2B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
