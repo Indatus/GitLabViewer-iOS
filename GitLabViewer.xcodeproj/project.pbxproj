@@ -23,6 +23,10 @@
 		5D8A585618A19F4400D1D2B7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8A585318A19F4400D1D2B7 /* LoginViewController.m */; };
 		5D8A585718A19F4400D1D2B7 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D8A585418A19F4400D1D2B7 /* LoginViewController.xib */; };
 		5D8A585818A19F4400D1D2B7 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D8A585418A19F4400D1D2B7 /* LoginViewController.xib */; };
+		5D8A586B18A1A44F00D1D2B7 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8A586A18A1A44F00D1D2B7 /* HomeViewController.m */; };
+		5D8A586C18A1A44F00D1D2B7 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8A586A18A1A44F00D1D2B7 /* HomeViewController.m */; };
+		5D8A586F18A1A45A00D1D2B7 /* ProjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8A586E18A1A45A00D1D2B7 /* ProjectsViewController.m */; };
+		5D8A587018A1A45A00D1D2B7 /* ProjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8A586E18A1A45A00D1D2B7 /* ProjectsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		5D8A585218A19F4400D1D2B7 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		5D8A585318A19F4400D1D2B7 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		5D8A585418A19F4400D1D2B7 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		5D8A586918A1A44F00D1D2B7 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		5D8A586A18A1A44F00D1D2B7 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		5D8A586D18A1A45A00D1D2B7 /* ProjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectsViewController.h; sourceTree = "<group>"; };
+		5D8A586E18A1A45A00D1D2B7 /* ProjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,11 +163,31 @@
 		5D8A585118A19F2F00D1D2B7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				5D8A585A18A1A3AB00D1D2B7 /* Home */,
+				5D8A585918A1A39400D1D2B7 /* Projects */,
 				5D8A585218A19F4400D1D2B7 /* LoginViewController.h */,
 				5D8A585318A19F4400D1D2B7 /* LoginViewController.m */,
 				5D8A585418A19F4400D1D2B7 /* LoginViewController.xib */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5D8A585918A1A39400D1D2B7 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				5D8A586D18A1A45A00D1D2B7 /* ProjectsViewController.h */,
+				5D8A586E18A1A45A00D1D2B7 /* ProjectsViewController.m */,
+			);
+			path = Projects;
+			sourceTree = "<group>";
+		};
+		5D8A585A18A1A3AB00D1D2B7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5D8A586918A1A44F00D1D2B7 /* HomeViewController.h */,
+				5D8A586A18A1A44F00D1D2B7 /* HomeViewController.m */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +287,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D8A586F18A1A45A00D1D2B7 /* ProjectsViewController.m in Sources */,
 				5D8A583318A19E6400D1D2B7 /* AppDelegate.m in Sources */,
 				5D8A582F18A19E6400D1D2B7 /* main.m in Sources */,
 				5D8A585518A19F4400D1D2B7 /* LoginViewController.m in Sources */,
+				5D8A586B18A1A44F00D1D2B7 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,8 +299,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D8A587018A1A45A00D1D2B7 /* ProjectsViewController.m in Sources */,
 				5D8A585618A19F4400D1D2B7 /* LoginViewController.m in Sources */,
 				5D8A584818A19E6400D1D2B7 /* GitLabViewerTests.m in Sources */,
+				5D8A586C18A1A44F00D1D2B7 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
