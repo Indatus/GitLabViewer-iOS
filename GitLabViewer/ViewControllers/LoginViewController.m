@@ -35,4 +35,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+#pragma mark - Custom IBActions
+
+- (IBAction)btnSignInClicked:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end

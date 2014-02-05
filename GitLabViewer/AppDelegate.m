@@ -56,9 +56,16 @@
 {
     ProjectsViewController *projects = [ProjectsViewController new];
     UINavigationController *projectsNav = [[UINavigationController alloc] initWithRootViewController:projects];
+    projectsNav.title = @"Projects";
     
     HomeViewController *home = [HomeViewController new];
     UINavigationController *homeNav = [[UINavigationController alloc] initWithRootViewController:home];
+    homeNav.title = @"GitLab";
+    
+    UITabBarItem *tab0 = _tabBarController.tabBar.items[0];
+    tab0.title = @"Projects";
+    UITabBarItem *tab1 = _tabBarController.tabBar.items[1];
+    tab1.title = @"Home";
     
     _tabBarController.viewControllers = @[projectsNav, homeNav];
     [_window setRootViewController:_tabBarController];
