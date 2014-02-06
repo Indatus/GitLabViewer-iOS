@@ -78,6 +78,7 @@
     UINavigationController *helpNav = [[UINavigationController alloc] initWithRootViewController:helpVC];
     
     _tabBarController.viewControllers = @[projectsNav, issuesNav, homeNav, mergeRequestsNav, helpNav];
+    _tabBarController.selectedIndex = 2;
     [_window setRootViewController:_tabBarController];
     [_window makeKeyAndVisible];
 }
