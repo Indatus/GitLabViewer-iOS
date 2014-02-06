@@ -1,10 +1,10 @@
 PODS:
-  - ObjcGitlabApi (0.1.0)
+  - ObjcGitlabApi (0.1.1)
 
 DEPENDENCIES:
   - ObjcGitlabApi (~> 0.1.0)
 
 SPEC CHECKSUMS:
-  ObjcGitlabApi: 7719915c6b32f2141e16676bb3f5cb2f34c16c28
+  ObjcGitlabApi: ead3c6158e9a4eb52d933f7175b239ca4bec5004
 
 COCOAPODS: 0.29.0
