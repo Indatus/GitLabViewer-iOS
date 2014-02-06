@@ -58,32 +58,24 @@
 - (void)setUpViews
 {
     ProjectsViewController *projectsVC = [ProjectsViewController new];
+    projectsVC.title = @"Projects";
     UINavigationController *projectsNav = [[UINavigationController alloc] initWithRootViewController:projectsVC];
     
     IssuesViewController *issuesVC = [IssuesViewController new];
+    issuesVC.title = @"Issues";
     UINavigationController *issuesNav = [[UINavigationController alloc] initWithRootViewController:issuesVC];
     
     HomeViewController *homeVC = [HomeViewController new];
+    homeVC.title = @"Home";
     UINavigationController *homeNav = [[UINavigationController alloc] initWithRootViewController:homeVC];
     
     MergeRequestsViewController *mergeRequestsVC = [MergeRequestsViewController new];
+    mergeRequestsVC.title = @"Merge Requests";
     UINavigationController *mergeRequestsNav = [[UINavigationController alloc] initWithRootViewController:mergeRequestsVC];
     
     HelpViewController *helpVC = [HelpViewController new];
+    helpVC.title = @"Help";
     UINavigationController *helpNav = [[UINavigationController alloc] initWithRootViewController:helpVC];
-    
-    
-    UITabBarItem *tab0 = _tabBarController.tabBar.items[0];
-    tab0.title = @"Projects";
-    UITabBarItem *tab1 = _tabBarController.tabBar.items[1];
-    tab1.title = @"Issues";
-    UITabBarItem *tab2 = _tabBarController.tabBar.items[0];
-    tab2.title = @"Home";
-    UITabBarItem *tab3 = _tabBarController.tabBar.items[1];
-    tab3.title = @"Merge Requests";
-    UITabBarItem *tab4 = _tabBarController.tabBar.items[0];
-    tab4.title = @"Help";
-
     
     _tabBarController.viewControllers = @[projectsNav, issuesNav, homeNav, mergeRequestsNav, helpNav];
     [_window setRootViewController:_tabBarController];

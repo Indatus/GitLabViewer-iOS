@@ -26,8 +26,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    self.title = @"Issues";
 }
 
 - (void)didReceiveMemoryWarning
