@@ -1,0 +1,1 @@
+pod 'ObjcGitlabApi', '~> 0.1.0'
