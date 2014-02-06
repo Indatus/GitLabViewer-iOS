@@ -31,6 +31,14 @@
 		5D8A587318A1AD6B00D1D2B7 /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D8A587118A1AD6B00D1D2B7 /* MainWindow_iPhone.xib */; };
 		5D8A587518A1AD8200D1D2B7 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D8A587418A1AD8200D1D2B7 /* MainWindow_iPad.xib */; };
 		5D8A587618A1AD8200D1D2B7 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D8A587418A1AD8200D1D2B7 /* MainWindow_iPad.xib */; };
+		5D8A588318A3316D00D1D2B7 /* IssuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8A588218A3316D00D1D2B7 /* IssuesViewController.m */; };
+		5D8A588418A3316D00D1D2B7 /* IssuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8A588218A3316D00D1D2B7 /* IssuesViewController.m */; };
+		5D8A588718A3318F00D1D2B7 /* MergeRequestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8A588618A3318F00D1D2B7 /* MergeRequestsViewController.m */; };
+		5D8A588818A3318F00D1D2B7 /* MergeRequestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8A588618A3318F00D1D2B7 /* MergeRequestsViewController.m */; };
+		5D8A588C18A331BC00D1D2B7 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8A588A18A331BC00D1D2B7 /* HelpViewController.m */; };
+		5D8A588D18A331BC00D1D2B7 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8A588A18A331BC00D1D2B7 /* HelpViewController.m */; };
+		5D8A588E18A331BC00D1D2B7 /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D8A588B18A331BC00D1D2B7 /* HelpViewController.xib */; };
+		5D8A588F18A331BC00D1D2B7 /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D8A588B18A331BC00D1D2B7 /* HelpViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +77,13 @@
 		5D8A586E18A1A45A00D1D2B7 /* ProjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectsViewController.m; sourceTree = "<group>"; };
 		5D8A587118A1AD6B00D1D2B7 /* MainWindow_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow_iPhone.xib; sourceTree = "<group>"; };
 		5D8A587418A1AD8200D1D2B7 /* MainWindow_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow_iPad.xib; sourceTree = "<group>"; };
+		5D8A588118A3316D00D1D2B7 /* IssuesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IssuesViewController.h; sourceTree = "<group>"; };
+		5D8A588218A3316D00D1D2B7 /* IssuesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IssuesViewController.m; sourceTree = "<group>"; };
+		5D8A588518A3318F00D1D2B7 /* MergeRequestsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergeRequestsViewController.h; sourceTree = "<group>"; };
+		5D8A588618A3318F00D1D2B7 /* MergeRequestsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergeRequestsViewController.m; sourceTree = "<group>"; };
+		5D8A588918A331BC00D1D2B7 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
+		5D8A588A18A331BC00D1D2B7 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
+		5D8A588B18A331BC00D1D2B7 /* HelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HelpViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,8 +186,11 @@
 		5D8A585118A19F2F00D1D2B7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				5D8A585A18A1A3AB00D1D2B7 /* Home */,
 				5D8A585918A1A39400D1D2B7 /* Projects */,
+				5D8A587818A330FA00D1D2B7 /* Issues */,
+				5D8A585A18A1A3AB00D1D2B7 /* Home */,
+				5D8A587918A330FA00D1D2B7 /* Merge Requests */,
+				5D8A587718A330FA00D1D2B7 /* Help */,
 				5D8A585218A19F4400D1D2B7 /* LoginViewController.h */,
 				5D8A585318A19F4400D1D2B7 /* LoginViewController.m */,
 				5D8A585418A19F4400D1D2B7 /* LoginViewController.xib */,
@@ -196,6 +214,34 @@
 				5D8A586A18A1A44F00D1D2B7 /* HomeViewController.m */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		5D8A587718A330FA00D1D2B7 /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				5D8A588918A331BC00D1D2B7 /* HelpViewController.h */,
+				5D8A588A18A331BC00D1D2B7 /* HelpViewController.m */,
+				5D8A588B18A331BC00D1D2B7 /* HelpViewController.xib */,
+			);
+			path = Help;
+			sourceTree = "<group>";
+		};
+		5D8A587818A330FA00D1D2B7 /* Issues */ = {
+			isa = PBXGroup;
+			children = (
+				5D8A588118A3316D00D1D2B7 /* IssuesViewController.h */,
+				5D8A588218A3316D00D1D2B7 /* IssuesViewController.m */,
+			);
+			path = Issues;
+			sourceTree = "<group>";
+		};
+		5D8A587918A330FA00D1D2B7 /* Merge Requests */ = {
+			isa = PBXGroup;
+			children = (
+				5D8A588518A3318F00D1D2B7 /* MergeRequestsViewController.h */,
+				5D8A588618A3318F00D1D2B7 /* MergeRequestsViewController.m */,
+			);
+			path = "Merge Requests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +324,7 @@
 				5D8A587518A1AD8200D1D2B7 /* MainWindow_iPad.xib in Resources */,
 				5D8A583518A19E6400D1D2B7 /* Images.xcassets in Resources */,
 				5D8A585718A19F4400D1D2B7 /* LoginViewController.xib in Resources */,
+				5D8A588E18A331BC00D1D2B7 /* HelpViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D8A587318A1AD6B00D1D2B7 /* MainWindow_iPhone.xib in Resources */,
+				5D8A588F18A331BC00D1D2B7 /* HelpViewController.xib in Resources */,
 				5D8A585818A19F4400D1D2B7 /* LoginViewController.xib in Resources */,
 				5D8A587618A1AD8200D1D2B7 /* MainWindow_iPad.xib in Resources */,
 				5D8A584618A19E6400D1D2B7 /* InfoPlist.strings in Resources */,
@@ -300,10 +348,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D8A586F18A1A45A00D1D2B7 /* ProjectsViewController.m in Sources */,
+				5D8A588718A3318F00D1D2B7 /* MergeRequestsViewController.m in Sources */,
 				5D8A583318A19E6400D1D2B7 /* AppDelegate.m in Sources */,
 				5D8A582F18A19E6400D1D2B7 /* main.m in Sources */,
 				5D8A585518A19F4400D1D2B7 /* LoginViewController.m in Sources */,
+				5D8A588318A3316D00D1D2B7 /* IssuesViewController.m in Sources */,
 				5D8A586B18A1A44F00D1D2B7 /* HomeViewController.m in Sources */,
+				5D8A588C18A331BC00D1D2B7 /* HelpViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,9 +363,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D8A587018A1A45A00D1D2B7 /* ProjectsViewController.m in Sources */,
+				5D8A588418A3316D00D1D2B7 /* IssuesViewController.m in Sources */,
 				5D8A585618A19F4400D1D2B7 /* LoginViewController.m in Sources */,
 				5D8A584818A19E6400D1D2B7 /* GitLabViewerTests.m in Sources */,
+				5D8A588D18A331BC00D1D2B7 /* HelpViewController.m in Sources */,
 				5D8A586C18A1A44F00D1D2B7 /* HomeViewController.m in Sources */,
+				5D8A588818A3318F00D1D2B7 /* MergeRequestsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

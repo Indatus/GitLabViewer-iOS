@@ -10,6 +10,9 @@
 #import "LoginViewController.h"
 #import "HomeViewController.h"
 #import "ProjectsViewController.h"
+#import "IssuesViewController.h"
+#import "MergeRequestsViewController.h"
+#import "HelpViewController.h"
 
 @implementation AppDelegate
 
@@ -54,20 +57,35 @@
 
 - (void)setUpViews
 {
-    ProjectsViewController *projects = [ProjectsViewController new];
-    UINavigationController *projectsNav = [[UINavigationController alloc] initWithRootViewController:projects];
-    projectsNav.title = @"Projects";
+    ProjectsViewController *projectsVC = [ProjectsViewController new];
+    UINavigationController *projectsNav = [[UINavigationController alloc] initWithRootViewController:projectsVC];
     
-    HomeViewController *home = [HomeViewController new];
-    UINavigationController *homeNav = [[UINavigationController alloc] initWithRootViewController:home];
-    homeNav.title = @"GitLab";
+    IssuesViewController *issuesVC = [IssuesViewController new];
+    UINavigationController *issuesNav = [[UINavigationController alloc] initWithRootViewController:issuesVC];
+    
+    HomeViewController *homeVC = [HomeViewController new];
+    UINavigationController *homeNav = [[UINavigationController alloc] initWithRootViewController:homeVC];
+    
+    MergeRequestsViewController *mergeRequestsVC = [MergeRequestsViewController new];
+    UINavigationController *mergeRequestsNav = [[UINavigationController alloc] initWithRootViewController:mergeRequestsVC];
+    
+    HelpViewController *helpVC = [HelpViewController new];
+    UINavigationController *helpNav = [[UINavigationController alloc] initWithRootViewController:helpVC];
+    
     
     UITabBarItem *tab0 = _tabBarController.tabBar.items[0];
     tab0.title = @"Projects";
     UITabBarItem *tab1 = _tabBarController.tabBar.items[1];
-    tab1.title = @"Home";
+    tab1.title = @"Issues";
+    UITabBarItem *tab2 = _tabBarController.tabBar.items[0];
+    tab2.title = @"Home";
+    UITabBarItem *tab3 = _tabBarController.tabBar.items[1];
+    tab3.title = @"Merge Requests";
+    UITabBarItem *tab4 = _tabBarController.tabBar.items[0];
+    tab4.title = @"Help";
+
     
-    _tabBarController.viewControllers = @[projectsNav, homeNav];
+    _tabBarController.viewControllers = @[projectsNav, issuesNav, homeNav, mergeRequestsNav, helpNav];
     [_window setRootViewController:_tabBarController];
     [_window makeKeyAndVisible];
 }

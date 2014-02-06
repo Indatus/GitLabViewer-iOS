@@ -1,18 +1,18 @@
 //
-//  ProjectsViewController.m
+//  MergeRequestsViewController.m
 //  GitLabViewer
 //
-//  Created by Jon Staff on 2/4/14.
+//  Created by Jon Staff on 2/5/14.
 //  Copyright (c) 2014 Indatus. All rights reserved.
 //
 
-#import "ProjectsViewController.h"
+#import "MergeRequestsViewController.h"
 
-@interface ProjectsViewController ()
+@interface MergeRequestsViewController ()
 
 @end
 
-@implementation ProjectsViewController
+@implementation MergeRequestsViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
 
-    self.title = @"Projects";
+    self.title = @"Merge Requests";
 }
 
 - (void)didReceiveMemoryWarning

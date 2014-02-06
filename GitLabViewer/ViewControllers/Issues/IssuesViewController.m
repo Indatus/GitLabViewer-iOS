@@ -1,18 +1,18 @@
 //
-//  ProjectsViewController.m
+//  IssuesViewController.m
 //  GitLabViewer
 //
-//  Created by Jon Staff on 2/4/14.
+//  Created by Jon Staff on 2/5/14.
 //  Copyright (c) 2014 Indatus. All rights reserved.
 //
 
-#import "ProjectsViewController.h"
+#import "IssuesViewController.h"
 
-@interface ProjectsViewController ()
+@interface IssuesViewController ()
 
 @end
 
-@implementation ProjectsViewController
+@implementation IssuesViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
 
-    self.title = @"Projects";
+    self.title = @"Issues";
 }
 
 - (void)didReceiveMemoryWarning
