@@ -44,6 +44,21 @@
 
 - (IBAction)btnSignInClicked:(id)sender
 {
+    NSString *serverAddress = _inputServerAddress.text;
+    NSString *username = _inputUsername.text;
+    NSString *password = _inputPassword.text;
+    
+    // TODO: using the wrapper, sign into the server
+    
+    // TODO: place inside the failure block
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                    message:@"There was an issue logging in. Please check the credentials and try again."
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+
+    // TODO: place inside the success block
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
