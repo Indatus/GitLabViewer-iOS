@@ -10,6 +10,10 @@
 
 @interface LoginViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *inputServerAddress;
+@property (weak, nonatomic) IBOutlet UITextField *inputUsername;
+@property (weak, nonatomic) IBOutlet UITextField *inputPassword;
+
 @end
 
 @implementation LoginViewController
