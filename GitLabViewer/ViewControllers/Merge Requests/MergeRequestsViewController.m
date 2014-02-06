@@ -9,6 +9,9 @@
 #import "MergeRequestsViewController.h"
 
 @interface MergeRequestsViewController ()
+{
+    NSMutableArray *_mergeRequests;
+}
 
 @end
 
@@ -38,16 +41,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return _mergeRequests.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

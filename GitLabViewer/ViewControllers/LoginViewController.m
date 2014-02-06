@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import <ObjcGitlabApi/GLGitlab.h>
 
 @interface LoginViewController ()
 
@@ -49,6 +50,7 @@
     NSString *password = _inputPassword.text;
     
     // TODO: using the wrapper, sign into the server
+
     
     // TODO: place inside the failure block
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
