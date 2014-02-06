@@ -18,6 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
     [self setUpViews];
     [self presentLoginIfNeeded];
     
@@ -59,34 +61,16 @@
 {
     ProjectsViewController *projectsVC = [ProjectsViewController new];
     projectsVC.title = @"Projects";
-    UINavigationController *projectsNav = [[UINavigationController alloc] initWithRootViewController:projectsVC];
-    
-    IssuesViewController *issuesVC = [IssuesViewController new];
-    issuesVC.title = @"Issues";
-    UINavigationController *issuesNav = [[UINavigationController alloc] initWithRootViewController:issuesVC];
-    
-    HomeViewController *homeVC = [HomeViewController new];
-    homeVC.title = @"Home";
-    UINavigationController *homeNav = [[UINavigationController alloc] initWithRootViewController:homeVC];
-    
-    MergeRequestsViewController *mergeRequestsVC = [MergeRequestsViewController new];
-    mergeRequestsVC.title = @"Merge Requests";
-    UINavigationController *mergeRequestsNav = [[UINavigationController alloc] initWithRootViewController:mergeRequestsVC];
-    
-    HelpViewController *helpVC = [HelpViewController new];
-    helpVC.title = @"Help";
-    UINavigationController *helpNav = [[UINavigationController alloc] initWithRootViewController:helpVC];
-    
-    _tabBarController.viewControllers = @[projectsNav, issuesNav, homeNav, mergeRequestsNav, helpNav];
-    _tabBarController.selectedIndex = 2;
-    [_window setRootViewController:_tabBarController];
+    _navController = [[UINavigationController alloc] initWithRootViewController:projectsVC];
+
+    [_window setRootViewController:_navController];
     [_window makeKeyAndVisible];
 }
 
 - (void)presentLoginIfNeeded
 {
     LoginViewController *loginView = [LoginViewController new];
-    [_tabBarController presentViewController:loginView animated:YES completion:nil];
+    [_navController presentViewController:loginView animated:YES completion:nil];
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "ProjectsViewController.h"
+#import <GLGitlab.h>
 
 @interface ProjectsViewController ()
 {
@@ -29,6 +30,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [[GLGitlabApi sharedInstance] getAllProjectsSuccess:^(NSArray *projects) {
+        
+    }
+                                                failure:^(NSError *error) {
+        // failure
+    }];
 }
 
 - (void)didReceiveMemoryWarning

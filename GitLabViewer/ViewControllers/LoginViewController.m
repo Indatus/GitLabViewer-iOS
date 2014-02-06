@@ -7,7 +7,7 @@
 //
 
 #import "LoginViewController.h"
-#import <ObjcGitlabApi/GLGitlab.h>
+#import <GLGitlab.h>
 
 @interface LoginViewController ()
 
@@ -49,7 +49,7 @@
     NSString *username = _inputUsername.text;
     NSString *password = _inputPassword.text;
     
-    [[GLGitlabApi new] loginToHost:serverAddress
+    [[GLGitlabApi sharedInstance] loginToHost:serverAddress
                           username:username
                           password:password
                            success:^(GLUser *user) {
