@@ -31,21 +31,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [[GLGitlabApi sharedInstance] getAllProjectsSuccess:^(NSArray *projects) {
-        NSLog(@"Projects: %@", projects);
-        _projects = [projects copy];
-        [self.tableView reloadData];
-    }
-                                                failure:^(NSError *error) {
-                                                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                                                                    message:@"There was an issue fetching projects. Please log in again."
-                                                                                                   delegate:nil
-                                                                                          cancelButtonTitle:@"OK"
-                                                                                          otherButtonTitles:nil];
-                                                    [alert show];
-                                                    [self dismissViewControllerAnimated:YES completion:nil];
-    }];
 }
 
 - (void)didReceiveMemoryWarning

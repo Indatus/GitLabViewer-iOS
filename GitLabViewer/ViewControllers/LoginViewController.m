@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import <GLGitlab.h>
+#import "ProjectsViewController.h"
 
 @interface LoginViewController ()
 
@@ -50,20 +51,33 @@
     NSString *password = _inputPassword.text;
     
     [[GLGitlabApi sharedInstance] loginToHost:serverAddress
-                          username:username
-                          password:password
-                           success:^(GLUser *user) {
-                               NSLog(@"The user is: %@", user);
-                               [self dismissViewControllerAnimated:YES completion:nil];
-    }
-                           failure:^(NSError *error) {
-                               UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                                                                          message:@"There was an issue logging in. Please check the credentials and try again."
-                                                                                                         delegate:nil
-                                                                                                cancelButtonTitle:@"OK"
-                                                                                                otherButtonTitles:nil];
-                               [alert show];
+                                     username:username
+                                     password:password
+                                      success:^(GLUser *user) {
+                                          NSLog(@"The user is: %@", user);
+                                          
+                                          [[GLGitlabApi sharedInstance] getUsersProjectsSuccess:^(NSArray *projects) {
+                                              NSLog(@"Projects: %@", projects);
+                                              ((ProjectsViewController *) self.presentingViewController.childViewControllers[0]).projects = [projects copy];
+                                              [self dismissViewControllerAnimated:YES completion:nil];
+                                          }
+                                                                                      failure:^(NSError *error) {
+                                                                                          UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                                                                                                          message:@"There was an issue fetching projects. Please sign in again."
+                                                                                                                                         delegate:nil
+                                                                                                                                cancelButtonTitle:@"OK"
+                                                                                                                                otherButtonTitles:nil];
+                                                                                          [alert show];
+                                                                                      }];
 
+    }
+                                      failure:^(NSError *error) {
+                               UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                                               message:@"There was an issue logging in. Please check the credentials and try again."
+                                                                              delegate:nil
+                                                                     cancelButtonTitle:@"OK"
+                                                                     otherButtonTitles:nil];
+                               [alert show];
     }];
 }
 

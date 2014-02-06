@@ -10,4 +10,6 @@
 
 @interface ProjectsViewController : UITableViewController
 
+@property (nonatomic, strong) NSMutableArray *projects;
+
 @end
