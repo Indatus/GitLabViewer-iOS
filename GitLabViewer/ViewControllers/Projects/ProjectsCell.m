@@ -7,6 +7,15 @@
 //
 
 #import "ProjectsCell.h"
+#import <GLProject.h>
+
+@interface ProjectsCell ()
+
+@property (weak, nonatomic) IBOutlet UILabel *lblName;
+@property (weak, nonatomic) IBOutlet UILabel *lblDescription;
+@property (weak, nonatomic) IBOutlet UILabel *lblLastActivity;
+
+@end
 
 @implementation ProjectsCell
 
@@ -24,6 +33,17 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)setProject:(GLProject *)project
+{
+    if (_project != project) {
+        _project = project;
+    }
+    
+    _lblName.text = project.nameWithNamespace;
+    _lblDescription.text = project.description;
+    _lblLastActivity.text = @"Fixme because I don't work properly"; // TODO: fix this
 }
 
 @end

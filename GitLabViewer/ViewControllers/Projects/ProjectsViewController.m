@@ -8,6 +8,7 @@
 
 #import "ProjectsViewController.h"
 #import <GLGitlab.h>
+#import "ProjectsCell.h"
 
 @interface ProjectsViewController ()
 {
@@ -32,10 +33,18 @@
     [super viewDidLoad];
     
     [[GLGitlabApi sharedInstance] getAllProjectsSuccess:^(NSArray *projects) {
-        
+        NSLog(@"Projects: %@", projects);
+        _projects = [projects copy];
+        [self.tableView reloadData];
     }
                                                 failure:^(NSError *error) {
-        // failure
+                                                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                                                                    message:@"There was an issue fetching projects. Please log in again."
+                                                                                                   delegate:nil
+                                                                                          cancelButtonTitle:@"OK"
+                                                                                          otherButtonTitles:nil];
+                                                    [alert show];
+                                                    [self dismissViewControllerAnimated:YES completion:nil];
     }];
 }
 
@@ -61,9 +70,13 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    ProjectsCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    if (!cell) {
+        cell = (ProjectsCell *) [ProjectsCell new];
+    }
+    
+    [cell setProject:_projects[indexPath.section]];
     
     return cell;
 }
