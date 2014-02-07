@@ -42,7 +42,7 @@
     }
     
     _lblName.text = project.nameWithNamespace;
-    _lblDescription.text = project.description;
+    _lblDescription.text = project.projectDescription;
     _lblLastActivity.text = @"Fixme because I don't work properly"; // TODO: fix this
 }
 

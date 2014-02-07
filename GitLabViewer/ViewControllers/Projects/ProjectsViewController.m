@@ -10,6 +10,8 @@
 #import <GLGitlab.h>
 #import "ProjectsCell.h"
 
+static NSString *const kCellIdentifier = @"Cell";
+
 @interface ProjectsViewController ()
 {
     NSMutableArray *_projects;
@@ -31,6 +33,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UINib *nib = [UINib nibWithNibName:@"ProjectsCell"
+                                bundle:[NSBundle mainBundle]];
+    [self.tableView registerNib:nib
+         forCellReuseIdentifier:kCellIdentifier];
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,8 +60,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    ProjectsCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    ProjectsCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier forIndexPath:indexPath];
     
     if (!cell) {
         cell = (ProjectsCell *) [ProjectsCell new];
@@ -64,6 +69,11 @@
     [cell setProject:_projects[indexPath.section]];
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 100;
 }
 
 
