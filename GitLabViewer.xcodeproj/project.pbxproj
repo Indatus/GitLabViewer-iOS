@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C5F189618A52CAD0035720D /* ProjectMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F189518A52CAD0035720D /* ProjectMenuViewController.m */; };
 		5D1F5A32A83F440EA1A0E702 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 135504ED168842DAADBC91EC /* libPods.a */; };
 		5D8A582318A19E6400D1D2B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8A582218A19E6400D1D2B7 /* Foundation.framework */; };
 		5D8A582518A19E6400D1D2B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8A582418A19E6400D1D2B7 /* CoreGraphics.framework */; };
@@ -53,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C5F189418A52CAD0035720D /* ProjectMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectMenuViewController.h; sourceTree = "<group>"; };
+		0C5F189518A52CAD0035720D /* ProjectMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectMenuViewController.m; sourceTree = "<group>"; };
 		135504ED168842DAADBC91EC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D8A581F18A19E6400D1D2B7 /* GitLabViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitLabViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D8A582218A19E6400D1D2B7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -115,6 +118,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C5F189018A52BEB0035720D /* Project Menu */ = {
+			isa = PBXGroup;
+			children = (
+				0C5F189418A52CAD0035720D /* ProjectMenuViewController.h */,
+				0C5F189518A52CAD0035720D /* ProjectMenuViewController.m */,
+			);
+			path = "Project Menu";
+			sourceTree = "<group>";
+		};
 		5D8A581618A19E6400D1D2B7 = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +203,7 @@
 		5D8A585118A19F2F00D1D2B7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0C5F189018A52BEB0035720D /* Project Menu */,
 				5D8A585918A1A39400D1D2B7 /* Projects */,
 				5D8A587818A330FA00D1D2B7 /* Issues */,
 				5D8A585A18A1A3AB00D1D2B7 /* Home */,
@@ -397,6 +410,7 @@
 				5D8A588318A3316D00D1D2B7 /* IssuesViewController.m in Sources */,
 				5D8A586B18A1A44F00D1D2B7 /* HomeViewController.m in Sources */,
 				5D8A588C18A331BC00D1D2B7 /* HelpViewController.m in Sources */,
+				0C5F189618A52CAD0035720D /* ProjectMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

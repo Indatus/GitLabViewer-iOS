@@ -2,27 +2,32 @@
 //  ProjectMenuViewController.m
 //  GitLabViewer
 //
-//  Created by Jeff Trespalacios on 2/6/14.
+//  Created by Jeff Trespalacios on 2/7/14.
 //  Copyright (c) 2014 Indatus. All rights reserved.
 //
 
 #import "ProjectMenuViewController.h"
 
-typedef NS_ENUM(NSInteger, ProjectMenuButtons) {
-    ProjectMenuViewControllerEvents = 1,
-    ProjectMenuViewControllerIssues,
-    ProjectMenuViewControllerMergeRequests
+typedef NS_ENUM(NSInteger, ProjectMenuViewControllerOption) {
+    ProjectMenuViewControllerOptionEvents,
+    ProjectMenuViewControllerOptionIssues,
+    ProjectMenuViewControllerOptionMergeRequests
 };
 
+static NSString *const kCellIdentifier = @"Cell";
+
 @interface ProjectMenuViewController ()
+{
+    NSArray *menuOptions;
+}
 
 @end
 
 @implementation ProjectMenuViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithStyle:(UITableViewStyle)style
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
     }
@@ -32,18 +37,9 @@ typedef NS_ENUM(NSInteger, ProjectMenuButtons) {
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	NSArray *buttonNames = @[@"Events", @"Issues", @"Merge Requests"];
-    
-    int i = 1;
-    for (NSString *buttonName in buttonNames) {
-        UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-        [button setTitle:buttonName
-                forState:UIControlStateNormal];
-        button.tag = i;
-        i++;
-        
-    }
-    
+    menuOptions = @[@"Events", @"Issues", @"Merge Requests"];
+    [self.tableView registerClass:[UITableViewCell class]
+           forCellReuseIdentifier:kCellIdentifier];
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,4 +48,47 @@ typedef NS_ENUM(NSInteger, ProjectMenuButtons) {
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return menuOptions.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier forIndexPath:indexPath];
+    NSString *title = menuOptions[indexPath.row];
+    cell.textLabel.text = title;
+    
+    return cell;
+}
+
+#pragma mark - Table view delegate
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ProjectMenuViewControllerOption selectedOption = indexPath.row;
+    UIViewController *controller;
+    switch (selectedOption) {
+        case ProjectMenuViewControllerOptionEvents:
+            
+            break;
+            
+        case ProjectMenuViewControllerOptionIssues:
+            
+            break;
+        
+        case ProjectMenuViewControllerOptionMergeRequests:
+            
+        break;
+    }
+    
+    [self.navigationController pushViewController:controller animated:YES];
+}
 @end

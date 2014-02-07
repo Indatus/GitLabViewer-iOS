@@ -9,6 +9,7 @@
 #import "ProjectsViewController.h"
 #import <GLGitlab.h>
 #import "ProjectsCell.h"
+#import "ProjectMenuViewController.h"
 
 static NSString *const kCellIdentifier = @"Cell";
 
@@ -71,14 +72,19 @@ static NSString *const kCellIdentifier = @"Cell";
     return cell;
 }
 
+#pragma mark - UITableView delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    GLProject *selectedProject = _projects[indexPath.row];
+    ProjectMenuViewController *menuViewController = [ProjectMenuViewController new];
+    menuViewController.project = selectedProject;
+    [self.navigationController pushViewController:menuViewController animated:YES];
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 100;
 }
-
-
-#pragma mark - UITableView delegate
-
-
 
 @end
