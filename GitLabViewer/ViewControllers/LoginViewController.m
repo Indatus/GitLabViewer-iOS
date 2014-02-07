@@ -7,8 +7,9 @@
 //
 
 #import "LoginViewController.h"
-#import <GLGitlab.h>
 #import "ProjectsViewController.h"
+#import <GLGitlabApi+Session.h>
+#import <GLGitlabApi+Projects.h>
 
 @interface LoginViewController ()
 
