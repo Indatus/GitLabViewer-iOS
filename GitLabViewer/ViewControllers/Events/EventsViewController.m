@@ -33,12 +33,6 @@ static NSString *const kCellIdentifier = @"Cell";
     [self.tableView registerNib:eventCellNib forCellReuseIdentifier:kCellIdentifier];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    [self fetchData];
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -71,13 +65,13 @@ static NSString *const kCellIdentifier = @"Cell";
 
 - (void)fetchData
 {
-    [[GLGitlabApi sharedInstance] getProjectEventsForProject:_project
+    [[GLGitlabApi sharedInstance] getProjectEventsForProject:self.project
                                                      success:^(NSArray *eventArray) {
                                                          self.events = eventArray;
                                                          [self.tableView reloadData];
                                                      }
                                                      failure:^(NSError *error) {
-                                                         NSLog(@"Error fetching events for project %@", _project);
+                                                         NSLog(@"Error fetching events for project %@", self.project);
                                                          UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error fetching events"
                                                                                                          message:@"Unable to fetch events, please try again"
                                                                                                         delegate:nil

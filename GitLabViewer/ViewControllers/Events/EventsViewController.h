@@ -6,10 +6,8 @@
 //  Copyright (c) 2014 Indatus. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseProjectDetailViewController.h"
 
-@interface EventsViewController : UITableViewController
-
-@property (nonatomic, strong) GLProject *project;
+@interface EventsViewController : BaseProjectDetailViewController
 
 @end
