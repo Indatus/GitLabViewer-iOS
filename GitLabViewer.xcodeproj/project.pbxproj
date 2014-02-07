@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C0F36DD18A5590900AC65FA /* IssueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C0F36DC18A5590900AC65FA /* IssueCell.m */; };
+		0C0F36DF18A5591B00AC65FA /* IssueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C0F36DE18A5591B00AC65FA /* IssueCell.xib */; };
 		0C5F189618A52CAD0035720D /* ProjectMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F189518A52CAD0035720D /* ProjectMenuViewController.m */; };
 		0C5F189A18A5306B0035720D /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F189918A5306B0035720D /* EventsViewController.m */; };
 		0C5F189D18A530DA0035720D /* EventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F189C18A530DA0035720D /* EventCell.m */; };
 		0C5F189F18A530E90035720D /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5F189E18A530E90035720D /* EventCell.xib */; };
+		0C5F18A218A53D150035720D /* BaseProjectDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F18A118A53D150035720D /* BaseProjectDetailViewController.m */; };
+		0C5F18A618A540130035720D /* MergeRequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F18A518A540130035720D /* MergeRequestCell.m */; };
+		0C5F18A818A5401E0035720D /* MergeRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5F18A718A5401E0035720D /* MergeRequestCell.xib */; };
 		5D1F5A32A83F440EA1A0E702 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 135504ED168842DAADBC91EC /* libPods.a */; };
 		5D8A582318A19E6400D1D2B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8A582218A19E6400D1D2B7 /* Foundation.framework */; };
 		5D8A582518A19E6400D1D2B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8A582418A19E6400D1D2B7 /* CoreGraphics.framework */; };
@@ -57,6 +62,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C0F36DB18A5590900AC65FA /* IssueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IssueCell.h; sourceTree = "<group>"; };
+		0C0F36DC18A5590900AC65FA /* IssueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IssueCell.m; sourceTree = "<group>"; };
+		0C0F36DE18A5591B00AC65FA /* IssueCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IssueCell.xib; sourceTree = "<group>"; };
 		0C5F189418A52CAD0035720D /* ProjectMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectMenuViewController.h; sourceTree = "<group>"; };
 		0C5F189518A52CAD0035720D /* ProjectMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectMenuViewController.m; sourceTree = "<group>"; };
 		0C5F189818A5306B0035720D /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventsViewController.h; path = Events/EventsViewController.h; sourceTree = "<group>"; };
@@ -64,6 +72,11 @@
 		0C5F189B18A530DA0035720D /* EventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventCell.h; path = Events/EventCell.h; sourceTree = "<group>"; };
 		0C5F189C18A530DA0035720D /* EventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventCell.m; path = Events/EventCell.m; sourceTree = "<group>"; };
 		0C5F189E18A530E90035720D /* EventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EventCell.xib; path = Events/EventCell.xib; sourceTree = "<group>"; };
+		0C5F18A018A53D150035720D /* BaseProjectDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseProjectDetailViewController.h; path = "Base Project Details/BaseProjectDetailViewController.h"; sourceTree = "<group>"; };
+		0C5F18A118A53D150035720D /* BaseProjectDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseProjectDetailViewController.m; path = "Base Project Details/BaseProjectDetailViewController.m"; sourceTree = "<group>"; };
+		0C5F18A418A540130035720D /* MergeRequestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergeRequestCell.h; sourceTree = "<group>"; };
+		0C5F18A518A540130035720D /* MergeRequestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergeRequestCell.m; sourceTree = "<group>"; };
+		0C5F18A718A5401E0035720D /* MergeRequestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MergeRequestCell.xib; sourceTree = "<group>"; };
 		135504ED168842DAADBC91EC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D8A581F18A19E6400D1D2B7 /* GitLabViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitLabViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D8A582218A19E6400D1D2B7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -145,6 +158,15 @@
 				0C5F189E18A530E90035720D /* EventCell.xib */,
 			);
 			name = Events;
+			sourceTree = "<group>";
+		};
+		0C5F18A318A53D2B0035720D /* Base Project Details */ = {
+			isa = PBXGroup;
+			children = (
+				0C5F18A018A53D150035720D /* BaseProjectDetailViewController.h */,
+				0C5F18A118A53D150035720D /* BaseProjectDetailViewController.m */,
+			);
+			name = "Base Project Details";
 			sourceTree = "<group>";
 		};
 		5D8A581618A19E6400D1D2B7 = {
@@ -233,6 +255,7 @@
 				5D8A585218A19F4400D1D2B7 /* LoginViewController.h */,
 				5D8A585318A19F4400D1D2B7 /* LoginViewController.m */,
 				5D8A585418A19F4400D1D2B7 /* LoginViewController.xib */,
+				0C5F18A318A53D2B0035720D /* Base Project Details */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -273,6 +296,9 @@
 			children = (
 				5D8A588118A3316D00D1D2B7 /* IssuesViewController.h */,
 				5D8A588218A3316D00D1D2B7 /* IssuesViewController.m */,
+				0C0F36DB18A5590900AC65FA /* IssueCell.h */,
+				0C0F36DC18A5590900AC65FA /* IssueCell.m */,
+				0C0F36DE18A5591B00AC65FA /* IssueCell.xib */,
 			);
 			path = Issues;
 			sourceTree = "<group>";
@@ -282,6 +308,9 @@
 			children = (
 				5D8A588518A3318F00D1D2B7 /* MergeRequestsViewController.h */,
 				5D8A588618A3318F00D1D2B7 /* MergeRequestsViewController.m */,
+				0C5F18A418A540130035720D /* MergeRequestCell.h */,
+				0C5F18A518A540130035720D /* MergeRequestCell.m */,
+				0C5F18A718A5401E0035720D /* MergeRequestCell.xib */,
 			);
 			path = "Merge Requests";
 			sourceTree = "<group>";
@@ -369,6 +398,8 @@
 				5D8A585718A19F4400D1D2B7 /* LoginViewController.xib in Resources */,
 				0C5F189F18A530E90035720D /* EventCell.xib in Resources */,
 				5D8A588E18A331BC00D1D2B7 /* HelpViewController.xib in Resources */,
+				0C5F18A818A5401E0035720D /* MergeRequestCell.xib in Resources */,
+				0C0F36DF18A5591B00AC65FA /* IssueCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,13 +456,16 @@
 			files = (
 				5D8A586F18A1A45A00D1D2B7 /* ProjectsViewController.m in Sources */,
 				5D8A588718A3318F00D1D2B7 /* MergeRequestsViewController.m in Sources */,
+				0C0F36DD18A5590900AC65FA /* IssueCell.m in Sources */,
 				5D8A583318A19E6400D1D2B7 /* AppDelegate.m in Sources */,
 				5D8A582F18A19E6400D1D2B7 /* main.m in Sources */,
 				0C5F189D18A530DA0035720D /* EventCell.m in Sources */,
 				5D8A585518A19F4400D1D2B7 /* LoginViewController.m in Sources */,
 				5D8A5ABD18A4113600D1D2B7 /* ProjectsCell.m in Sources */,
 				5D8A588318A3316D00D1D2B7 /* IssuesViewController.m in Sources */,
+				0C5F18A618A540130035720D /* MergeRequestCell.m in Sources */,
 				5D8A586B18A1A44F00D1D2B7 /* HomeViewController.m in Sources */,
+				0C5F18A218A53D150035720D /* BaseProjectDetailViewController.m in Sources */,
 				5D8A588C18A331BC00D1D2B7 /* HelpViewController.m in Sources */,
 				0C5F189618A52CAD0035720D /* ProjectMenuViewController.m in Sources */,
 				0C5F189A18A5306B0035720D /* EventsViewController.m in Sources */,
