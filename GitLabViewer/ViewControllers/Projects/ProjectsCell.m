@@ -40,10 +40,17 @@
     if (_project != project) {
         _project = project;
     }
+
+    static NSDateFormatter *formatter;
+    if (!formatter) {
+        formatter = [NSDateFormatter new];
+        formatter.dateStyle = NSDateFormatterShortStyle;
+        formatter.timeStyle = NSDateFormatterShortStyle;
+    }
     
     _lblName.text = project.nameWithNamespace;
     _lblDescription.text = project.projectDescription;
-    _lblLastActivity.text = @"Fixme because I don't work properly"; // TODO: fix this
+    _lblLastActivity.text = [formatter stringFromDate:project.lastActivityAt];
 }
 
 @end
