@@ -7,6 +7,7 @@
 //
 
 #import "ProjectMenuViewController.h"
+#import "EventsViewController.h"
 
 typedef NS_ENUM(NSInteger, ProjectMenuViewControllerOption) {
     ProjectMenuViewControllerOptionEvents,
@@ -73,11 +74,11 @@ static NSString *const kCellIdentifier = @"Cell";
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    ProjectMenuViewControllerOption selectedOption = indexPath.row;
     UIViewController *controller;
-    switch (selectedOption) {
+    switch (indexPath.row) {
         case ProjectMenuViewControllerOptionEvents:
-            
+            controller = [EventsViewController new];
+            [(EventsViewController*)controller setProject:_project];
             break;
             
         case ProjectMenuViewControllerOptionIssues:
@@ -89,6 +90,8 @@ static NSString *const kCellIdentifier = @"Cell";
         break;
     }
     
-    [self.navigationController pushViewController:controller animated:YES];
+    if (controller) {
+        [self.navigationController pushViewController:controller animated:YES];
+    }
 }
 @end

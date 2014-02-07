@@ -76,7 +76,7 @@ static NSString *const kCellIdentifier = @"Cell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    GLProject *selectedProject = _projects[indexPath.row];
+    GLProject *selectedProject = _projects[indexPath.section];
     ProjectMenuViewController *menuViewController = [ProjectMenuViewController new];
     menuViewController.project = selectedProject;
     [self.navigationController pushViewController:menuViewController animated:YES];
