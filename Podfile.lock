@@ -2,11 +2,11 @@ PODS:
   - ObjcGitlabApi (0.1.1)
 
 DEPENDENCIES:
-  - ObjcGitlabApi (from `https://github.com/Indatus/objc-gitlab-api.git`)
+  - ObjcGitlabApi (from `/Users/JTrespalacios/Development/iOS/GitLab API Wrapper/objc-gitlab-api`)
 
 EXTERNAL SOURCES:
   ObjcGitlabApi:
-    :git: https://github.com/Indatus/objc-gitlab-api.git
+    :path: /Users/JTrespalacios/Development/iOS/GitLab API Wrapper/objc-gitlab-api
 
 SPEC CHECKSUMS:
   ObjcGitlabApi: ead3c6158e9a4eb52d933f7175b239ca4bec5004

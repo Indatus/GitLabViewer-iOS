@@ -8,6 +8,8 @@
 
 #import "ProjectMenuViewController.h"
 #import "EventsViewController.h"
+#import "IssuesViewController.h"
+#import "MergeRequestsViewController.h"
 
 typedef NS_ENUM(NSInteger, ProjectMenuViewControllerOption) {
     ProjectMenuViewControllerOptionEvents,
@@ -74,24 +76,20 @@ static NSString *const kCellIdentifier = @"Cell";
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UIViewController *controller;
+    BaseProjectDetailViewController *controller;
     switch (indexPath.row) {
         case ProjectMenuViewControllerOptionEvents:
-            controller = [EventsViewController new];
-            [(EventsViewController*)controller setProject:_project];
+            controller = [[EventsViewController  alloc] initWithStyle:UITableViewStylePlain];
             break;
-            
         case ProjectMenuViewControllerOptionIssues:
-            
+            controller = [[IssuesViewController alloc] initWithStyle:UITableViewStylePlain];
             break;
-        
         case ProjectMenuViewControllerOptionMergeRequests:
-            
+            controller = [[MergeRequestsViewController alloc] initWithStyle:UITableViewStylePlain];
         break;
     }
     
-    if (controller) {
-        [self.navigationController pushViewController:controller animated:YES];
-    }
+    [controller setProject:_project];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 @end
