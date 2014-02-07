@@ -31,7 +31,7 @@
 
 - (void)setUpViews
 {
-    ProjectsViewController *projectsVC = [ProjectsViewController new];
+    ProjectsViewController *projectsVC = [[ProjectsViewController alloc] initWithStyle:UITableViewStylePlain];
     projectsVC.title = @"Projects";
     _navController = [[UINavigationController alloc] initWithRootViewController:projectsVC];
 
@@ -41,8 +41,8 @@
 
 - (void)presentLoginIfNeeded
 {
-    LoginViewController *loginView = [LoginViewController new];
-    [_navController presentViewController:loginView animated:YES completion:nil];
+    LoginViewController *loginView = [[LoginViewController alloc] initWithNibName:nil bundle:nil];
+    [_navController.topViewController presentViewController:loginView animated:NO completion:nil];
 }
 
 @end
