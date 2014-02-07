@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Indatus. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseProjectDetailViewController.h"
 
-@interface MergeRequestsViewController : UITableViewController
+@interface MergeRequestsViewController : BaseProjectDetailViewController
 
 @end
