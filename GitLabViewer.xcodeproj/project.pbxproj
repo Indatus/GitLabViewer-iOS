@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0C5F189618A52CAD0035720D /* ProjectMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F189518A52CAD0035720D /* ProjectMenuViewController.m */; };
+		0C5F189A18A5306B0035720D /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F189918A5306B0035720D /* EventsViewController.m */; };
+		0C5F189D18A530DA0035720D /* EventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F189C18A530DA0035720D /* EventCell.m */; };
+		0C5F189F18A530E90035720D /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5F189E18A530E90035720D /* EventCell.xib */; };
 		5D1F5A32A83F440EA1A0E702 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 135504ED168842DAADBC91EC /* libPods.a */; };
 		5D8A582318A19E6400D1D2B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8A582218A19E6400D1D2B7 /* Foundation.framework */; };
 		5D8A582518A19E6400D1D2B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8A582418A19E6400D1D2B7 /* CoreGraphics.framework */; };
@@ -56,6 +59,11 @@
 /* Begin PBXFileReference section */
 		0C5F189418A52CAD0035720D /* ProjectMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectMenuViewController.h; sourceTree = "<group>"; };
 		0C5F189518A52CAD0035720D /* ProjectMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectMenuViewController.m; sourceTree = "<group>"; };
+		0C5F189818A5306B0035720D /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventsViewController.h; path = Events/EventsViewController.h; sourceTree = "<group>"; };
+		0C5F189918A5306B0035720D /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventsViewController.m; path = Events/EventsViewController.m; sourceTree = "<group>"; };
+		0C5F189B18A530DA0035720D /* EventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventCell.h; path = Events/EventCell.h; sourceTree = "<group>"; };
+		0C5F189C18A530DA0035720D /* EventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventCell.m; path = Events/EventCell.m; sourceTree = "<group>"; };
+		0C5F189E18A530E90035720D /* EventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EventCell.xib; path = Events/EventCell.xib; sourceTree = "<group>"; };
 		135504ED168842DAADBC91EC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D8A581F18A19E6400D1D2B7 /* GitLabViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitLabViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D8A582218A19E6400D1D2B7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -125,6 +133,18 @@
 				0C5F189518A52CAD0035720D /* ProjectMenuViewController.m */,
 			);
 			path = "Project Menu";
+			sourceTree = "<group>";
+		};
+		0C5F189718A530590035720D /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				0C5F189818A5306B0035720D /* EventsViewController.h */,
+				0C5F189918A5306B0035720D /* EventsViewController.m */,
+				0C5F189B18A530DA0035720D /* EventCell.h */,
+				0C5F189C18A530DA0035720D /* EventCell.m */,
+				0C5F189E18A530E90035720D /* EventCell.xib */,
+			);
+			name = Events;
 			sourceTree = "<group>";
 		};
 		5D8A581618A19E6400D1D2B7 = {
@@ -203,6 +223,7 @@
 		5D8A585118A19F2F00D1D2B7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0C5F189718A530590035720D /* Events */,
 				0C5F189018A52BEB0035720D /* Project Menu */,
 				5D8A585918A1A39400D1D2B7 /* Projects */,
 				5D8A587818A330FA00D1D2B7 /* Issues */,
@@ -346,6 +367,7 @@
 				5D8A582D18A19E6400D1D2B7 /* InfoPlist.strings in Resources */,
 				5D8A583518A19E6400D1D2B7 /* Images.xcassets in Resources */,
 				5D8A585718A19F4400D1D2B7 /* LoginViewController.xib in Resources */,
+				0C5F189F18A530E90035720D /* EventCell.xib in Resources */,
 				5D8A588E18A331BC00D1D2B7 /* HelpViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,12 +427,14 @@
 				5D8A588718A3318F00D1D2B7 /* MergeRequestsViewController.m in Sources */,
 				5D8A583318A19E6400D1D2B7 /* AppDelegate.m in Sources */,
 				5D8A582F18A19E6400D1D2B7 /* main.m in Sources */,
+				0C5F189D18A530DA0035720D /* EventCell.m in Sources */,
 				5D8A585518A19F4400D1D2B7 /* LoginViewController.m in Sources */,
 				5D8A5ABD18A4113600D1D2B7 /* ProjectsCell.m in Sources */,
 				5D8A588318A3316D00D1D2B7 /* IssuesViewController.m in Sources */,
 				5D8A586B18A1A44F00D1D2B7 /* HomeViewController.m in Sources */,
 				5D8A588C18A331BC00D1D2B7 /* HelpViewController.m in Sources */,
 				0C5F189618A52CAD0035720D /* ProjectMenuViewController.m in Sources */,
+				0C5F189A18A5306B0035720D /* EventsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
