@@ -1,1 +1,1 @@
-pod 'ObjcGitlabApi', '~> 0.1.0'
+pod 'ObjcGitlabApi', :git => 'https://github.com/Indatus/objc-gitlab-api.git'
