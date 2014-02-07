@@ -7,6 +7,10 @@
 //
 
 #import "IssuesViewController.h"
+#import <GLGitlabApi+Issues.h>
+#import "IssueCell.h"
+
+static NSString *const kCellIdentifier = @"Cell";
 
 @interface IssuesViewController ()
 {
@@ -29,6 +33,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UINib *nib = [UINib nibWithNibName:@"IssueCell" bundle:[NSBundle mainBundle]];
+    [self.tableView registerNib:nib forCellReuseIdentifier:kCellIdentifier];
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,63 +57,36 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    IssueCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier forIndexPath:indexPath];
+    GLIssue *issue = _issues[indexPath.section];
+    [cell setupWithIssue:issue];
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+#pragma mark - Table view delegate
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    return 150.0;
 }
 
- */
+#pragma mark - Private Methods
+
+- (void)fetchData
+{
+    [[GLGitlabApi sharedInstance] getAllIssuesForProjectId:self.project.projectId
+                                          withSuccessBlock:^(NSArray *issues) {
+                                              _issues = [issues mutableCopy];
+                                              [self.tableView reloadData];
+                                          }
+                                           andFailureBlock:^(NSError *error) {
+                                               UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                                                               message:@"Error fetching issues, please try again"
+                                                                                              delegate:nil
+                                                                                     cancelButtonTitle:@"OK"
+                                                                                     otherButtonTitles:nil];
+                                               [alert show];
+                                           }];
+}
 
 @end
