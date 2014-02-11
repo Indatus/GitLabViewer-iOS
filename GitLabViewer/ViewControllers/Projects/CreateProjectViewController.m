@@ -63,10 +63,18 @@
     NSString *title = _inputTitle.text;
     
     if (title.length < 1) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"You must specify at least a title." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                        message:@"You must specify at least a title."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
         [alert show];
     } else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Create Project?" message:@"Please verify that all the information is correct." delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:@"Create", nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Create Project?"
+                                                        message:@"Please verify that all the information is correct."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"Cancel"
+                                              otherButtonTitles:@"Create", nil];
         [alert showWithCompletion:^(UIAlertView *alertView, NSInteger buttonIndex) {
             if (buttonIndex != [alertView cancelButtonIndex]) {
                 GLProject *project = [GLProject new];
@@ -80,8 +88,15 @@
                 
                 [[GLGitlabApi sharedInstance] createProject:project success:^(id responseObject) {
                     NSLog(@"Project created successfully!");
+                    [self dismissViewControllerAnimated:YES completion:nil];
                 } failure:^(NSError *error) {
                     NSLog(@"Project creation failed...");
+                    UIAlertView *failedAlert = [[UIAlertView alloc] initWithTitle:@"Creation Failed"
+                                                                          message:@"Failed to create this project - please try again."
+                                                                         delegate:nil
+                                                                cancelButtonTitle:@"OK"
+                                                                otherButtonTitles:nil];
+                    [failedAlert show];
                 }];
             }
         }];
