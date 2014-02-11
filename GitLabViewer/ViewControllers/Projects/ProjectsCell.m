@@ -48,7 +48,7 @@
         formatter.timeStyle = NSDateFormatterShortStyle;
     }
     
-    _lblName.text = project.nameWithNamespace;
+    _lblName.text = project.name;
     _lblDescription.text = project.projectDescription;
     _lblLastActivity.text = [formatter stringFromDate:project.lastActivityAt];
 }

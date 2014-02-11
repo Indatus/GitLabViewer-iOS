@@ -72,6 +72,11 @@ static NSString *const kCellIdentifier = @"Cell";
     return cell;
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return ((GLProject *)_projects[section]).glNamespace.name;
+}
+
 #pragma mark - UITableView delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

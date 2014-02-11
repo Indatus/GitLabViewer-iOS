@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "LoginViewController.h"
-#import "HomeViewController.h"
 #import "ProjectsViewController.h"
 #import "IssuesViewController.h"
 #import "MergeRequestsViewController.h"
@@ -31,7 +30,7 @@
 
 - (void)setUpViews
 {
-    ProjectsViewController *projectsVC = [[ProjectsViewController alloc] initWithStyle:UITableViewStylePlain];
+    ProjectsViewController *projectsVC = [[ProjectsViewController alloc] initWithStyle:UITableViewStyleGrouped];
     projectsVC.title = @"Projects";
     _navController = [[UINavigationController alloc] initWithRootViewController:projectsVC];
 

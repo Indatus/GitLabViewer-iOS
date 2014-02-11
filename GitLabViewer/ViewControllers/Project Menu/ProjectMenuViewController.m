@@ -21,7 +21,7 @@ static NSString *const kCellIdentifier = @"Cell";
 
 @interface ProjectMenuViewController ()
 {
-    NSArray *menuOptions;
+    NSArray *_menuOptions;
 }
 
 @end
@@ -40,7 +40,7 @@ static NSString *const kCellIdentifier = @"Cell";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    menuOptions = @[@"Events", @"Issues", @"Merge Requests"];
+    _menuOptions = @[@"Events", @"Issues", @"Merge Requests"];
     [self.tableView registerClass:[UITableViewCell class]
            forCellReuseIdentifier:kCellIdentifier];
 }
@@ -60,13 +60,13 @@ static NSString *const kCellIdentifier = @"Cell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return menuOptions.count;
+    return _menuOptions.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier forIndexPath:indexPath];
-    NSString *title = menuOptions[indexPath.row];
+    NSString *title = _menuOptions[indexPath.row];
     cell.textLabel.text = title;
     
     return cell;
