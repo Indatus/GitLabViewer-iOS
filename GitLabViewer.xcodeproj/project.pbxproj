@@ -33,8 +33,6 @@
 		5D8A585618A19F4400D1D2B7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8A585318A19F4400D1D2B7 /* LoginViewController.m */; };
 		5D8A585718A19F4400D1D2B7 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D8A585418A19F4400D1D2B7 /* LoginViewController.xib */; };
 		5D8A585818A19F4400D1D2B7 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D8A585418A19F4400D1D2B7 /* LoginViewController.xib */; };
-		5D8A586B18A1A44F00D1D2B7 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8A586A18A1A44F00D1D2B7 /* HomeViewController.m */; };
-		5D8A586C18A1A44F00D1D2B7 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8A586A18A1A44F00D1D2B7 /* HomeViewController.m */; };
 		5D8A586F18A1A45A00D1D2B7 /* ProjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8A586E18A1A45A00D1D2B7 /* ProjectsViewController.m */; };
 		5D8A587018A1A45A00D1D2B7 /* ProjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8A586E18A1A45A00D1D2B7 /* ProjectsViewController.m */; };
 		5D8A588318A3316D00D1D2B7 /* IssuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8A588218A3316D00D1D2B7 /* IssuesViewController.m */; };
@@ -97,8 +95,6 @@
 		5D8A585218A19F4400D1D2B7 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		5D8A585318A19F4400D1D2B7 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		5D8A585418A19F4400D1D2B7 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		5D8A586918A1A44F00D1D2B7 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		5D8A586A18A1A44F00D1D2B7 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		5D8A586D18A1A45A00D1D2B7 /* ProjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectsViewController.h; sourceTree = "<group>"; };
 		5D8A586E18A1A45A00D1D2B7 /* ProjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectsViewController.m; sourceTree = "<group>"; };
 		5D8A588118A3316D00D1D2B7 /* IssuesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IssuesViewController.h; sourceTree = "<group>"; };
@@ -249,7 +245,6 @@
 				0C5F189018A52BEB0035720D /* Project Menu */,
 				5D8A585918A1A39400D1D2B7 /* Projects */,
 				5D8A587818A330FA00D1D2B7 /* Issues */,
-				5D8A585A18A1A3AB00D1D2B7 /* Home */,
 				5D8A587918A330FA00D1D2B7 /* Merge Requests */,
 				5D8A587718A330FA00D1D2B7 /* Help */,
 				5D8A585218A19F4400D1D2B7 /* LoginViewController.h */,
@@ -270,15 +265,6 @@
 				5D8A5ABF18A4114E00D1D2B7 /* ProjectsCell.xib */,
 			);
 			path = Projects;
-			sourceTree = "<group>";
-		};
-		5D8A585A18A1A3AB00D1D2B7 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				5D8A586918A1A44F00D1D2B7 /* HomeViewController.h */,
-				5D8A586A18A1A44F00D1D2B7 /* HomeViewController.m */,
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 		5D8A587718A330FA00D1D2B7 /* Help */ = {
@@ -464,7 +450,6 @@
 				5D8A5ABD18A4113600D1D2B7 /* ProjectsCell.m in Sources */,
 				5D8A588318A3316D00D1D2B7 /* IssuesViewController.m in Sources */,
 				0C5F18A618A540130035720D /* MergeRequestCell.m in Sources */,
-				5D8A586B18A1A44F00D1D2B7 /* HomeViewController.m in Sources */,
 				0C5F18A218A53D150035720D /* BaseProjectDetailViewController.m in Sources */,
 				5D8A588C18A331BC00D1D2B7 /* HelpViewController.m in Sources */,
 				0C5F189618A52CAD0035720D /* ProjectMenuViewController.m in Sources */,
@@ -482,7 +467,6 @@
 				5D8A5ABE18A4113600D1D2B7 /* ProjectsCell.m in Sources */,
 				5D8A584818A19E6400D1D2B7 /* GitLabViewerTests.m in Sources */,
 				5D8A588D18A331BC00D1D2B7 /* HelpViewController.m in Sources */,
-				5D8A586C18A1A44F00D1D2B7 /* HomeViewController.m in Sources */,
 				5D8A588818A3318F00D1D2B7 /* MergeRequestsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

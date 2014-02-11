@@ -1,1 +1,1 @@
-pod 'ObjcGitlabApi', :path => '/Users/JTrespalacios/Development/iOS/GitLab API Wrapper/objc-gitlab-api'
+pod 'ObjcGitlabApi'

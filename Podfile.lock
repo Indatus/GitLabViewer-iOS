@@ -2,11 +2,7 @@ PODS:
   - ObjcGitlabApi (0.1.1)
 
 DEPENDENCIES:
-  - ObjcGitlabApi (from `/Users/JTrespalacios/Development/iOS/GitLab API Wrapper/objc-gitlab-api`)
-
-EXTERNAL SOURCES:
-  ObjcGitlabApi:
-    :path: /Users/JTrespalacios/Development/iOS/GitLab API Wrapper/objc-gitlab-api
+  - ObjcGitlabApi
 
 SPEC CHECKSUMS:
   ObjcGitlabApi: ead3c6158e9a4eb52d933f7175b239ca4bec5004
