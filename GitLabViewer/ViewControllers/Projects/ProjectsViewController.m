@@ -10,6 +10,8 @@
 #import <GLGitlab.h>
 #import "ProjectsCell.h"
 #import "ProjectMenuViewController.h"
+#import "UserPreferences.h"
+#import "LoginViewController.h"
 
 static NSString *const kCellIdentifier = @"Cell";
 
@@ -34,10 +36,11 @@ static NSString *const kCellIdentifier = @"Cell";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UINib *nib = [UINib nibWithNibName:@"ProjectsCell"
-                                bundle:[NSBundle mainBundle]];
-    [self.tableView registerNib:nib
-         forCellReuseIdentifier:kCellIdentifier];
+    UINib *nib = [UINib nibWithNibName:@"ProjectsCell" bundle:[NSBundle mainBundle]];
+    [self.tableView registerNib:nib forCellReuseIdentifier:kCellIdentifier];
+    
+    UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithTitle:@"Log Out" style:UIBarButtonItemStylePlain target:self action:@selector(logOut)];
+    self.navigationItem.leftBarButtonItem = logoutButton;
 }
 
 - (void)didReceiveMemoryWarning
@@ -90,6 +93,18 @@ static NSString *const kCellIdentifier = @"Cell";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 100;
+}
+
+
+#pragma mark - Custom Private Methods
+
+- (void)logOut
+{
+    UserPreferences *prefs = [UserPreferences sharedInstance];
+    prefs.loggedIn = NO;
+    
+    LoginViewController *loginVC = [LoginViewController new];
+    [self presentViewController:loginVC animated:YES completion:nil];
 }
 
 @end

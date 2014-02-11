@@ -53,6 +53,7 @@
                                                   NSLog(@"Projects: %@", projects);
                                                   _projectsVC.projects = [projects copy];
                                                   [_projectsVC.tableView reloadData];
+                                                  // TODO: show animation until this is finished...
                                               }
                                                                                             failure:^(NSError *error) {
                                                                                                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
