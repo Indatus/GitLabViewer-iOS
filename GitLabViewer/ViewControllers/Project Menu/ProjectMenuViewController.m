@@ -48,6 +48,8 @@ static NSString *const kCellIdentifier = @"Cell";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    self.title = _project.name;
     _menuOptions = @[@"Files", @"Commits", @"Network", @"Graphs", @"Issues", @"Merge Requests", @"Settings"];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellIdentifier];
 }

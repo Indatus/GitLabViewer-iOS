@@ -41,6 +41,9 @@ static NSString *const kCellIdentifier = @"Cell";
     
     UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithTitle:@"Log Out" style:UIBarButtonItemStylePlain target:self action:@selector(logOut)];
     self.navigationItem.leftBarButtonItem = logoutButton;
+    
+    UIBarButtonItem *addProjectButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(createProject)];
+    self.navigationItem.rightBarButtonItem = addProjectButton;
 }
 
 - (void)didReceiveMemoryWarning
@@ -110,6 +113,11 @@ static NSString *const kCellIdentifier = @"Cell";
     
     LoginViewController *loginVC = [LoginViewController new];
     [self presentViewController:loginVC animated:YES completion:nil];
+}
+
+- (void)createProject
+{
+    
 }
 
 @end
