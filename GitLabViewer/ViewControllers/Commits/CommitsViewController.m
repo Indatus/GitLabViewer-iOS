@@ -35,4 +35,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Private Methods
+
+- (void)fetchData
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fixme"
+                                                    message:@"I haven't been implemented yet, please fix."
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
+
 @end

@@ -7,12 +7,22 @@
 //
 
 #import "ProjectMenuViewController.h"
+#import "FilesViewController.h"
+#import "CommitsViewController.h"
+#import "NetworkViewController.h"
+#import "GraphsViewController.h"
 #import "IssuesViewController.h"
 #import "MergeRequestsViewController.h"
+#import "SettingsViewController.h"
 
 typedef NS_ENUM(NSInteger, ProjectMenuViewControllerOption) {
-    ProjectMenuViewControllerOptionIssues,
-    ProjectMenuViewControllerOptionMergeRequests
+    ProjectOptionFiles,
+    ProjectOptionCommits,
+    ProjectOptionNetwork,
+    ProjectOptionGraphs,
+    ProjectOptionIssues,
+    ProjectOptionMergeRequests,
+    ProjectOptionSettings
 };
 
 static NSString *const kCellIdentifier = @"Cell";
@@ -38,7 +48,7 @@ static NSString *const kCellIdentifier = @"Cell";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _menuOptions = @[@"Events", @"Issues", @"Merge Requests"];
+    _menuOptions = @[@"Files", @"Commits", @"Network", @"Graphs", @"Issues", @"Merge Requests", @"Settings"];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellIdentifier];
 }
 
@@ -75,12 +85,27 @@ static NSString *const kCellIdentifier = @"Cell";
 {
     BaseProjectDetailViewController *controller;
     switch (indexPath.row) {
-        case ProjectMenuViewControllerOptionIssues:
+        case ProjectOptionFiles:
+            controller = [[FilesViewController alloc] initWithStyle:UITableViewStylePlain];
+            break;
+        case ProjectOptionCommits:
+            controller = [[CommitsViewController alloc] initWithStyle:UITableViewStylePlain];
+            break;
+        case ProjectOptionNetwork:
+            controller = [[NetworkViewController alloc] initWithStyle:UITableViewStylePlain];
+            break;
+        case ProjectOptionGraphs:
+            controller = [[GraphsViewController alloc] initWithStyle:UITableViewStylePlain];
+            break;
+        case ProjectOptionIssues:
             controller = [[IssuesViewController alloc] initWithStyle:UITableViewStylePlain];
             break;
-        case ProjectMenuViewControllerOptionMergeRequests:
+        case ProjectOptionMergeRequests:
             controller = [[MergeRequestsViewController alloc] initWithStyle:UITableViewStylePlain];
-        break;
+            break;
+        case ProjectOptionSettings:
+            controller = [[SettingsViewController alloc] initWithStyle:UITableViewStylePlain];
+            break;
     }
     
     [controller setProject:_project];
