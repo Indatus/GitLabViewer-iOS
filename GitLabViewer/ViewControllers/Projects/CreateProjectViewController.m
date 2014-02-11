@@ -69,7 +69,20 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Create Project?" message:@"Please verify that all the information is correct." delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:@"Create", nil];
         [alert showWithCompletion:^(UIAlertView *alertView, NSInteger buttonIndex) {
             if (buttonIndex != [alertView cancelButtonIndex]) {
+                GLProject *project = [GLProject new];
+                project.name = title;
+                project.projectDescription = _inputDescription.text;
+                project.issuesEnabled = _switchIssues.isOn;
+                project.wallEnabled = _switchWall.isOn;
+                project.mergeRequestsEnabled = _switchMergeRequests.isOn;
+                project.snippetsEnabled = _switchSnippets.isOn;
+                project.publicProject = _switchPublic.isOn;
                 
+                [[GLGitlabApi sharedInstance] createProject:project success:^(id responseObject) {
+                    NSLog(@"Project created successfully!");
+                } failure:^(NSError *error) {
+                    NSLog(@"Project creation failed...");
+                }];
             }
         }];
     }
