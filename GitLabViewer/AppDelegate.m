@@ -11,7 +11,6 @@
 #import "ProjectsViewController.h"
 #import "IssuesViewController.h"
 #import "MergeRequestsViewController.h"
-#import "HelpViewController.h"
 #import "UserPreferences.h"
 
 @implementation AppDelegate

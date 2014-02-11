@@ -7,12 +7,10 @@
 //
 
 #import "ProjectMenuViewController.h"
-#import "EventsViewController.h"
 #import "IssuesViewController.h"
 #import "MergeRequestsViewController.h"
 
 typedef NS_ENUM(NSInteger, ProjectMenuViewControllerOption) {
-    ProjectMenuViewControllerOptionEvents,
     ProjectMenuViewControllerOptionIssues,
     ProjectMenuViewControllerOptionMergeRequests
 };
@@ -77,9 +75,6 @@ static NSString *const kCellIdentifier = @"Cell";
 {
     BaseProjectDetailViewController *controller;
     switch (indexPath.row) {
-        case ProjectMenuViewControllerOptionEvents:
-            controller = [[EventsViewController  alloc] initWithStyle:UITableViewStylePlain];
-            break;
         case ProjectMenuViewControllerOptionIssues:
             controller = [[IssuesViewController alloc] initWithStyle:UITableViewStylePlain];
             break;
