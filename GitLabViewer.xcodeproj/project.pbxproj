@@ -38,6 +38,8 @@
 		5D74FD9518AAE02600656E03 /* CreateProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FD9218AAE02600656E03 /* CreateProjectViewController.m */; };
 		5D74FD9618AAE02600656E03 /* CreateProjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D74FD9318AAE02600656E03 /* CreateProjectViewController.xib */; };
 		5D74FD9718AAE02600656E03 /* CreateProjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D74FD9318AAE02600656E03 /* CreateProjectViewController.xib */; };
+		5D74FD9A18AAE4FC00656E03 /* UIAlertView+Indatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FD9918AAE4FC00656E03 /* UIAlertView+Indatus.m */; };
+		5D74FD9B18AAE4FC00656E03 /* UIAlertView+Indatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FD9918AAE4FC00656E03 /* UIAlertView+Indatus.m */; };
 		5D8A582318A19E6400D1D2B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8A582218A19E6400D1D2B7 /* Foundation.framework */; };
 		5D8A582518A19E6400D1D2B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8A582418A19E6400D1D2B7 /* CoreGraphics.framework */; };
 		5D8A582718A19E6400D1D2B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8A582618A19E6400D1D2B7 /* UIKit.framework */; };
@@ -109,6 +111,8 @@
 		5D74FD9118AAE02600656E03 /* CreateProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateProjectViewController.h; sourceTree = "<group>"; };
 		5D74FD9218AAE02600656E03 /* CreateProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateProjectViewController.m; sourceTree = "<group>"; };
 		5D74FD9318AAE02600656E03 /* CreateProjectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateProjectViewController.xib; sourceTree = "<group>"; };
+		5D74FD9818AAE4FC00656E03 /* UIAlertView+Indatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Indatus.h"; sourceTree = "<group>"; };
+		5D74FD9918AAE4FC00656E03 /* UIAlertView+Indatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Indatus.m"; sourceTree = "<group>"; };
 		5D8A581F18A19E6400D1D2B7 /* GitLabViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitLabViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D8A582218A19E6400D1D2B7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5D8A582418A19E6400D1D2B7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -190,6 +194,8 @@
 				5D74FD6718AAA5BA00656E03 /* UserPreferences.m */,
 				5D74FD8A18AAD25200656E03 /* Constants.h */,
 				5D74FD8B18AAD25200656E03 /* Constants.m */,
+				5D74FD9818AAE4FC00656E03 /* UIAlertView+Indatus.h */,
+				5D74FD9918AAE4FC00656E03 /* UIAlertView+Indatus.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -529,6 +535,7 @@
 				5D8A585518A19F4400D1D2B7 /* LoginViewController.m in Sources */,
 				5D8A5ABD18A4113600D1D2B7 /* ProjectsCell.m in Sources */,
 				5D74FD8118AAB97100656E03 /* SettingsViewController.m in Sources */,
+				5D74FD9A18AAE4FC00656E03 /* UIAlertView+Indatus.m in Sources */,
 				5D8A588318A3316D00D1D2B7 /* IssuesViewController.m in Sources */,
 				5D74FD7518AAB95800656E03 /* FilesViewController.m in Sources */,
 				5D74FD7D18AAB96800656E03 /* NetworkViewController.m in Sources */,
@@ -549,6 +556,7 @@
 				5D74FD9518AAE02600656E03 /* CreateProjectViewController.m in Sources */,
 				5D8A587018A1A45A00D1D2B7 /* ProjectsViewController.m in Sources */,
 				5D74FD7E18AAB96800656E03 /* NetworkViewController.m in Sources */,
+				5D74FD9B18AAE4FC00656E03 /* UIAlertView+Indatus.m in Sources */,
 				5D74FD7A18AAB96000656E03 /* GraphsViewController.m in Sources */,
 				5D74FD8218AAB97100656E03 /* SettingsViewController.m in Sources */,
 				5D74FD8D18AAD25200656E03 /* Constants.m in Sources */,
