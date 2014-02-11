@@ -10,12 +10,15 @@
 #import <GLGitlabApi+Issues.h>
 #import "IssueCell.h"
 #import "SingleIssueViewController.h"
+#import "Constants.h"
 
 static NSString *const kCellIdentifier = @"Cell";
+static NSString * const kEmptyViewText = @"There are currently no\nIssues in this project.";
 
 @interface IssuesViewController ()
 {
     NSMutableArray *_issues;
+    UILabel *_emptyView;
 }
 
 @end
@@ -36,6 +39,7 @@ static NSString *const kCellIdentifier = @"Cell";
     [super viewDidLoad];
     UINib *nib = [UINib nibWithNibName:@"IssueCell" bundle:[NSBundle mainBundle]];
     [self.tableView registerNib:nib forCellReuseIdentifier:kCellIdentifier];
+    [self prepareEmptyView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,6 +57,14 @@ static NSString *const kCellIdentifier = @"Cell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    if (_issues.count == 0) {
+        _emptyView.hidden = NO;
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    } else {
+        _emptyView.hidden = YES;
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    }
+
     return _issues.count;
 }
 
@@ -96,6 +108,13 @@ static NSString *const kCellIdentifier = @"Cell";
                                                                                      otherButtonTitles:nil];
                                                [alert show];
                                            }];
+}
+
+- (void)prepareEmptyView
+{
+    _emptyView = [Constants emptyView];
+    _emptyView.text = kEmptyViewText;
+    [self.view addSubview:_emptyView];
 }
 
 @end
