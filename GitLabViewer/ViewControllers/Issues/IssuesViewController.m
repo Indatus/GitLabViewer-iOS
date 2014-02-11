@@ -9,6 +9,7 @@
 #import "IssuesViewController.h"
 #import <GLGitlabApi+Issues.h>
 #import "IssueCell.h"
+#import "SingleIssueViewController.h"
 
 static NSString *const kCellIdentifier = @"Cell";
 
@@ -63,7 +64,15 @@ static NSString *const kCellIdentifier = @"Cell";
     return cell;
 }
 
+
 #pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SingleIssueViewController *issueVC = [SingleIssueViewController new];
+    issueVC.issue = _issues[indexPath.row];
+    [self.navigationController pushViewController:issueVC animated:YES];
+}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
