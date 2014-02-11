@@ -8,11 +8,13 @@
 
 #import "MergeRequestsViewController.h"
 
-static NSString *const kCellIdentifier = @"Cell";
+static NSString * const kCellIdentifier = @"Cell";
+static NSString * const kEmptyViewText = @"There are currently no\nMerge Requests in this project.";
 
 @interface MergeRequestsViewController ()
 {
     NSMutableArray *_mergeRequests;
+    UILabel *_emptyView;
 }
 
 @end
@@ -33,6 +35,8 @@ static NSString *const kCellIdentifier = @"Cell";
     [super viewDidLoad];
     UINib *nib = [UINib nibWithNibName:@"MergeRequestCell" bundle:[NSBundle mainBundle]];
     [self.tableView registerNib:nib forCellReuseIdentifier:kCellIdentifier];
+    
+    [self prepareEmptyView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,6 +49,14 @@ static NSString *const kCellIdentifier = @"Cell";
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+    if (_mergeRequests.count == 0) {
+        _emptyView.hidden = NO;
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    } else {
+        _emptyView.hidden = YES;
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    }
+    
     return _mergeRequests.count;
 }
 
@@ -79,6 +91,18 @@ static NSString *const kCellIdentifier = @"Cell";
                                                                                          otherButtonTitles:nil];
                                                    [alert show];
                                                }];
+}
+
+- (void)prepareEmptyView
+{
+    _emptyView = [[UILabel alloc] initWithFrame:CGRectZero];
+    _emptyView.backgroundColor = self.tableView.backgroundColor;
+    _emptyView.lineBreakMode = NSLineBreakByWordWrapping;
+    _emptyView.numberOfLines = 0;
+    _emptyView.textAlignment = NSTextAlignmentCenter;
+    _emptyView.text = kEmptyViewText;
+    _emptyView.frame = self.view.frame;
+    [self.view addSubview:_emptyView];
 }
 
 @end
