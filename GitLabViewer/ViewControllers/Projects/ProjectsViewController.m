@@ -12,6 +12,7 @@
 #import "ProjectMenuViewController.h"
 #import "UserPreferences.h"
 #import "LoginViewController.h"
+#import "CreateProjectViewController.h"
 
 static NSString *const kCellIdentifier = @"Cell";
 
@@ -117,7 +118,8 @@ static NSString *const kCellIdentifier = @"Cell";
 
 - (void)createProject
 {
-    
+    UINavigationController *tempNav = [[UINavigationController alloc] initWithRootViewController:[CreateProjectViewController new]];
+    [self presentViewController:tempNav animated:YES completion:nil];
 }
 
 @end

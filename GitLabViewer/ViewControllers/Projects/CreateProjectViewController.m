@@ -35,7 +35,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    self.title = @"Create Project";
+    
+    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelModal)];
+    self.navigationItem.leftBarButtonItem = cancelButton;
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,6 +54,14 @@
 - (IBAction)btnCreateClicked:(id)sender
 {
     
+}
+
+
+#pragma mark - Custom Methods
+
+- (void)cancelModal
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
