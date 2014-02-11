@@ -13,6 +13,9 @@
 #import <GLGitlabApi+Projects.h>
 
 @interface LoginViewController ()
+{
+    UserPreferences *_userPrefs;
+}
 
 @property (weak, nonatomic) IBOutlet UITextField *inputServerAddress;
 @property (weak, nonatomic) IBOutlet UITextField *inputUsername;
@@ -35,6 +38,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    _userPrefs = [UserPreferences sharedInstance];
+    _inputServerAddress.text = _userPrefs.hostname;
+    _inputUsername.text = _userPrefs.username;
 }
 
 - (void)didReceiveMemoryWarning
@@ -68,11 +75,10 @@
                                       success:^(GLUser *user) {
                                           NSLog(@"The user is: %@", user);
                                           
-                                          UserPreferences *prefs = [UserPreferences sharedInstance];
-                                          prefs.hostname = serverAddress;
-                                          prefs.username = username;
-                                          prefs.password = password;
-                                          prefs.loggedIn = YES;
+                                          _userPrefs.hostname = serverAddress;
+                                          _userPrefs.username = username;
+                                          _userPrefs.password = password;
+                                          _userPrefs.loggedIn = YES;
                                           
                                           [[GLGitlabApi sharedInstance] getUsersProjectsSuccess:^(NSArray *projects) {
                                               NSLog(@"Projects: %@", projects);
@@ -97,6 +103,16 @@
                                                                      otherButtonTitles:nil];
                                [alert show];
     }];
+}
+
+
+#pragma mark - UITextField delegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self btnSignInClicked:nil];
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end
