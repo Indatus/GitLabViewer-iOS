@@ -41,8 +41,7 @@ static NSString *const kCellIdentifier = @"Cell";
 {
     [super viewDidLoad];
     _menuOptions = @[@"Events", @"Issues", @"Merge Requests"];
-    [self.tableView registerClass:[UITableViewCell class]
-           forCellReuseIdentifier:kCellIdentifier];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellIdentifier];
 }
 
 - (void)didReceiveMemoryWarning

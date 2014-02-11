@@ -95,6 +95,11 @@ static NSString *const kCellIdentifier = @"Cell";
     return 100;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 20;
+}
+
 
 #pragma mark - Custom Private Methods
 
