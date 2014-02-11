@@ -32,6 +32,8 @@
 		5D74FD8918AABED300656E03 /* SingleIssueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D74FD8518AABED300656E03 /* SingleIssueViewController.xib */; };
 		5D74FD8C18AAD25200656E03 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FD8B18AAD25200656E03 /* Constants.m */; };
 		5D74FD8D18AAD25200656E03 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FD8B18AAD25200656E03 /* Constants.m */; };
+		5D74FD8F18AAD88600656E03 /* NetworkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D74FD8E18AAD88600656E03 /* NetworkViewController.xib */; };
+		5D74FD9018AAD88600656E03 /* NetworkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D74FD8E18AAD88600656E03 /* NetworkViewController.xib */; };
 		5D8A582318A19E6400D1D2B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8A582218A19E6400D1D2B7 /* Foundation.framework */; };
 		5D8A582518A19E6400D1D2B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8A582418A19E6400D1D2B7 /* CoreGraphics.framework */; };
 		5D8A582718A19E6400D1D2B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8A582618A19E6400D1D2B7 /* UIKit.framework */; };
@@ -99,6 +101,7 @@
 		5D74FD8518AABED300656E03 /* SingleIssueViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingleIssueViewController.xib; sourceTree = "<group>"; };
 		5D74FD8A18AAD25200656E03 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		5D74FD8B18AAD25200656E03 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		5D74FD8E18AAD88600656E03 /* NetworkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NetworkViewController.xib; sourceTree = "<group>"; };
 		5D8A581F18A19E6400D1D2B7 /* GitLabViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitLabViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D8A582218A19E6400D1D2B7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5D8A582418A19E6400D1D2B7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -216,6 +219,7 @@
 			children = (
 				5D74FD7B18AAB96800656E03 /* NetworkViewController.h */,
 				5D74FD7C18AAB96800656E03 /* NetworkViewController.m */,
+				5D74FD8E18AAD88600656E03 /* NetworkViewController.xib */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -442,6 +446,7 @@
 				5D8A5AC018A4114E00D1D2B7 /* ProjectsCell.xib in Resources */,
 				5D8A582D18A19E6400D1D2B7 /* InfoPlist.strings in Resources */,
 				5D8A583518A19E6400D1D2B7 /* Images.xcassets in Resources */,
+				5D74FD8F18AAD88600656E03 /* NetworkViewController.xib in Resources */,
 				5D8A585718A19F4400D1D2B7 /* LoginViewController.xib in Resources */,
 				5D74FD8818AABED300656E03 /* SingleIssueViewController.xib in Resources */,
 				0C5F18A818A5401E0035720D /* MergeRequestCell.xib in Resources */,
@@ -456,6 +461,7 @@
 				5D74FD8918AABED300656E03 /* SingleIssueViewController.xib in Resources */,
 				5D8A5AC118A4114E00D1D2B7 /* ProjectsCell.xib in Resources */,
 				5D8A585818A19F4400D1D2B7 /* LoginViewController.xib in Resources */,
+				5D74FD9018AAD88600656E03 /* NetworkViewController.xib in Resources */,
 				5D8A584618A19E6400D1D2B7 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

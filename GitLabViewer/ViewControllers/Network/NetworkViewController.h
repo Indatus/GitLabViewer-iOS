@@ -8,6 +8,10 @@
 
 #import "BaseProjectDetailViewController.h"
 
-@interface NetworkViewController : BaseProjectDetailViewController
+@class GLProject;
+
+@interface NetworkViewController : UIViewController
+
+@property (nonatomic, strong) GLProject *project;
 
 @end

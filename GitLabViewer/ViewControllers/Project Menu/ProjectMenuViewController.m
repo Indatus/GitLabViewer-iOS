@@ -81,7 +81,7 @@ static NSString *const kCellIdentifier = @"Cell";
 
 #pragma mark - Table view delegate
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     BaseProjectDetailViewController *controller;
     switch (indexPath.row) {
@@ -91,8 +91,12 @@ static NSString *const kCellIdentifier = @"Cell";
         case ProjectOptionCommits:
             controller = [[CommitsViewController alloc] initWithStyle:UITableViewStylePlain];
             break;
-        case ProjectOptionNetwork:
-            controller = [[NetworkViewController alloc] initWithStyle:UITableViewStylePlain];
+        case ProjectOptionNetwork:{
+            NetworkViewController *networkVC = [NetworkViewController new];
+            networkVC.project = _project;
+            [self.navigationController pushViewController:networkVC animated:YES];
+            return;
+        }
             break;
         case ProjectOptionGraphs:
             controller = [[GraphsViewController alloc] initWithStyle:UITableViewStylePlain];
