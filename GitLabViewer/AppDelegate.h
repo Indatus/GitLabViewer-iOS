@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class ProjectsViewController;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (nonatomic, strong) UIWindow *window;
 @property (nonatomic, strong) UINavigationController *navController;
+@property (nonatomic, strong) ProjectsViewController *projectsVC;
 
 @end

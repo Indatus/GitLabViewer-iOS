@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "ProjectsViewController.h"
+#import "UserPreferences.h"
 #import <GLGitlabApi+Session.h>
 #import <GLGitlabApi+Projects.h>
 
@@ -56,6 +57,12 @@
                                      password:password
                                       success:^(GLUser *user) {
                                           NSLog(@"The user is: %@", user);
+                                          
+                                          UserPreferences *prefs = [UserPreferences sharedInstance];
+                                          prefs.hostname = serverAddress;
+                                          prefs.username = username;
+                                          prefs.password = password;
+                                          prefs.loggedIn = YES;
                                           
                                           [[GLGitlabApi sharedInstance] getUsersProjectsSuccess:^(NSArray *projects) {
                                               NSLog(@"Projects: %@", projects);

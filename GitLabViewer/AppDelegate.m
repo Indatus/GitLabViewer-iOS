@@ -31,9 +31,9 @@
 
 - (void)setUpViews
 {
-    ProjectsViewController *projectsVC = [[ProjectsViewController alloc] initWithStyle:UITableViewStyleGrouped];
-    projectsVC.title = @"Projects";
-    _navController = [[UINavigationController alloc] initWithRootViewController:projectsVC];
+    _projectsVC = [[ProjectsViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    _projectsVC.title = @"Projects";
+    _navController = [[UINavigationController alloc] initWithRootViewController:_projectsVC];
 
     [_window setRootViewController:_navController];
     [_window makeKeyAndVisible];
@@ -51,7 +51,8 @@
                                               
                                               [[GLGitlabApi sharedInstance] getUsersProjectsSuccess:^(NSArray *projects) {
                                                   NSLog(@"Projects: %@", projects);
-                                                  ((ProjectsViewController *) _window.rootViewController).projects = [projects copy];
+                                                  _projectsVC.projects = [projects copy];
+                                                  [_projectsVC.tableView reloadData];
                                               }
                                                                                             failure:^(NSError *error) {
                                                                                                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
