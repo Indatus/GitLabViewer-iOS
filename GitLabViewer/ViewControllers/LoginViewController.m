@@ -52,6 +52,16 @@
     NSString *username = _inputUsername.text;
     NSString *password = _inputPassword.text;
     
+    if (serverAddress.length < 1 || username.length < 1 || password.length < 1) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                        message:@"Please fill out all the fields."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        return;
+    }
+    
     [[GLGitlabApi sharedInstance] loginToHost:serverAddress
                                      username:username
                                      password:password
