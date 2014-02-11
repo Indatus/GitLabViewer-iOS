@@ -17,6 +17,8 @@
 		0C5F18A618A540130035720D /* MergeRequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F18A518A540130035720D /* MergeRequestCell.m */; };
 		0C5F18A818A5401E0035720D /* MergeRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5F18A718A5401E0035720D /* MergeRequestCell.xib */; };
 		5D1F5A32A83F440EA1A0E702 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 135504ED168842DAADBC91EC /* libPods.a */; };
+		5D74FD6818AAA5BA00656E03 /* UserPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FD6718AAA5BA00656E03 /* UserPreferences.m */; };
+		5D74FD6918AAA5BA00656E03 /* UserPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FD6718AAA5BA00656E03 /* UserPreferences.m */; };
 		5D8A582318A19E6400D1D2B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8A582218A19E6400D1D2B7 /* Foundation.framework */; };
 		5D8A582518A19E6400D1D2B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8A582418A19E6400D1D2B7 /* CoreGraphics.framework */; };
 		5D8A582718A19E6400D1D2B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8A582618A19E6400D1D2B7 /* UIKit.framework */; };
@@ -76,6 +78,8 @@
 		0C5F18A518A540130035720D /* MergeRequestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergeRequestCell.m; sourceTree = "<group>"; };
 		0C5F18A718A5401E0035720D /* MergeRequestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MergeRequestCell.xib; sourceTree = "<group>"; };
 		135504ED168842DAADBC91EC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D74FD6618AAA5BA00656E03 /* UserPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserPreferences.h; sourceTree = "<group>"; };
+		5D74FD6718AAA5BA00656E03 /* UserPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserPreferences.m; sourceTree = "<group>"; };
 		5D8A581F18A19E6400D1D2B7 /* GitLabViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitLabViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D8A582218A19E6400D1D2B7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5D8A582418A19E6400D1D2B7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -165,6 +169,15 @@
 			name = "Base Project Details";
 			sourceTree = "<group>";
 		};
+		5D74FD6518AAA59400656E03 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5D74FD6618AAA5BA00656E03 /* UserPreferences.h */,
+				5D74FD6718AAA5BA00656E03 /* UserPreferences.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		5D8A581618A19E6400D1D2B7 = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +215,7 @@
 			children = (
 				5D8A583118A19E6400D1D2B7 /* AppDelegate.h */,
 				5D8A583218A19E6400D1D2B7 /* AppDelegate.m */,
+				5D74FD6518AAA59400656E03 /* Utilities */,
 				5D8A585118A19F2F00D1D2B7 /* ViewControllers */,
 				5D8A583418A19E6400D1D2B7 /* Images.xcassets */,
 				5D8A582918A19E6400D1D2B7 /* Supporting Files */,
@@ -443,6 +457,7 @@
 				5D8A586F18A1A45A00D1D2B7 /* ProjectsViewController.m in Sources */,
 				5D8A588718A3318F00D1D2B7 /* MergeRequestsViewController.m in Sources */,
 				0C0F36DD18A5590900AC65FA /* IssueCell.m in Sources */,
+				5D74FD6818AAA5BA00656E03 /* UserPreferences.m in Sources */,
 				5D8A583318A19E6400D1D2B7 /* AppDelegate.m in Sources */,
 				5D8A582F18A19E6400D1D2B7 /* main.m in Sources */,
 				0C5F189D18A530DA0035720D /* EventCell.m in Sources */,
@@ -466,6 +481,7 @@
 				5D8A585618A19F4400D1D2B7 /* LoginViewController.m in Sources */,
 				5D8A5ABE18A4113600D1D2B7 /* ProjectsCell.m in Sources */,
 				5D8A584818A19E6400D1D2B7 /* GitLabViewerTests.m in Sources */,
+				5D74FD6918AAA5BA00656E03 /* UserPreferences.m in Sources */,
 				5D8A588D18A331BC00D1D2B7 /* HelpViewController.m in Sources */,
 				5D8A588818A3318F00D1D2B7 /* MergeRequestsViewController.m in Sources */,
 			);

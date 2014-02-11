@@ -12,6 +12,7 @@
 #import "IssuesViewController.h"
 #import "MergeRequestsViewController.h"
 #import "HelpViewController.h"
+#import "UserPreferences.h"
 
 @implementation AppDelegate
 
@@ -40,8 +41,41 @@
 
 - (void)presentLoginIfNeeded
 {
-    LoginViewController *loginView = [[LoginViewController alloc] initWithNibName:nil bundle:nil];
-    [_navController.topViewController presentViewController:loginView animated:NO completion:nil];
+    UserPreferences *prefs = [UserPreferences sharedInstance];
+    if (prefs.loggedIn) {
+        [[GLGitlabApi sharedInstance] loginToHost:prefs.hostname
+                                         username:prefs.username
+                                         password:prefs.password
+                                          success:^(GLUser *user) {
+                                              NSLog(@"The user is: %@", user);
+                                              
+                                              [[GLGitlabApi sharedInstance] getUsersProjectsSuccess:^(NSArray *projects) {
+                                                  NSLog(@"Projects: %@", projects);
+                                                  ((ProjectsViewController *) _window.rootViewController).projects = [projects copy];
+                                              }
+                                                                                            failure:^(NSError *error) {
+                                                                                                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                                                                                                                message:@"There was an issue fetching projects. Please sign in again."
+                                                                                                                                               delegate:nil
+                                                                                                                                      cancelButtonTitle:@"OK"
+                                                                                                                                      otherButtonTitles:nil];
+                                                                                                [alert show];
+                                                                                            }];
+                                              
+                                          }
+                                          failure:^(NSError *error) {
+                                              UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                                                              message:@"There was an issue logging in. Please check the credentials and try again."
+                                                                                             delegate:nil
+                                                                                    cancelButtonTitle:@"OK"
+                                                                                    otherButtonTitles:nil];
+                                              [alert show];
+                                          }];
+
+    } else {
+        LoginViewController *loginView = [[LoginViewController alloc] initWithNibName:nil bundle:nil];
+        [_navController.topViewController presentViewController:loginView animated:NO completion:nil];
+    }
 }
 
 @end
