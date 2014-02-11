@@ -7,6 +7,7 @@
 //
 
 #import "MergeRequestsViewController.h"
+#import "Constants.h"
 
 static NSString * const kCellIdentifier = @"Cell";
 static NSString * const kEmptyViewText = @"There are currently no\nMerge Requests in this project.";
@@ -36,6 +37,7 @@ static NSString * const kEmptyViewText = @"There are currently no\nMerge Request
     UINib *nib = [UINib nibWithNibName:@"MergeRequestCell" bundle:[NSBundle mainBundle]];
     [self.tableView registerNib:nib forCellReuseIdentifier:kCellIdentifier];
     
+    self.title = @"Merge Requests";
     [self prepareEmptyView];
 }
 
@@ -95,13 +97,8 @@ static NSString * const kEmptyViewText = @"There are currently no\nMerge Request
 
 - (void)prepareEmptyView
 {
-    _emptyView = [[UILabel alloc] initWithFrame:CGRectZero];
-    _emptyView.backgroundColor = self.tableView.backgroundColor;
-    _emptyView.lineBreakMode = NSLineBreakByWordWrapping;
-    _emptyView.numberOfLines = 0;
-    _emptyView.textAlignment = NSTextAlignmentCenter;
+    _emptyView = [Constants emptyView];
     _emptyView.text = kEmptyViewText;
-    _emptyView.frame = self.view.frame;
     [self.view addSubview:_emptyView];
 }
 

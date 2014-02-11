@@ -30,6 +30,8 @@
 		5D74FD8718AABED300656E03 /* SingleIssueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FD8418AABED300656E03 /* SingleIssueViewController.m */; };
 		5D74FD8818AABED300656E03 /* SingleIssueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D74FD8518AABED300656E03 /* SingleIssueViewController.xib */; };
 		5D74FD8918AABED300656E03 /* SingleIssueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D74FD8518AABED300656E03 /* SingleIssueViewController.xib */; };
+		5D74FD8C18AAD25200656E03 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FD8B18AAD25200656E03 /* Constants.m */; };
+		5D74FD8D18AAD25200656E03 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FD8B18AAD25200656E03 /* Constants.m */; };
 		5D8A582318A19E6400D1D2B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8A582218A19E6400D1D2B7 /* Foundation.framework */; };
 		5D8A582518A19E6400D1D2B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8A582418A19E6400D1D2B7 /* CoreGraphics.framework */; };
 		5D8A582718A19E6400D1D2B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8A582618A19E6400D1D2B7 /* UIKit.framework */; };
@@ -95,6 +97,8 @@
 		5D74FD8318AABED300656E03 /* SingleIssueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleIssueViewController.h; sourceTree = "<group>"; };
 		5D74FD8418AABED300656E03 /* SingleIssueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleIssueViewController.m; sourceTree = "<group>"; };
 		5D74FD8518AABED300656E03 /* SingleIssueViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingleIssueViewController.xib; sourceTree = "<group>"; };
+		5D74FD8A18AAD25200656E03 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		5D74FD8B18AAD25200656E03 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		5D8A581F18A19E6400D1D2B7 /* GitLabViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitLabViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D8A582218A19E6400D1D2B7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5D8A582418A19E6400D1D2B7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -174,6 +178,8 @@
 			children = (
 				5D74FD6618AAA5BA00656E03 /* UserPreferences.h */,
 				5D74FD6718AAA5BA00656E03 /* UserPreferences.m */,
+				5D74FD8A18AAD25200656E03 /* Constants.h */,
+				5D74FD8B18AAD25200656E03 /* Constants.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -512,6 +518,7 @@
 				0C5F18A218A53D150035720D /* BaseProjectDetailViewController.m in Sources */,
 				5D74FD8618AABED300656E03 /* SingleIssueViewController.m in Sources */,
 				0C5F189618A52CAD0035720D /* ProjectMenuViewController.m in Sources */,
+				5D74FD8C18AAD25200656E03 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +531,7 @@
 				5D74FD7E18AAB96800656E03 /* NetworkViewController.m in Sources */,
 				5D74FD7A18AAB96000656E03 /* GraphsViewController.m in Sources */,
 				5D74FD8218AAB97100656E03 /* SettingsViewController.m in Sources */,
+				5D74FD8D18AAD25200656E03 /* Constants.m in Sources */,
 				5D8A588418A3316D00D1D2B7 /* IssuesViewController.m in Sources */,
 				5D8A585618A19F4400D1D2B7 /* LoginViewController.m in Sources */,
 				5D8A5ABE18A4113600D1D2B7 /* ProjectsCell.m in Sources */,
