@@ -1,1 +1,1 @@
-pod 'ObjcGitlabApi'
+pod 'ObjcGitlabApi', '~> 0.1.2'
