@@ -37,9 +37,15 @@ static NSString * const kEmptyViewText = @"There are currently no\nIssues in thi
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.title = @"Issues";
+    
     UINib *nib = [UINib nibWithNibName:@"IssueCell" bundle:[NSBundle mainBundle]];
     [self.tableView registerNib:nib forCellReuseIdentifier:kCellIdentifier];
     [self prepareEmptyView];
+    
+    UIBarButtonItem *addProjectButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(createIssue)];
+    self.navigationItem.rightBarButtonItem = addProjectButton;
 }
 
 - (void)didReceiveMemoryWarning
@@ -115,6 +121,11 @@ static NSString * const kEmptyViewText = @"There are currently no\nIssues in thi
     _emptyView = [Constants emptyView];
     _emptyView.text = kEmptyViewText;
     [self.view addSubview:_emptyView];
+}
+
+- (void)createIssue
+{
+    
 }
 
 @end
