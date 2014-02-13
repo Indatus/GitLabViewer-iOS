@@ -11,6 +11,7 @@
 #import "IssueCell.h"
 #import "SingleIssueViewController.h"
 #import "Constants.h"
+#import "CreateIssueViewController.h"
 
 static NSString *const kCellIdentifier = @"Cell";
 static NSString * const kEmptyViewText = @"There are currently no\nIssues in this project.";
@@ -44,7 +45,7 @@ static NSString * const kEmptyViewText = @"There are currently no\nIssues in thi
     [self.tableView registerNib:nib forCellReuseIdentifier:kCellIdentifier];
     [self prepareEmptyView];
     
-    UIBarButtonItem *addProjectButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(createIssue)];
+    UIBarButtonItem *addProjectButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showCreateIssueView)];
     self.navigationItem.rightBarButtonItem = addProjectButton;
 }
 
@@ -123,9 +124,10 @@ static NSString * const kEmptyViewText = @"There are currently no\nIssues in thi
     [self.view addSubview:_emptyView];
 }
 
-- (void)createIssue
+- (void)showCreateIssueView
 {
-    
+    UINavigationController *tempNav = [[UINavigationController alloc] initWithRootViewController:[CreateIssueViewController new]];
+    [self presentViewController:tempNav animated:YES completion:nil];
 }
 
 @end

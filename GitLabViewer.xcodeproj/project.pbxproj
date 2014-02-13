@@ -40,6 +40,10 @@
 		5D74FD9718AAE02600656E03 /* CreateProjectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D74FD9318AAE02600656E03 /* CreateProjectViewController.xib */; };
 		5D74FD9A18AAE4FC00656E03 /* UIAlertView+Indatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FD9918AAE4FC00656E03 /* UIAlertView+Indatus.m */; };
 		5D74FD9B18AAE4FC00656E03 /* UIAlertView+Indatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FD9918AAE4FC00656E03 /* UIAlertView+Indatus.m */; };
+		5D74FD9F18AD343C00656E03 /* CreateIssueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FD9D18AD343C00656E03 /* CreateIssueViewController.m */; };
+		5D74FDA018AD343C00656E03 /* CreateIssueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FD9D18AD343C00656E03 /* CreateIssueViewController.m */; };
+		5D74FDA118AD343C00656E03 /* CreateIssueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D74FD9E18AD343C00656E03 /* CreateIssueViewController.xib */; };
+		5D74FDA218AD343C00656E03 /* CreateIssueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D74FD9E18AD343C00656E03 /* CreateIssueViewController.xib */; };
 		5D8A582318A19E6400D1D2B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8A582218A19E6400D1D2B7 /* Foundation.framework */; };
 		5D8A582518A19E6400D1D2B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8A582418A19E6400D1D2B7 /* CoreGraphics.framework */; };
 		5D8A582718A19E6400D1D2B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8A582618A19E6400D1D2B7 /* UIKit.framework */; };
@@ -113,6 +117,9 @@
 		5D74FD9318AAE02600656E03 /* CreateProjectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateProjectViewController.xib; sourceTree = "<group>"; };
 		5D74FD9818AAE4FC00656E03 /* UIAlertView+Indatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Indatus.h"; sourceTree = "<group>"; };
 		5D74FD9918AAE4FC00656E03 /* UIAlertView+Indatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Indatus.m"; sourceTree = "<group>"; };
+		5D74FD9C18AD343C00656E03 /* CreateIssueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateIssueViewController.h; sourceTree = "<group>"; };
+		5D74FD9D18AD343C00656E03 /* CreateIssueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateIssueViewController.m; sourceTree = "<group>"; };
+		5D74FD9E18AD343C00656E03 /* CreateIssueViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateIssueViewController.xib; sourceTree = "<group>"; };
 		5D8A581F18A19E6400D1D2B7 /* GitLabViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitLabViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D8A582218A19E6400D1D2B7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5D8A582418A19E6400D1D2B7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -366,6 +373,9 @@
 				5D74FD8318AABED300656E03 /* SingleIssueViewController.h */,
 				5D74FD8418AABED300656E03 /* SingleIssueViewController.m */,
 				5D74FD8518AABED300656E03 /* SingleIssueViewController.xib */,
+				5D74FD9C18AD343C00656E03 /* CreateIssueViewController.h */,
+				5D74FD9D18AD343C00656E03 /* CreateIssueViewController.m */,
+				5D74FD9E18AD343C00656E03 /* CreateIssueViewController.xib */,
 			);
 			path = Issues;
 			sourceTree = "<group>";
@@ -463,6 +473,7 @@
 				5D8A582D18A19E6400D1D2B7 /* InfoPlist.strings in Resources */,
 				5D8A583518A19E6400D1D2B7 /* Images.xcassets in Resources */,
 				5D74FD8F18AAD88600656E03 /* NetworkViewController.xib in Resources */,
+				5D74FDA118AD343C00656E03 /* CreateIssueViewController.xib in Resources */,
 				5D8A585718A19F4400D1D2B7 /* LoginViewController.xib in Resources */,
 				5D74FD8818AABED300656E03 /* SingleIssueViewController.xib in Resources */,
 				0C5F18A818A5401E0035720D /* MergeRequestCell.xib in Resources */,
@@ -481,6 +492,7 @@
 				5D74FD9018AAD88600656E03 /* NetworkViewController.xib in Resources */,
 				5D74FD9718AAE02600656E03 /* CreateProjectViewController.xib in Resources */,
 				5D8A584618A19E6400D1D2B7 /* InfoPlist.strings in Resources */,
+				5D74FDA218AD343C00656E03 /* CreateIssueViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,6 +554,7 @@
 				5D74FD7918AAB96000656E03 /* GraphsViewController.m in Sources */,
 				0C5F18A618A540130035720D /* MergeRequestCell.m in Sources */,
 				0C5F18A218A53D150035720D /* BaseProjectDetailViewController.m in Sources */,
+				5D74FD9F18AD343C00656E03 /* CreateIssueViewController.m in Sources */,
 				5D74FD8618AABED300656E03 /* SingleIssueViewController.m in Sources */,
 				0C5F189618A52CAD0035720D /* ProjectMenuViewController.m in Sources */,
 				5D74FD8C18AAD25200656E03 /* Constants.m in Sources */,
@@ -564,6 +577,7 @@
 				5D8A585618A19F4400D1D2B7 /* LoginViewController.m in Sources */,
 				5D8A5ABE18A4113600D1D2B7 /* ProjectsCell.m in Sources */,
 				5D8A584818A19E6400D1D2B7 /* GitLabViewerTests.m in Sources */,
+				5D74FDA018AD343C00656E03 /* CreateIssueViewController.m in Sources */,
 				5D74FD7218AAB94500656E03 /* CommitsViewController.m in Sources */,
 				5D74FD6918AAA5BA00656E03 /* UserPreferences.m in Sources */,
 				5D74FD7618AAB95800656E03 /* FilesViewController.m in Sources */,

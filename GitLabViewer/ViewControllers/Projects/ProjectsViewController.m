@@ -43,7 +43,7 @@ static NSString *const kCellIdentifier = @"Cell";
     UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithTitle:@"Log Out" style:UIBarButtonItemStylePlain target:self action:@selector(logOut)];
     self.navigationItem.leftBarButtonItem = logoutButton;
     
-    UIBarButtonItem *addProjectButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(createProject)];
+    UIBarButtonItem *addProjectButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showCreateProjectView)];
     self.navigationItem.rightBarButtonItem = addProjectButton;
 }
 
@@ -116,7 +116,7 @@ static NSString *const kCellIdentifier = @"Cell";
     [self presentViewController:loginVC animated:YES completion:nil];
 }
 
-- (void)createProject
+- (void)showCreateProjectView
 {
     UINavigationController *tempNav = [[UINavigationController alloc] initWithRootViewController:[CreateProjectViewController new]];
     [self presentViewController:tempNav animated:YES completion:nil];
