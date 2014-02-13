@@ -15,11 +15,13 @@ NOTE:  This project is not fully functioning at the moment, and much of the UI i
 - View a single issue in a project
 - Create a new issue for a project
 - View a list of all merge requests in a project
+- Create a merge request for a project
  
 
 ### In Progress/Partially Working
 
-- Create a merge request for a project
+- Merge request cell styling
+- View a single merge request
  
 
 ### TODO
@@ -34,3 +36,4 @@ NOTE:  This project is not fully functioning at the moment, and much of the UI i
 - Settings
 - Select branch for merge request
 - Select users for assignee fields
+- Better error handling
