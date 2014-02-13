@@ -7,6 +7,8 @@
 //
 
 #import "CreateMergeRequestViewController.h"
+#import "UIAlertView+Blocks.h"
+#import "GLNavigationController.h"
 
 @interface CreateMergeRequestViewController ()
 {
@@ -57,7 +59,37 @@
 
 - (IBAction)btnSubmitMergeRequestClicked:(id)sender
 {
+    NSString *title = _inputTitle.text;
+    NSString *sourceBranch = _inputSourceBranch.text;
+    NSString *targetBranch = _inputTargetBranch.text;
     
+    if (title.length < 1 || sourceBranch.length < 1 || targetBranch.length < 1) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                        message:@"You must specify at least a title, the source branch, and the target branch."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Submit Merge Request?"
+                                                        message:@"Please verify that all the information is correct."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"Cancel"
+                                              otherButtonTitles:@"Submit", nil];
+        [alert showWithCompletion:^(UIAlertView *alertView, NSInteger buttonIndex) {
+            GLMergeRequest *merge = [GLMergeRequest new];
+            merge.projectId = ((GLNavigationController *) self.navigationController).project.projectId;
+            merge.title = title;
+            merge.sourceBranch = sourceBranch;
+            merge.targetBranch = targetBranch;
+            
+            [[GLGitlabApi sharedInstance] createMergeRequest:merge withSuccessBlock:^(id responseObject) {
+                NSLog(@"Merge request created successfully!");
+            } andFailureBlock:^(NSError *error) {
+                NSLog(@"Merge request creation failed...");
+            }];
+        }];
+    }
     
 }
 
