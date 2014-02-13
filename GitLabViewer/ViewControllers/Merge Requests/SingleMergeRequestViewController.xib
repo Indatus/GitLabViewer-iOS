@@ -57,6 +57,9 @@
                     <state key="normal" title="Accept Merge Request">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="btnAcceptMergeClicked:" destination="-1" eventType="touchUpInside" id="saU-dn-oqS"/>
+                    </connections>
                 </button>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uix-en-665">
                     <rect key="frame" x="34" y="363" width="59" height="21"/>
@@ -88,6 +91,9 @@
                     <state key="normal" title="Upvote">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="btnUpvoteClicked:" destination="-1" eventType="touchUpInside" id="R8g-07-M22"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38w-OT-uHY">
                     <rect key="frame" x="219" y="387" width="69" height="30"/>
@@ -95,6 +101,9 @@
                     <state key="normal" title="Downvote">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="btnDownvoteClicked:" destination="-1" eventType="touchUpInside" id="cp7-SO-Mvx"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

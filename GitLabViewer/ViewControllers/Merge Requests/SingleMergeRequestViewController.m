@@ -42,4 +42,23 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+#pragma mark - Custom IBActions
+
+- (IBAction)btnUpvoteClicked:(id)sender
+{
+    // TODO: make a connection to change the number of upvotes
+}
+
+- (IBAction)btnDownvoteClicked:(id)sender
+{
+    // TODO: make a connection to change the number of downvotes
+}
+
+- (IBAction)btnAcceptMergeClicked:(id)sender
+{
+    // TODO: make a connection to accept the merge request
+}
+
+
 @end

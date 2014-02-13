@@ -10,6 +10,7 @@
 #import "Constants.h"
 #import "GLNavigationController.h"
 #import "CreateMergeRequestViewController.h"
+#import "SingleMergeRequestViewController.h"
 
 static NSString * const kCellIdentifier = @"Cell";
 static NSString * const kEmptyViewText = @"There are currently no\nMerge Requests in this project.";
@@ -79,6 +80,16 @@ static NSString * const kEmptyViewText = @"There are currently no\nMerge Request
     cell.textLabel.text = mergeRequest.title;
     
     return cell;
+}
+
+
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SingleMergeRequestViewController *mergeVC = [SingleMergeRequestViewController new];
+    mergeVC.mergeRequest = _mergeRequests[indexPath.row];
+    [self.navigationController pushViewController:mergeVC animated:YES];
 }
 
 #pragma mark - Private Methods

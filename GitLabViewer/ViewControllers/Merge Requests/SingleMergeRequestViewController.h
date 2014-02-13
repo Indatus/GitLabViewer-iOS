@@ -10,4 +10,6 @@
 
 @interface SingleMergeRequestViewController : UIViewController
 
+@property (nonatomic, strong) GLMergeRequest *mergeRequest;
+
 @end
