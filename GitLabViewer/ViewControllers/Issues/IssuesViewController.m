@@ -128,6 +128,7 @@ static NSString * const kEmptyViewText = @"There are currently no\nIssues in thi
 - (void)showCreateIssueView
 {
     GLNavigationController *tempNav = [[GLNavigationController alloc] initWithRootViewController:[CreateIssueViewController new]];
+    tempNav.project = ((GLNavigationController *) self.navigationController).project;
     [self presentViewController:tempNav animated:YES completion:nil];
 }
 

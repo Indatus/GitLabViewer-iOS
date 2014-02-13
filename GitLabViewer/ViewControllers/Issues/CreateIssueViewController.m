@@ -8,6 +8,7 @@
 
 #import "CreateIssueViewController.h"
 #import "UIAlertView+Blocks.h"
+#import "GLNavigationController.h"
 
 @interface CreateIssueViewController ()
 {
@@ -17,7 +18,6 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UITextField *inputTitle;
 @property (weak, nonatomic) IBOutlet UITextView *inputDescription;
-@property (weak, nonatomic) IBOutlet UITextField *inputMilestone;
 @property (weak, nonatomic) IBOutlet UITextField *inputAssignee;
 
 @end
@@ -75,12 +75,19 @@
         [alert showWithCompletion:^(UIAlertView *alertView, NSInteger buttonIndex) {
             if (buttonIndex != [alertView cancelButtonIndex]) {
                 GLIssue *issue = [GLIssue new];
+                issue.projectId = ((GLNavigationController *) self.navigationController).project.projectId;
+                issue.title = title;
+                issue.issueDescription = _inputDescription.text;
+                issue.assignee.userId = [_inputAssignee.text longLongValue];
+                
+                NSLog(@"the issue is: %@", issue);
                 
                 [[GLGitlabApi sharedInstance] createIssue:issue withSuccessBlock:^(id responseObject) {
                     NSLog(@"Issue created successfully!");
                     [self dismissViewControllerAnimated:YES completion:nil];
                 } andFailureBlock:^(NSError *error) {
                     NSLog(@"Issue creation failed...");
+                    NSLog(@"error: %@", error);
                     UIAlertView *failedAlert = [[UIAlertView alloc] initWithTitle:@"Creation Failed"
                                                                           message:@"Failed to create this issue - please try again."
                                                                          delegate:nil

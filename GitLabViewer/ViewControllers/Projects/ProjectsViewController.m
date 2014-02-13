@@ -92,6 +92,8 @@ static NSString *const kCellIdentifier = @"Cell";
     GLProject *selectedProject = _projects[indexPath.section];
     ProjectMenuViewController *menuViewController = [ProjectMenuViewController new];
     menuViewController.project = selectedProject;
+    
+    ((GLNavigationController *) self.navigationController).project = selectedProject;
     [self.navigationController pushViewController:menuViewController animated:YES];
 }
 

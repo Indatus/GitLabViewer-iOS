@@ -8,7 +8,6 @@
             <connections>
                 <outlet property="inputAssignee" destination="Nks-ym-qTU" id="pao-sU-A0j"/>
                 <outlet property="inputDescription" destination="Jv0-uj-5K2" id="QCr-dO-zCj"/>
-                <outlet property="inputMilestone" destination="hMO-X9-mLm" id="2LS-vA-hrG"/>
                 <outlet property="inputTitle" destination="cWZ-6k-4iJ" id="yS3-wz-LjL"/>
                 <outlet property="scrollView" destination="RXb-AF-MKY" id="SXZ-XB-EW0"/>
                 <outlet property="view" destination="1" id="3"/>
@@ -44,20 +43,14 @@
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Milestone" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hMO-X9-mLm">
-                            <rect key="frame" x="42" y="276" width="238" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Assignee" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nks-ym-qTU">
-                            <rect key="frame" x="42" y="323" width="237" height="30"/>
+                            <rect key="frame" x="42" y="284" width="237" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqK-aS-FMs">
-                            <rect key="frame" x="117" y="382" width="86" height="30"/>
+                            <rect key="frame" x="117" y="352" width="86" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Create Issue">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
