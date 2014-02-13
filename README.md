@@ -34,3 +34,4 @@ NOTE:  This project is not fully functioning at the moment, and much of the UI i
 - Settings
 - Select branch for merge request
 - Select users for assignee fields
+- Better error handling
