@@ -33,7 +33,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+    _txtTitle.text = _mergeRequest.title;
+    _txtSourceBranch.text = _mergeRequest.sourceBranch;
+    _txtTargetBranch.text = _mergeRequest.targetBranch;
+    _txtAuthor.text = _mergeRequest.author.name;
+    _txtUpvotes.text = [NSString stringWithFormat:@"%i", _mergeRequest.upvotes];
+    _txtDownvotes.text = [NSString stringWithFormat:@"%i", _mergeRequest.downvotes];
 }
 
 - (void)didReceiveMemoryWarning
