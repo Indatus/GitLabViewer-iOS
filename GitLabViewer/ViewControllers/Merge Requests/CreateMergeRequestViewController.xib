@@ -6,7 +6,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateMergeRequestViewController">
             <connections>
-                <outlet property="view" destination="1" id="3"/>
+                <outlet property="inputAssignee" destination="Xm3-0M-aLR" id="kHB-fM-Z3e"/>
+                <outlet property="inputDescription" destination="RZQ-QT-orq" id="wCx-Ag-bRd"/>
+                <outlet property="inputSourceBranch" destination="6qC-vu-UD9" id="NVk-4h-Ycp"/>
+                <outlet property="inputTargetBranch" destination="OTi-ts-UfB" id="Nto-sl-Vok"/>
+                <outlet property="inputTitle" destination="APY-SM-r7W" id="hyp-4W-z0q"/>
+                <outlet property="scrollView" destination="1" id="lkU-Eb-eRc"/>
+                <outlet property="view" destination="egQ-0y-wbE" id="pQP-li-G8j"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -62,6 +68,9 @@
                             <state key="normal" title="Submit Merge Request">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="btnSubmitMergeRequestClicked:" destination="-1" eventType="touchUpInside" id="5xd-x5-3uH"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

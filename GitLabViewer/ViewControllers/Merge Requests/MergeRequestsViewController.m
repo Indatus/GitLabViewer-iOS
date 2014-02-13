@@ -8,6 +8,8 @@
 
 #import "MergeRequestsViewController.h"
 #import "Constants.h"
+#import "GLNavigationController.h"
+#import "CreateMergeRequestViewController.h"
 
 static NSString * const kCellIdentifier = @"Cell";
 static NSString * const kEmptyViewText = @"There are currently no\nMerge Requests in this project.";
@@ -39,6 +41,9 @@ static NSString * const kEmptyViewText = @"There are currently no\nMerge Request
     
     self.title = @"Merge Requests";
     [self prepareEmptyView];
+    
+    UIBarButtonItem *addProjectButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(showCreateMergeRequestView)];
+    self.navigationItem.rightBarButtonItem = addProjectButton;
 }
 
 - (void)didReceiveMemoryWarning
@@ -100,6 +105,13 @@ static NSString * const kEmptyViewText = @"There are currently no\nMerge Request
     _emptyView = [Constants emptyView];
     _emptyView.text = kEmptyViewText;
     [self.view addSubview:_emptyView];
+}
+
+- (void)showCreateMergeRequestView
+{
+    GLNavigationController *tempNav = [[GLNavigationController alloc] initWithRootViewController:[CreateMergeRequestViewController new]];
+    tempNav.project = ((GLNavigationController *) self.navigationController).project;
+    [self presentViewController:tempNav animated:YES completion:nil];
 }
 
 @end

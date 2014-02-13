@@ -67,7 +67,7 @@
                                               otherButtonTitles:nil];
         [alert show];
     } else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Create Project?"
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Create Issue?"
                                                         message:@"Please verify that all the information is correct."
                                                        delegate:nil
                                               cancelButtonTitle:@"Cancel"

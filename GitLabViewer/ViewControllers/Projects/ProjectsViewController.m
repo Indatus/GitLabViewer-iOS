@@ -94,7 +94,6 @@ static NSString *const kCellIdentifier = @"Cell";
     menuViewController.project = selectedProject;
     
     ((GLNavigationController *) self.navigationController).project = selectedProject;
-//    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:Nil action:nil];
     [self.navigationController pushViewController:menuViewController animated:YES];
 }
 
