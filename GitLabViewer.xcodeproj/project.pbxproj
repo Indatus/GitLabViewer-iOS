@@ -46,6 +46,10 @@
 		5D74FDA618AD3D6F00656E03 /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FDA418AD3D6F00656E03 /* UIAlertView+Blocks.m */; };
 		5D74FDAD18AD3F5B00656E03 /* GLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FDAC18AD3F5B00656E03 /* GLNavigationController.m */; };
 		5D74FDAE18AD3F5B00656E03 /* GLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FDAC18AD3F5B00656E03 /* GLNavigationController.m */; };
+		5D74FDB218AD53C000656E03 /* CreateMergeRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FDB018AD53C000656E03 /* CreateMergeRequestViewController.m */; };
+		5D74FDB318AD53C000656E03 /* CreateMergeRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FDB018AD53C000656E03 /* CreateMergeRequestViewController.m */; };
+		5D74FDB418AD53C000656E03 /* CreateMergeRequestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D74FDB118AD53C000656E03 /* CreateMergeRequestViewController.xib */; };
+		5D74FDB518AD53C000656E03 /* CreateMergeRequestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D74FDB118AD53C000656E03 /* CreateMergeRequestViewController.xib */; };
 		5D8A582318A19E6400D1D2B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8A582218A19E6400D1D2B7 /* Foundation.framework */; };
 		5D8A582518A19E6400D1D2B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8A582418A19E6400D1D2B7 /* CoreGraphics.framework */; };
 		5D8A582718A19E6400D1D2B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8A582618A19E6400D1D2B7 /* UIKit.framework */; };
@@ -124,6 +128,9 @@
 		5D74FDA418AD3D6F00656E03 /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
 		5D74FDAB18AD3F5B00656E03 /* GLNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLNavigationController.h; sourceTree = "<group>"; };
 		5D74FDAC18AD3F5B00656E03 /* GLNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLNavigationController.m; sourceTree = "<group>"; };
+		5D74FDAF18AD53C000656E03 /* CreateMergeRequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateMergeRequestViewController.h; sourceTree = "<group>"; };
+		5D74FDB018AD53C000656E03 /* CreateMergeRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateMergeRequestViewController.m; sourceTree = "<group>"; };
+		5D74FDB118AD53C000656E03 /* CreateMergeRequestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateMergeRequestViewController.xib; sourceTree = "<group>"; };
 		5D8A581F18A19E6400D1D2B7 /* GitLabViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitLabViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D8A582218A19E6400D1D2B7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5D8A582418A19E6400D1D2B7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -394,6 +401,9 @@
 				0C5F18A418A540130035720D /* MergeRequestCell.h */,
 				0C5F18A518A540130035720D /* MergeRequestCell.m */,
 				0C5F18A718A5401E0035720D /* MergeRequestCell.xib */,
+				5D74FDAF18AD53C000656E03 /* CreateMergeRequestViewController.h */,
+				5D74FDB018AD53C000656E03 /* CreateMergeRequestViewController.m */,
+				5D74FDB118AD53C000656E03 /* CreateMergeRequestViewController.xib */,
 			);
 			path = "Merge Requests";
 			sourceTree = "<group>";
@@ -477,6 +487,7 @@
 			files = (
 				5D8A5AC018A4114E00D1D2B7 /* ProjectsCell.xib in Resources */,
 				5D8A582D18A19E6400D1D2B7 /* InfoPlist.strings in Resources */,
+				5D74FDB418AD53C000656E03 /* CreateMergeRequestViewController.xib in Resources */,
 				5D8A583518A19E6400D1D2B7 /* Images.xcassets in Resources */,
 				5D74FD8F18AAD88600656E03 /* NetworkViewController.xib in Resources */,
 				5D74FDA118AD343C00656E03 /* CreateIssueViewController.xib in Resources */,
@@ -493,6 +504,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D74FD8918AABED300656E03 /* SingleIssueViewController.xib in Resources */,
+				5D74FDB518AD53C000656E03 /* CreateMergeRequestViewController.xib in Resources */,
 				5D8A5AC118A4114E00D1D2B7 /* ProjectsCell.xib in Resources */,
 				5D8A585818A19F4400D1D2B7 /* LoginViewController.xib in Resources */,
 				5D74FD9018AAD88600656E03 /* NetworkViewController.xib in Resources */,
@@ -563,6 +575,7 @@
 				0C5F18A218A53D150035720D /* BaseProjectDetailViewController.m in Sources */,
 				5D74FD9F18AD343C00656E03 /* CreateIssueViewController.m in Sources */,
 				5D74FD8618AABED300656E03 /* SingleIssueViewController.m in Sources */,
+				5D74FDB218AD53C000656E03 /* CreateMergeRequestViewController.m in Sources */,
 				0C5F189618A52CAD0035720D /* ProjectMenuViewController.m in Sources */,
 				5D74FD8C18AAD25200656E03 /* Constants.m in Sources */,
 			);
@@ -573,6 +586,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D74FDAE18AD3F5B00656E03 /* GLNavigationController.m in Sources */,
+				5D74FDB318AD53C000656E03 /* CreateMergeRequestViewController.m in Sources */,
 				5D74FD8718AABED300656E03 /* SingleIssueViewController.m in Sources */,
 				5D74FD9518AAE02600656E03 /* CreateProjectViewController.m in Sources */,
 				5D8A587018A1A45A00D1D2B7 /* ProjectsViewController.m in Sources */,
