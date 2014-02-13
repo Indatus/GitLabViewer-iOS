@@ -12,6 +12,7 @@
 #import "IssuesViewController.h"
 #import "MergeRequestsViewController.h"
 #import "UserPreferences.h"
+#import "GLNavigationController.h"
 
 @implementation AppDelegate
 
@@ -32,7 +33,7 @@
 {
     _projectsVC = [[ProjectsViewController alloc] initWithStyle:UITableViewStyleGrouped];
     _projectsVC.title = @"Projects";
-    _navController = [[UINavigationController alloc] initWithRootViewController:_projectsVC];
+    _navController = [[GLNavigationController alloc] initWithRootViewController:_projectsVC];
 
     [_window setRootViewController:_navController];
     [_window makeKeyAndVisible];

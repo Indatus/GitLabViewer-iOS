@@ -12,6 +12,7 @@
 #import "SingleIssueViewController.h"
 #import "Constants.h"
 #import "CreateIssueViewController.h"
+#import "GLNavigationController.h"
 
 static NSString *const kCellIdentifier = @"Cell";
 static NSString * const kEmptyViewText = @"There are currently no\nIssues in this project.";
@@ -126,7 +127,7 @@ static NSString * const kEmptyViewText = @"There are currently no\nIssues in thi
 
 - (void)showCreateIssueView
 {
-    UINavigationController *tempNav = [[UINavigationController alloc] initWithRootViewController:[CreateIssueViewController new]];
+    GLNavigationController *tempNav = [[GLNavigationController alloc] initWithRootViewController:[CreateIssueViewController new]];
     [self presentViewController:tempNav animated:YES completion:nil];
 }
 

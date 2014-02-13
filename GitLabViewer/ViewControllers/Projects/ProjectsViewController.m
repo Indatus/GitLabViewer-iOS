@@ -13,6 +13,7 @@
 #import "UserPreferences.h"
 #import "LoginViewController.h"
 #import "CreateProjectViewController.h"
+#import "GLNavigationController.h"
 
 static NSString *const kCellIdentifier = @"Cell";
 
@@ -118,7 +119,7 @@ static NSString *const kCellIdentifier = @"Cell";
 
 - (void)showCreateProjectView
 {
-    UINavigationController *tempNav = [[UINavigationController alloc] initWithRootViewController:[CreateProjectViewController new]];
+    GLNavigationController *tempNav = [[GLNavigationController alloc] initWithRootViewController:[CreateProjectViewController new]];
     [self presentViewController:tempNav animated:YES completion:nil];
 }
 
