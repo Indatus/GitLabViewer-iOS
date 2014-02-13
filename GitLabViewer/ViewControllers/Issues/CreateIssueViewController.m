@@ -14,6 +14,10 @@
 }
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UITextField *inputTitle;
+@property (weak, nonatomic) IBOutlet UITextView *inputDescription;
+@property (weak, nonatomic) IBOutlet UITextField *inputMilestone;
+@property (weak, nonatomic) IBOutlet UITextField *inputAssignee;
 
 @end
 
@@ -48,12 +52,21 @@
 }
 
 
+#pragma mark - Custom IBActions
+
+- (IBAction)btnCreateIssueClicked:(id)sender
+{
+    // TODO: make connection to the server here
+}
+
+
 #pragma mark - Custom Methods
 
 - (void)cancelModal
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 
 #pragma mark - Keyboard methods
 
