@@ -1,12 +1,12 @@
 //
-//  UIAlertView+Indatus.m
+//  UIAlertView+Blocks.m
 //  GitLabViewer
 //
-//  Created by Jon Staff on 2/11/14.
+//  Created by Jon Staff on 2/13/14.
 //  Copyright (c) 2014 Indatus. All rights reserved.
 //
 
-#import "UIAlertView+Indatus.h"
+#import "UIAlertView+Blocks.h"
 #import <objc/runtime.h>
 
 @interface INAlertWrapper : NSObject
@@ -38,7 +38,7 @@
 
 static const char kINAlertWrapper;
 
-@implementation UIAlertView (TallyRally)
+@implementation UIAlertView (Blocks)
 
 - (void)showWithCompletion:(void (^)(UIAlertView *, NSInteger))completion
 {
@@ -50,5 +50,4 @@ static const char kINAlertWrapper;
     
     [self show];
 }
-
 @end
