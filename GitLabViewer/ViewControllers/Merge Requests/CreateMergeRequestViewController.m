@@ -83,10 +83,19 @@
             merge.sourceBranch = sourceBranch;
             merge.targetBranch = targetBranch;
             
-            [[GLGitlabApi sharedInstance] createMergeRequest:merge withSuccessBlock:^(id responseObject) {
+            [[GLGitlabApi sharedInstance] createMergeRequest:merge withSuccessBlock:^(GLMergeRequest *mergeRequest) {
                 NSLog(@"Merge request created successfully!");
+                [self dismissViewControllerAnimated:YES completion:nil];
+                
             } andFailureBlock:^(NSError *error) {
                 NSLog(@"Merge request creation failed...");
+                UIAlertView *failedAlert = [[UIAlertView alloc] initWithTitle:@"Creation Failed"
+                                                                      message:@"Failed to create this merge request - please try again."
+                                                                     delegate:nil
+                                                            cancelButtonTitle:@"OK"
+                                                            otherButtonTitles:nil];
+                [failedAlert show];
+
             }];
         }];
     }
