@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@class GLProject;
-
 @interface ProjectsCell : UITableViewCell
 
 @property (nonatomic, strong) GLProject *project;

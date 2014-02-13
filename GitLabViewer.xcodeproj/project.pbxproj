@@ -44,6 +44,8 @@
 		5D74FDA218AD343C00656E03 /* CreateIssueViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D74FD9E18AD343C00656E03 /* CreateIssueViewController.xib */; };
 		5D74FDA518AD3D6F00656E03 /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FDA418AD3D6F00656E03 /* UIAlertView+Blocks.m */; };
 		5D74FDA618AD3D6F00656E03 /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FDA418AD3D6F00656E03 /* UIAlertView+Blocks.m */; };
+		5D74FDAD18AD3F5B00656E03 /* GLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FDAC18AD3F5B00656E03 /* GLNavigationController.m */; };
+		5D74FDAE18AD3F5B00656E03 /* GLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FDAC18AD3F5B00656E03 /* GLNavigationController.m */; };
 		5D8A582318A19E6400D1D2B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8A582218A19E6400D1D2B7 /* Foundation.framework */; };
 		5D8A582518A19E6400D1D2B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8A582418A19E6400D1D2B7 /* CoreGraphics.framework */; };
 		5D8A582718A19E6400D1D2B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8A582618A19E6400D1D2B7 /* UIKit.framework */; };
@@ -120,6 +122,8 @@
 		5D74FD9E18AD343C00656E03 /* CreateIssueViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateIssueViewController.xib; sourceTree = "<group>"; };
 		5D74FDA318AD3D6F00656E03 /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
 		5D74FDA418AD3D6F00656E03 /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
+		5D74FDAB18AD3F5B00656E03 /* GLNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLNavigationController.h; sourceTree = "<group>"; };
+		5D74FDAC18AD3F5B00656E03 /* GLNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLNavigationController.m; sourceTree = "<group>"; };
 		5D8A581F18A19E6400D1D2B7 /* GitLabViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitLabViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D8A582218A19E6400D1D2B7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5D8A582418A19E6400D1D2B7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -203,6 +207,8 @@
 				5D74FD8B18AAD25200656E03 /* Constants.m */,
 				5D74FDA318AD3D6F00656E03 /* UIAlertView+Blocks.h */,
 				5D74FDA418AD3D6F00656E03 /* UIAlertView+Blocks.m */,
+				5D74FDAB18AD3F5B00656E03 /* GLNavigationController.h */,
+				5D74FDAC18AD3F5B00656E03 /* GLNavigationController.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -538,6 +544,7 @@
 			files = (
 				5D8A586F18A1A45A00D1D2B7 /* ProjectsViewController.m in Sources */,
 				5D8A588718A3318F00D1D2B7 /* MergeRequestsViewController.m in Sources */,
+				5D74FDAD18AD3F5B00656E03 /* GLNavigationController.m in Sources */,
 				0C0F36DD18A5590900AC65FA /* IssueCell.m in Sources */,
 				5D74FD6818AAA5BA00656E03 /* UserPreferences.m in Sources */,
 				5D74FD7118AAB94500656E03 /* CommitsViewController.m in Sources */,
@@ -565,6 +572,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D74FDAE18AD3F5B00656E03 /* GLNavigationController.m in Sources */,
 				5D74FD8718AABED300656E03 /* SingleIssueViewController.m in Sources */,
 				5D74FD9518AAE02600656E03 /* CreateProjectViewController.m in Sources */,
 				5D8A587018A1A45A00D1D2B7 /* ProjectsViewController.m in Sources */,

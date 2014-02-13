@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@class GLIssue;
-
 @interface SingleIssueViewController : UIViewController
 
 @property (nonatomic, strong) GLIssue *issue;

@@ -7,7 +7,7 @@
 //
 
 #import "CreateProjectViewController.h"
-#import "UIAlertView+Indatus.h"
+#import "UIAlertView+Blocks.h"
 
 @interface CreateProjectViewController ()
 {

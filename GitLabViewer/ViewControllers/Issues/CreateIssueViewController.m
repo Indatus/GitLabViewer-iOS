@@ -7,7 +7,7 @@
 //
 
 #import "CreateIssueViewController.h"
-#import "UIAlertView+Indatus.h"
+#import "UIAlertView+Blocks.h"
 
 @interface CreateIssueViewController ()
 {
