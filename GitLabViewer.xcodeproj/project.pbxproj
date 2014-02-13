@@ -50,6 +50,10 @@
 		5D74FDB318AD53C000656E03 /* CreateMergeRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FDB018AD53C000656E03 /* CreateMergeRequestViewController.m */; };
 		5D74FDB418AD53C000656E03 /* CreateMergeRequestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D74FDB118AD53C000656E03 /* CreateMergeRequestViewController.xib */; };
 		5D74FDB518AD53C000656E03 /* CreateMergeRequestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D74FDB118AD53C000656E03 /* CreateMergeRequestViewController.xib */; };
+		5D74FDB918AD748F00656E03 /* SingleMergeRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FDB718AD748F00656E03 /* SingleMergeRequestViewController.m */; };
+		5D74FDBA18AD748F00656E03 /* SingleMergeRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FDB718AD748F00656E03 /* SingleMergeRequestViewController.m */; };
+		5D74FDBB18AD748F00656E03 /* SingleMergeRequestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D74FDB818AD748F00656E03 /* SingleMergeRequestViewController.xib */; };
+		5D74FDBC18AD748F00656E03 /* SingleMergeRequestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D74FDB818AD748F00656E03 /* SingleMergeRequestViewController.xib */; };
 		5D8A582318A19E6400D1D2B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8A582218A19E6400D1D2B7 /* Foundation.framework */; };
 		5D8A582518A19E6400D1D2B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8A582418A19E6400D1D2B7 /* CoreGraphics.framework */; };
 		5D8A582718A19E6400D1D2B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8A582618A19E6400D1D2B7 /* UIKit.framework */; };
@@ -131,6 +135,9 @@
 		5D74FDAF18AD53C000656E03 /* CreateMergeRequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateMergeRequestViewController.h; sourceTree = "<group>"; };
 		5D74FDB018AD53C000656E03 /* CreateMergeRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateMergeRequestViewController.m; sourceTree = "<group>"; };
 		5D74FDB118AD53C000656E03 /* CreateMergeRequestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateMergeRequestViewController.xib; sourceTree = "<group>"; };
+		5D74FDB618AD748F00656E03 /* SingleMergeRequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleMergeRequestViewController.h; sourceTree = "<group>"; };
+		5D74FDB718AD748F00656E03 /* SingleMergeRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleMergeRequestViewController.m; sourceTree = "<group>"; };
+		5D74FDB818AD748F00656E03 /* SingleMergeRequestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingleMergeRequestViewController.xib; sourceTree = "<group>"; };
 		5D8A581F18A19E6400D1D2B7 /* GitLabViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitLabViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D8A582218A19E6400D1D2B7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5D8A582418A19E6400D1D2B7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -404,6 +411,9 @@
 				5D74FDAF18AD53C000656E03 /* CreateMergeRequestViewController.h */,
 				5D74FDB018AD53C000656E03 /* CreateMergeRequestViewController.m */,
 				5D74FDB118AD53C000656E03 /* CreateMergeRequestViewController.xib */,
+				5D74FDB618AD748F00656E03 /* SingleMergeRequestViewController.h */,
+				5D74FDB718AD748F00656E03 /* SingleMergeRequestViewController.m */,
+				5D74FDB818AD748F00656E03 /* SingleMergeRequestViewController.xib */,
 			);
 			path = "Merge Requests";
 			sourceTree = "<group>";
@@ -492,6 +502,7 @@
 				5D74FD8F18AAD88600656E03 /* NetworkViewController.xib in Resources */,
 				5D74FDA118AD343C00656E03 /* CreateIssueViewController.xib in Resources */,
 				5D8A585718A19F4400D1D2B7 /* LoginViewController.xib in Resources */,
+				5D74FDBB18AD748F00656E03 /* SingleMergeRequestViewController.xib in Resources */,
 				5D74FD8818AABED300656E03 /* SingleIssueViewController.xib in Resources */,
 				0C5F18A818A5401E0035720D /* MergeRequestCell.xib in Resources */,
 				5D74FD9618AAE02600656E03 /* CreateProjectViewController.xib in Resources */,
@@ -510,6 +521,7 @@
 				5D74FD9018AAD88600656E03 /* NetworkViewController.xib in Resources */,
 				5D74FD9718AAE02600656E03 /* CreateProjectViewController.xib in Resources */,
 				5D8A584618A19E6400D1D2B7 /* InfoPlist.strings in Resources */,
+				5D74FDBC18AD748F00656E03 /* SingleMergeRequestViewController.xib in Resources */,
 				5D74FDA218AD343C00656E03 /* CreateIssueViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -567,6 +579,7 @@
 				5D8A5ABD18A4113600D1D2B7 /* ProjectsCell.m in Sources */,
 				5D74FD8118AAB97100656E03 /* SettingsViewController.m in Sources */,
 				5D8A588318A3316D00D1D2B7 /* IssuesViewController.m in Sources */,
+				5D74FDB918AD748F00656E03 /* SingleMergeRequestViewController.m in Sources */,
 				5D74FD7518AAB95800656E03 /* FilesViewController.m in Sources */,
 				5D74FDA518AD3D6F00656E03 /* UIAlertView+Blocks.m in Sources */,
 				5D74FD7D18AAB96800656E03 /* NetworkViewController.m in Sources */,
@@ -588,6 +601,7 @@
 				5D74FDAE18AD3F5B00656E03 /* GLNavigationController.m in Sources */,
 				5D74FDB318AD53C000656E03 /* CreateMergeRequestViewController.m in Sources */,
 				5D74FD8718AABED300656E03 /* SingleIssueViewController.m in Sources */,
+				5D74FDBA18AD748F00656E03 /* SingleMergeRequestViewController.m in Sources */,
 				5D74FD9518AAE02600656E03 /* CreateProjectViewController.m in Sources */,
 				5D8A587018A1A45A00D1D2B7 /* ProjectsViewController.m in Sources */,
 				5D74FDA618AD3D6F00656E03 /* UIAlertView+Blocks.m in Sources */,
