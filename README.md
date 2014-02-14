@@ -16,12 +16,12 @@ NOTE:  This project is not fully functioning at the moment, and much of the UI i
 - Create a new issue for a project
 - View a list of all merge requests in a project
 - Create a merge request for a project
+- View a single merge request in a project
  
 
 ### In Progress/Partially Working
 
 - Merge request cell styling
-- View a single merge request
  
 
 ### TODO
