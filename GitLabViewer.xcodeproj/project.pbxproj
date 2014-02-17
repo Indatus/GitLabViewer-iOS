@@ -467,6 +467,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Indatus;
 				TargetAttributes = {
+					5D8A581E18A19E6400D1D2B7 = {
+						DevelopmentTeam = Y9L2M882FC;
+					};
 					5D8A583918A19E6400D1D2B7 = {
 						TestTargetID = 5D8A581E18A19E6400D1D2B7;
 					};
@@ -731,10 +734,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GitLabViewer/GitLabViewer-Prefix.pch";
 				INFOPLIST_FILE = "GitLabViewer/GitLabViewer-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "73A109A2-4C0C-4F43-B66D-7E1484184545";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -745,10 +750,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GitLabViewer/GitLabViewer-Prefix.pch";
 				INFOPLIST_FILE = "GitLabViewer/GitLabViewer-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "73A109A2-4C0C-4F43-B66D-7E1484184545";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
