@@ -10,6 +10,7 @@
 
 @interface IssueCell ()
 
+@property (weak, nonatomic) IBOutlet UILabel *lblTitle;
 @property (weak, nonatomic) IBOutlet UILabel *lblAuthorName;
 @property (weak, nonatomic) IBOutlet UILabel *lblCreatedDate;
 @property (weak, nonatomic) IBOutlet UILabel *lblDescription;
@@ -43,7 +44,8 @@
         formatter.timeStyle = NSDateFormatterShortStyle;
     }
     
-    _lblAuthorName.text = issue.author.username;
+    _lblTitle.text = issue.title;
+    _lblAuthorName.text = issue.author.name;
     _lblCreatedDate.text = [formatter stringFromDate:issue.createdAt];
     _lblDescription.text = issue.issueDescription;
 }
