@@ -79,7 +79,7 @@ static NSString * const kEmptyViewText = @"There are currently no\nIssues in thi
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     IssueCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier forIndexPath:indexPath];
-    GLIssue *issue = _issues[indexPath.section];
+    GLIssue *issue = _issues[indexPath.row];
     [cell setupWithIssue:issue];
     return cell;
 }
