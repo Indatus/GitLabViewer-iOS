@@ -63,19 +63,26 @@
 
 - (IBAction)btnAcceptMergeClicked:(id)sender
 {
-    _mergeRequest.state = @"merged";
+//    _mergeRequest.state = @"true";
+//    
+//    NSLog(@"Merge request: %@", [_mergeRequest jsonRepresentation]);
+//    
+//    [[GLGitlabApi sharedInstance] updateMergeRequest:_mergeRequest
+//                                       successBlock:^(GLMergeRequest *responseObject) {
+//                                           NSLog(@"Merge Request accept successful");
+//                                           NSLog(@"%@", [responseObject jsonRepresentation]);
+//    }
+//                                    andFailureBlock:^(NSError *error) {
+//                                        NSLog(@"Merge Request accept failed...");
+//                                        NSLog(@"Error: %@", error);
+//    }];
     
-    NSLog(@"Merge request: %@", [_mergeRequest jsonRepresentation]);
-    
-    [[GLGitlabApi sharedInstance] updateMergeRequest:_mergeRequest
-                                       successBlock:^(GLMergeRequest *responseObject) {
-                                           NSLog(@"Merge Request accept successful");
-                                           NSLog(@"%@", responseObject);
-    }
-                                    andFailureBlock:^(NSError *error) {
-                                        NSLog(@"Merge Request accept failed...");
-                                        NSLog(@"Error: %@", error);
-    }];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Unavailable"
+                                                    message:@"Sorry, but this action is temporarily unavailable. It will be fixed soon."
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
 }
 
 
