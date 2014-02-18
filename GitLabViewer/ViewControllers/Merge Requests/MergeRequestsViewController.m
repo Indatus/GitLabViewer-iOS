@@ -11,6 +11,7 @@
 #import "GLNavigationController.h"
 #import "CreateMergeRequestViewController.h"
 #import "SingleMergeRequestViewController.h"
+#import "MergeRequestCell.h"
 
 static NSString * const kCellIdentifier = @"Cell";
 static NSString * const kEmptyViewText = @"There are currently no\nMerge Requests in this project.";
@@ -53,9 +54,15 @@ static NSString * const kEmptyViewText = @"There are currently no\nMerge Request
     // Dispose of any resources that can be recreated.
 }
 
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (_mergeRequests.count == 0) {
         _emptyView.hidden = NO;
@@ -68,16 +75,11 @@ static NSString * const kEmptyViewText = @"There are currently no\nMerge Request
     return _mergeRequests.count;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 1;
-}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier forIndexPath:indexPath];
+    MergeRequestCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier forIndexPath:indexPath];
     GLMergeRequest *mergeRequest = _mergeRequests[indexPath.row];
-    cell.textLabel.text = mergeRequest.title;
+    [cell setUpWithMergeRequest:mergeRequest];
     
     return cell;
 }
@@ -91,6 +93,12 @@ static NSString * const kEmptyViewText = @"There are currently no\nMerge Request
     mergeVC.mergeRequest = _mergeRequests[indexPath.row];
     [self.navigationController pushViewController:mergeVC animated:YES];
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 100;
+}
+
 
 #pragma mark - Private Methods
 
