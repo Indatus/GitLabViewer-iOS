@@ -22,7 +22,7 @@ NOTE:  This project is not fully functioning at the moment, and much of the UI i
 ### In Progress/Partially Working
 
 - Merge request cell styling
- 
+- Accept a merge request
 
 ### TODO
 
@@ -31,7 +31,6 @@ NOTE:  This project is not fully functioning at the moment, and much of the UI i
 - View network
 - View graphs
 - Edit issues (comment, close, open, etc.)
-- View a single merge request
 - Edit merge requests (comment, approve, upvote, downvote, etc.)
 - Settings
 - Select branch for merge request
