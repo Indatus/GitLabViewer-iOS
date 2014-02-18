@@ -10,4 +10,6 @@
 
 @interface MergeRequestCell : UITableViewCell
 
+- (void)setUpWithMergeRequest:(GLMergeRequest *)mergeRequest;
+
 @end

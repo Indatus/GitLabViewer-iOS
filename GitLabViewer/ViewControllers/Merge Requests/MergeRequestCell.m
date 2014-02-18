@@ -7,6 +7,15 @@
 //
 
 #import "MergeRequestCell.h"
+#import "Constants.h"
+
+@interface MergeRequestCell ()
+
+@property (weak, nonatomic) IBOutlet UILabel *lblTitle;
+@property (weak, nonatomic) IBOutlet UILabel *lblSourceDestination;
+@property (weak, nonatomic) IBOutlet UILabel *lblAuthorName;
+
+@end
 
 @implementation MergeRequestCell
 
@@ -24,6 +33,13 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)setUpWithMergeRequest:(GLMergeRequest *)mergeRequest
+{
+    _lblTitle.text = mergeRequest.title;
+    _lblSourceDestination.text = [NSString stringWithFormat:@"%@ > %@", mergeRequest.sourceBranch, mergeRequest.targetBranch];
+    _lblAuthorName.text = mergeRequest.author.name;
 }
 
 @end

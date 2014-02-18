@@ -7,6 +7,7 @@
 //
 
 #import "IssueCell.h"
+#import "Constants.h"
 
 @interface IssueCell ()
 
@@ -37,12 +38,7 @@
 
 - (void)setupWithIssue:(GLIssue *)issue
 {
-    static NSDateFormatter *formatter;
-    if (!formatter) {
-        formatter = [NSDateFormatter new];
-        formatter.dateStyle = NSDateFormatterMediumStyle;
-        formatter.timeStyle = NSDateFormatterShortStyle;
-    }
+    NSDateFormatter *formatter = [Constants standardFormatter];
     
     _lblTitle.text = issue.title;
     _lblAuthorName.text = issue.author.name;

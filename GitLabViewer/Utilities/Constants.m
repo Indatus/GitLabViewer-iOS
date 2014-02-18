@@ -22,4 +22,16 @@
     return label;
 }
 
++ (NSDateFormatter *)standardFormatter
+{
+    static NSDateFormatter *formatter;
+    if (!formatter) {
+        formatter = [NSDateFormatter new];
+        formatter.dateStyle = NSDateFormatterMediumStyle;
+        formatter.timeStyle = NSDateFormatterShortStyle;
+    }
+    
+    return formatter;
+}
+
 @end

@@ -12,4 +12,6 @@
 
 + (UILabel *)emptyView;
 
++ (NSDateFormatter *)standardFormatter;
+
 @end
