@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblTitle;
 @property (weak, nonatomic) IBOutlet UILabel *lblSourceDestination;
 @property (weak, nonatomic) IBOutlet UILabel *lblAuthorName;
+@property (weak, nonatomic) IBOutlet UILabel *lblStatus;
 
 @end
 
@@ -40,6 +41,7 @@
     _lblTitle.text = mergeRequest.title;
     _lblSourceDestination.text = [NSString stringWithFormat:@"%@ > %@", mergeRequest.sourceBranch, mergeRequest.targetBranch];
     _lblAuthorName.text = mergeRequest.author.name;
+    _lblStatus.text = mergeRequest.state;
 }
 
 @end

@@ -96,7 +96,7 @@ static NSString * const kEmptyViewText = @"There are currently no\nMerge Request
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 100;
+    return 120;
 }
 
 

@@ -63,7 +63,19 @@
 
 - (IBAction)btnAcceptMergeClicked:(id)sender
 {
-    // TODO: make a connection to accept the merge request
+    _mergeRequest.state = @"merged";
+    
+    NSLog(@"Merge request: %@", [_mergeRequest jsonRepresentation]);
+    
+    [[GLGitlabApi sharedInstance] updateMergeRequest:_mergeRequest
+                                       successBlock:^(GLMergeRequest *responseObject) {
+                                           NSLog(@"Merge Request accept successful");
+                                           NSLog(@"%@", responseObject);
+    }
+                                    andFailureBlock:^(NSError *error) {
+                                        NSLog(@"Merge Request accept failed...");
+                                        NSLog(@"Error: %@", error);
+    }];
 }
 
 
