@@ -19,6 +19,8 @@
 		5D0B0AB218B688D400949BF0 /* INVertex.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B0AB018B688D400949BF0 /* INVertex.m */; };
 		5D0B0AB518B688F100949BF0 /* INEdge.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B0AB418B688F100949BF0 /* INEdge.m */; };
 		5D0B0AB618B688F100949BF0 /* INEdge.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B0AB418B688F100949BF0 /* INEdge.m */; };
+		5D0B0AB918B699FA00949BF0 /* GLNetworkGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B0AB818B699FA00949BF0 /* GLNetworkGraph.m */; };
+		5D0B0ABA18B699FA00949BF0 /* GLNetworkGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B0AB818B699FA00949BF0 /* GLNetworkGraph.m */; };
 		5D1F5A32A83F440EA1A0E702 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 135504ED168842DAADBC91EC /* libPods.a */; };
 		5D74FD6818AAA5BA00656E03 /* UserPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FD6718AAA5BA00656E03 /* UserPreferences.m */; };
 		5D74FD6918AAA5BA00656E03 /* UserPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FD6718AAA5BA00656E03 /* UserPreferences.m */; };
@@ -116,6 +118,8 @@
 		5D0B0AB018B688D400949BF0 /* INVertex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INVertex.m; sourceTree = "<group>"; };
 		5D0B0AB318B688F100949BF0 /* INEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INEdge.h; sourceTree = "<group>"; };
 		5D0B0AB418B688F100949BF0 /* INEdge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INEdge.m; sourceTree = "<group>"; };
+		5D0B0AB718B699FA00949BF0 /* GLNetworkGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLNetworkGraph.h; sourceTree = "<group>"; };
+		5D0B0AB818B699FA00949BF0 /* GLNetworkGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLNetworkGraph.m; sourceTree = "<group>"; };
 		5D74FD6618AAA5BA00656E03 /* UserPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserPreferences.h; sourceTree = "<group>"; };
 		5D74FD6718AAA5BA00656E03 /* UserPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserPreferences.m; sourceTree = "<group>"; };
 		5D74FD6F18AAB94500656E03 /* CommitsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitsViewController.h; sourceTree = "<group>"; };
@@ -241,6 +245,8 @@
 				5D0B0AB018B688D400949BF0 /* INVertex.m */,
 				5D0B0AB318B688F100949BF0 /* INEdge.h */,
 				5D0B0AB418B688F100949BF0 /* INEdge.m */,
+				5D0B0AB718B699FA00949BF0 /* GLNetworkGraph.h */,
+				5D0B0AB818B699FA00949BF0 /* GLNetworkGraph.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -606,6 +612,7 @@
 				5D74FDB918AD748F00656E03 /* SingleMergeRequestViewController.m in Sources */,
 				5D74FD7518AAB95800656E03 /* FilesViewController.m in Sources */,
 				5D74FDA518AD3D6F00656E03 /* UIAlertView+Blocks.m in Sources */,
+				5D0B0AB918B699FA00949BF0 /* GLNetworkGraph.m in Sources */,
 				5D74FD7D18AAB96800656E03 /* NetworkViewController.m in Sources */,
 				5D74FD7918AAB96000656E03 /* GraphsViewController.m in Sources */,
 				0C5F18A618A540130035720D /* MergeRequestCell.m in Sources */,
@@ -640,6 +647,7 @@
 				5D8A5ABE18A4113600D1D2B7 /* ProjectsCell.m in Sources */,
 				5D8A584818A19E6400D1D2B7 /* GitLabViewerTests.m in Sources */,
 				5D74FDA018AD343C00656E03 /* CreateIssueViewController.m in Sources */,
+				5D0B0ABA18B699FA00949BF0 /* GLNetworkGraph.m in Sources */,
 				5D74FD7218AAB94500656E03 /* CommitsViewController.m in Sources */,
 				5D74FD6918AAA5BA00656E03 /* UserPreferences.m in Sources */,
 				5D0B0AAE18B6889800949BF0 /* INSimpleGraphView.m in Sources */,
