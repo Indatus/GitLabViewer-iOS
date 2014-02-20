@@ -10,6 +10,7 @@
 #import "INVertex.h"
 #import "INEdge.h"
 #import "INSimpleGraphView.h"
+#import "GLNetworkGraph.h"
 
 @interface NetworkViewController ()
 
@@ -29,9 +30,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    NSMutableArray *vertices = [NSMutableArray new];
-    NSMutableArray *edges = [NSMutableArray new];
     
     /* ---- Branch names ---- */
     
@@ -47,20 +45,26 @@
                                                                                                           NSBackgroundColorAttributeName: [UIColor blackColor],
                                                                                                           NSStrokeColorAttributeName: [UIColor whiteColor]}];
     
-
-    
-    
-    
-    UIScrollView *scollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
-    
-    INSimpleGraphView *graphView = [[INSimpleGraphView alloc] initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height)
-                                                               vertices:vertices
-                                                               andEdges:edges];
-    graphView.backgroundColor = [UIColor whiteColor];
-    
-    [scollView addSubview:graphView];
-    scollView.contentSize = graphView.frame.size;
-    [self.view addSubview:scollView];
+    [[GLGitlabApi sharedInstance] getAllCommitsForProjectId:_project.projectId withSuccessBlock:^(NSArray *commits) {
+        GLNetworkGraph *networkGraph = [[GLNetworkGraph alloc] initWithCommits:commits];
+        
+        
+        NSLog(@"vertices are: %@", networkGraph.vertices);
+        
+        UIScrollView *scollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+        
+        INSimpleGraphView *graphView = [[INSimpleGraphView alloc] initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height)
+                                                                       vertices:networkGraph.vertices
+                                                                       andEdges:networkGraph.edges];
+        graphView.backgroundColor = [UIColor whiteColor];
+        
+        [scollView addSubview:graphView];
+        scollView.contentSize = graphView.frame.size;
+        [self.view addSubview:scollView];
+ 
+    } andFailureBlock:^(NSError *error) {
+        NSLog(@"Failed to retrieve commits inside the NetworkViewController");
+    }];
 }
 
 - (void)didReceiveMemoryWarning

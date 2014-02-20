@@ -24,6 +24,7 @@
 {
     if (self = [super init]) {
         [[GLGitlabApi sharedInstance] getAllCommitsForProjectId:projectId withSuccessBlock:^(NSArray *commits) {
+            NSLog(@"commits: %@", commits);
             [self createVerticesAndEdgesFromCommits:commits];
         } andFailureBlock:^(NSError *error) {
             NSLog(@"Error retrieving commits...");
@@ -37,12 +38,14 @@
 
 - (void)createVerticesAndEdgesFromCommits:(NSArray *)commits
 {
+    _vertices = [NSMutableArray new];
     int i = 0;
     for (GLCommit *c in commits) {
         INVertex *v = [INVertex new];
-        v.y = i;
+        v.y = i++;
         
         [_vertices addObject:v];
+        NSLog(@"vertex added");
     }
 }
 
