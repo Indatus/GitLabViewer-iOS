@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) INVertex *vertex1;
 @property (nonatomic, strong) INVertex *vertex2;
+@property (nonatomic, strong) UIColor *color;
 
 - (NSString *)description;
 

@@ -47,13 +47,10 @@ static const int kPaddingTop = 20;
         CGPoint point1 = CGPointMake((e.vertex1.x * kSizeMultiplier) + kPaddingLeft, (e.vertex1.y * kSizeMultiplier) + kPaddingTop);
         CGPoint point2 = CGPointMake((e.vertex2.x * kSizeMultiplier) + kPaddingLeft, (e.vertex2.y * kSizeMultiplier) + kPaddingTop);
         
-        if (e.vertex2.x == 1) {
-            CGContextSetRGBStrokeColor(context, .1, .3, .7, 1);
-        }
+        UIColor *strokeColor = e.color ?: [UIColor blackColor];
+        const CGFloat *components = CGColorGetComponents((__bridge CGColorRef)(strokeColor));
         
-        if (e.vertex2.x == 2) {
-            CGContextSetRGBStrokeColor(context, .8, .9, .4, 1);
-        }
+        CGContextSetRGBStrokeColor(context, components[0], components[1], components[2], components[3]);
         
         CGContextMoveToPoint(context, point1.x, point1.y);
         CGContextAddLineToPoint(context, point2.x, point2.y);
