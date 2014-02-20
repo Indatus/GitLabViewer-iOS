@@ -21,14 +21,14 @@ NOTE:  This project is not fully functioning at the moment, and much of the UI i
 
 ### In Progress/Partially Working
 
-- Merge request cell styling
-- Accept a merge request
+- View network graph
+- Accept a merge request (this has been started, but I'm not sure how it's going to work...)
 
 ### TODO
 
+- Merge request cell styling
 - View files
 - View commits
-- View network
 - View graphs
 - Edit issues (comment, close, open, etc.)
 - Edit merge requests (comment, approve, upvote, downvote, etc.)
