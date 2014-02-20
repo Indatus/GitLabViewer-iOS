@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class INVertex, INEdge;
+
 @interface INSimpleGraphView : UIView
+
+@property (nonatomic, strong) NSMutableArray *vertices;
+@property (nonatomic, strong) NSMutableArray *edges;
+
+- (instancetype)initWithFrame:(CGRect)frame vertices:(NSArray *)vertices andEdges:(NSArray *)edges;
 
 @end
