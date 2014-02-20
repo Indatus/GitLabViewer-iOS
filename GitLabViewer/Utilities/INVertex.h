@@ -10,4 +10,16 @@
 
 @interface INVertex : NSObject
 
+@property (nonatomic, assign) int32_t x;
+@property (nonatomic, assign) int32_t y;
+@property (nonatomic, copy) NSAttributedString *label;
+
+- (NSString *)description;
+
+- (BOOL)isEqual:(id)other;
+
+- (BOOL)isEqualToVertex:(INVertex *)vertex;
+
+- (NSUInteger)hash;
+
 @end

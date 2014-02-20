@@ -8,6 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+@class INVertex;
+
 @interface INEdge : NSObject
+
+@property (nonatomic, strong) INVertex *vertex1;
+@property (nonatomic, strong) INVertex *vertex2;
+
+- (NSString *)description;
+
+- (BOOL)isEqual:(id)other;
+
+- (BOOL)isEqualToEdge:(INEdge *)edge;
+
+- (NSUInteger)hash;
 
 @end
