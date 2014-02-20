@@ -7,18 +7,43 @@
 //
 
 #import "GLNetworkGraph.h"
+#import "INVertex.h"
+#import "INEdge.h"
 
 @implementation GLNetworkGraph
 
 - (instancetype)initWithCommits:(NSArray *)commits
 {
     if (self = [super init]) {
-        _commits = commits;
+        [self createVerticesAndEdgesFromCommits:commits];
     }
     return self;
 }
 
-// return vertices
-// return edges
+- (instancetype)initWithProjectId:(int64_t)projectId
+{
+    if (self = [super init]) {
+        [[GLGitlabApi sharedInstance] getAllCommitsForProjectId:projectId withSuccessBlock:^(NSArray *commits) {
+            [self createVerticesAndEdgesFromCommits:commits];
+        } andFailureBlock:^(NSError *error) {
+            NSLog(@"Error retrieving commits...");
+            NSLog(@"Error: %@", error);
+        }];
+    }
+    return self;
+}
+
+
+
+- (void)createVerticesAndEdgesFromCommits:(NSArray *)commits
+{
+    int i = 0;
+    for (GLCommit *c in commits) {
+        INVertex *v = [INVertex new];
+        v.y = i;
+        
+        [_vertices addObject:v];
+    }
+}
 
 @end

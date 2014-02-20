@@ -10,8 +10,10 @@
 
 @interface GLNetworkGraph : NSObject
 
-@property (nonatomic, strong) NSArray *commits;
+@property (nonatomic, strong) NSMutableArray *vertices;
+@property (nonatomic, strong) NSMutableArray *edges;
 
 - (instancetype)initWithCommits:(NSArray *)commits;
+- (instancetype)initWithProjectId:(int64_t)projectId;
 
 @end
