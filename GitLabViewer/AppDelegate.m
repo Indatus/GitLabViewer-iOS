@@ -23,7 +23,6 @@
     [self setUpViews];
     [self presentLoginIfNeeded];
     
-    
     return YES;
 }
 
@@ -33,6 +32,7 @@
 {
     _projectsVC = [[ProjectsViewController alloc] initWithStyle:UITableViewStyleGrouped];
     _projectsVC.title = @"Projects";
+
     _navController = [[GLNavigationController alloc] initWithRootViewController:_projectsVC];
 
     [_window setRootViewController:_navController];

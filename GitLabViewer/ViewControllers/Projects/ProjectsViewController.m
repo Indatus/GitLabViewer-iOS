@@ -38,6 +38,10 @@ static NSString *const kCellIdentifier = @"Cell";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UIEdgeInsets inset = UIEdgeInsetsMake(20, 0, 0, 0);
+    self.tableView.contentInset = inset;
+    
     UINib *nib = [UINib nibWithNibName:@"ProjectsCell" bundle:[NSBundle mainBundle]];
     [self.tableView registerNib:nib forCellReuseIdentifier:kCellIdentifier];
     
