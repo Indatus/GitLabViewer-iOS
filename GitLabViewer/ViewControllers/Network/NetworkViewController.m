@@ -211,7 +211,7 @@
     
     UIScrollView *scollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     
-    INSimpleGraphView *graph = [[INSimpleGraphView alloc] initWithFrame:CGRectMake(0, 60, 320, self.view.frame.size.height)
+    INSimpleGraphView *graph = [[INSimpleGraphView alloc] initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height)
                                                                vertices:vertices
                                                                andEdges:edges];
     graph.backgroundColor = [UIColor whiteColor];
