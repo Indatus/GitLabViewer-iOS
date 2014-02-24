@@ -7,26 +7,32 @@
 //
 
 #import "FilesViewController.h"
+#import <GLProject.h>
+#import <GLFile.h>
+#import <GLNetworkOperation.h>
+#import <GLGitlabApi+Files.h>
+#import "FileCell.h"
 
 @interface FilesViewController ()
-
+@property (nonatomic, strong) GLNetworkOperation *operation;
+@property (nonatomic, strong) NSArray *files;
 @end
 
 @implementation FilesViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    UINib *nib = [UINib nibWithNibName:@"FileCell" bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"Cell"];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    if (_operation) {
+        [_operation cancel];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,16 +41,44 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return _files.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    FileCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    GLFile *file = _files[indexPath.row];
+    [cell setupWithFile:file];
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 75.f;
+}
+
 #pragma mark - Private Methods
 
 - (void)fetchData
 {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Fixme"
-                                                    message:@"I haven't been implemented yet, please fix."
-                                                   delegate:nil
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
-    [alert show];
+    self.operation = [[GLGitlabApi sharedInstance] getRepositoryTreeForProjectId:self.project.projectId
+                                                                            path:nil
+                                                                      branchName:nil
+                                                                withSuccessBlock:^(NSArray *files) {
+                                                                    self.files = files;
+                                                                    [self.tableView reloadData];
+                                                                }
+                                                                 andFailureBlock:^(NSError *error) {
+                                                                     NSLog(@"Error fetching files: %@", error);
+                                                                 }];
 }
 
 @end

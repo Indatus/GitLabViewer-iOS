@@ -13,6 +13,8 @@
 		0C5F18A218A53D150035720D /* BaseProjectDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F18A118A53D150035720D /* BaseProjectDetailViewController.m */; };
 		0C5F18A618A540130035720D /* MergeRequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F18A518A540130035720D /* MergeRequestCell.m */; };
 		0C5F18A818A5401E0035720D /* MergeRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5F18A718A5401E0035720D /* MergeRequestCell.xib */; };
+		0CDA72D518BBD00F00FE1E1D /* FileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDA72D418BBD00F00FE1E1D /* FileCell.m */; };
+		0CDA72D718BBD03500FE1E1D /* FileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CDA72D618BBD03500FE1E1D /* FileCell.xib */; };
 		5D0B0AAD18B6889800949BF0 /* INSimpleGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B0AAC18B6889800949BF0 /* INSimpleGraphView.m */; };
 		5D0B0AAE18B6889800949BF0 /* INSimpleGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B0AAC18B6889800949BF0 /* INSimpleGraphView.m */; };
 		5D0B0AB118B688D400949BF0 /* INVertex.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B0AB018B688D400949BF0 /* INVertex.m */; };
@@ -111,6 +113,9 @@
 		0C5F18A418A540130035720D /* MergeRequestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergeRequestCell.h; sourceTree = "<group>"; };
 		0C5F18A518A540130035720D /* MergeRequestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergeRequestCell.m; sourceTree = "<group>"; };
 		0C5F18A718A5401E0035720D /* MergeRequestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MergeRequestCell.xib; sourceTree = "<group>"; };
+		0CDA72D318BBD00F00FE1E1D /* FileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileCell.h; sourceTree = "<group>"; };
+		0CDA72D418BBD00F00FE1E1D /* FileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileCell.m; sourceTree = "<group>"; };
+		0CDA72D618BBD03500FE1E1D /* FileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FileCell.xib; sourceTree = "<group>"; };
 		135504ED168842DAADBC91EC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D0B0AAB18B6889800949BF0 /* INSimpleGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INSimpleGraphView.h; sourceTree = "<group>"; };
 		5D0B0AAC18B6889800949BF0 /* INSimpleGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INSimpleGraphView.m; sourceTree = "<group>"; };
@@ -265,6 +270,9 @@
 			children = (
 				5D74FD7318AAB95800656E03 /* FilesViewController.h */,
 				5D74FD7418AAB95800656E03 /* FilesViewController.m */,
+				0CDA72D318BBD00F00FE1E1D /* FileCell.h */,
+				0CDA72D418BBD00F00FE1E1D /* FileCell.m */,
+				0CDA72D618BBD03500FE1E1D /* FileCell.xib */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -533,6 +541,7 @@
 				5D74FD8818AABED300656E03 /* SingleIssueViewController.xib in Resources */,
 				0C5F18A818A5401E0035720D /* MergeRequestCell.xib in Resources */,
 				5D74FD9618AAE02600656E03 /* CreateProjectViewController.xib in Resources */,
+				0CDA72D718BBD03500FE1E1D /* FileCell.xib in Resources */,
 				0C0F36DF18A5591B00AC65FA /* IssueCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -608,6 +617,7 @@
 				5D8A5ABD18A4113600D1D2B7 /* ProjectsCell.m in Sources */,
 				5D0B0AB118B688D400949BF0 /* INVertex.m in Sources */,
 				5D74FD8118AAB97100656E03 /* SettingsViewController.m in Sources */,
+				0CDA72D518BBD00F00FE1E1D /* FileCell.m in Sources */,
 				5D8A588318A3316D00D1D2B7 /* IssuesViewController.m in Sources */,
 				5D74FDB918AD748F00656E03 /* SingleMergeRequestViewController.m in Sources */,
 				5D74FD7518AAB95800656E03 /* FilesViewController.m in Sources */,

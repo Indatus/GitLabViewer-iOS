@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class GLProject;
+
 @interface BaseProjectDetailViewController : UITableViewController
 
 @property (nonatomic, strong) GLProject *project;
