@@ -17,22 +17,20 @@ NOTE:  This project is not fully functioning at the moment, and much of the UI i
 - View a list of all merge requests in a project
 - Create a merge request for a project
 - View a single merge request in a project
- 
+- View a list of all commits in a project
 
 ### In Progress/Partially Working
 
 - View network graph
-- Accept a merge request (this has been started, but I'm not sure how it's going to work...)
+- View single commit
+- View files
 
 ### TODO
 
+- Accept a merge request (this has been started, but I'm not sure how it's going to work...)
 - Merge request cell styling
-- View files
-- View commits
-- View graphs
 - Edit issues (comment, close, open, etc.)
 - Edit merge requests (comment, approve, upvote, downvote, etc.)
-- Settings
 - Select branch for merge request
 - Select users for assignee fields
 - Better error handling
