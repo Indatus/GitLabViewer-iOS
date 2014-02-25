@@ -28,8 +28,8 @@
 {
     [[GLGitlabApi sharedInstance] getFileContentFromProject:self.project.projectId
                                                         sha:_file.fileId
-                                           withSuccessBlock:^(id responseObject) {
-                                               [self showTextResponse:responseObject];
+                                           withSuccessBlock:^(NSData *responseData) {
+                                               [self handleData:responseData];
                                                [_activityIndicator stopAnimating];
                                            }
                                             andFailureBlock:^(NSError *error) {
@@ -39,19 +39,59 @@
                                             } ];
 }
 
-- (void)showTextResponse:(NSData *)data
+
+- (void)handleData:(NSData *)data
+{
+    if ([self isFileAnImage]) {
+        [self showImage:data];
+        return;
+    }
+    
+    NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    if (string) {
+        [self showTextResponse:string];
+    }
+    else {
+        [self showUnsupportedFormatMessage];
+    }
+}
+
+- (void)showImage:(NSData *)data {
+    UIImage *image = [UIImage imageWithData:data];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    imageView.alpha = 0;
+    imageView.center = self.view.center;
+    
+    if (!CGRectContainsRect(self.view.bounds, imageView.frame)) {
+        [self scaleImageViewToFit:imageView];
+    }
+    
+    [self.view addSubview:imageView];
+    [self fadeInView:imageView];
+}
+
+- (void)scaleImageViewToFit:(UIImageView *)imageView
+{
+    // TODO: Actually scale the image view...
+}
+
+- (void)showTextResponse:(NSString *)string
 {
     UITextView *textView = [[UITextView alloc] initWithFrame:self.view.bounds];
     textView.editable = NO;
-    textView.text = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    textView.text = string;
     textView.alpha = 0;
     [self.view addSubview:textView];
-    
+    [self fadeInView:textView];
+}
+
+- (void)fadeInView:(UIView *)view
+{
     [UIView animateWithDuration:.25
                           delay:0
                         options:UIViewAnimationOptionCurveEaseIn
                      animations:^{
-                         textView.alpha = 1;
+                         view.alpha = 1;
                      }
                      completion:nil];
 }
@@ -64,6 +104,34 @@
                                           cancelButtonTitle:nil
                                           otherButtonTitles:@"OK", nil];
     [alert show];
+}
+
+- (void)showUnsupportedFormatMessage
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                    message:@"The downloaded file cannot be viewed."
+                                                   delegate:self
+                                          cancelButtonTitle:nil
+                                          otherButtonTitles:@"OK", nil];
+    [alert show];
+}
+
+- (BOOL)isFileAnImage
+{
+    if ([_file.name rangeOfString:@"."].location == NSNotFound ) {
+        return NO;
+    }
+    
+    NSString *extension = [[_file.name componentsSeparatedByString:@"."] lastObject];
+    NSArray *imageExtensions = @[@"tiff", @"tif", @"jpg", @"jpeg", @"gif", @"png", @"bmp", @"bmpf", @"ico", @"cur", @"xbm"];
+    
+    for (NSString *imageExtension in imageExtensions) {
+        if ([extension caseInsensitiveCompare:imageExtension] == NSOrderedSame) {
+            return YES;
+        }
+    }
+    
+    return NO;
 }
 
 #pragma mark - UIAlertViewDelegate
