@@ -24,6 +24,14 @@
 		5D0B0AB618B688F100949BF0 /* INEdge.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B0AB418B688F100949BF0 /* INEdge.m */; };
 		5D0B0AB918B699FA00949BF0 /* GLNetworkGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B0AB818B699FA00949BF0 /* GLNetworkGraph.m */; };
 		5D0B0ABA18B699FA00949BF0 /* GLNetworkGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B0AB818B699FA00949BF0 /* GLNetworkGraph.m */; };
+		5D0B0ABE18BD218D00949BF0 /* SingleCommitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B0ABC18BD218D00949BF0 /* SingleCommitViewController.m */; };
+		5D0B0ABF18BD218D00949BF0 /* SingleCommitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B0ABC18BD218D00949BF0 /* SingleCommitViewController.m */; };
+		5D0B0AC018BD218D00949BF0 /* SingleCommitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B0ABD18BD218D00949BF0 /* SingleCommitViewController.xib */; };
+		5D0B0AC118BD218D00949BF0 /* SingleCommitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B0ABD18BD218D00949BF0 /* SingleCommitViewController.xib */; };
+		5D0B0AC418BD21A000949BF0 /* CommitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B0AC318BD21A000949BF0 /* CommitCell.m */; };
+		5D0B0AC518BD21A000949BF0 /* CommitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B0AC318BD21A000949BF0 /* CommitCell.m */; };
+		5D0B0AC718BD21B500949BF0 /* CommitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B0AC618BD21B500949BF0 /* CommitCell.xib */; };
+		5D0B0AC818BD21B500949BF0 /* CommitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B0AC618BD21B500949BF0 /* CommitCell.xib */; };
 		5D1F5A32A83F440EA1A0E702 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 135504ED168842DAADBC91EC /* libPods.a */; };
 		5D74FD6818AAA5BA00656E03 /* UserPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FD6718AAA5BA00656E03 /* UserPreferences.m */; };
 		5D74FD6918AAA5BA00656E03 /* UserPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FD6718AAA5BA00656E03 /* UserPreferences.m */; };
@@ -128,6 +136,12 @@
 		5D0B0AB418B688F100949BF0 /* INEdge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INEdge.m; sourceTree = "<group>"; };
 		5D0B0AB718B699FA00949BF0 /* GLNetworkGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLNetworkGraph.h; sourceTree = "<group>"; };
 		5D0B0AB818B699FA00949BF0 /* GLNetworkGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLNetworkGraph.m; sourceTree = "<group>"; };
+		5D0B0ABB18BD218D00949BF0 /* SingleCommitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleCommitViewController.h; sourceTree = "<group>"; };
+		5D0B0ABC18BD218D00949BF0 /* SingleCommitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleCommitViewController.m; sourceTree = "<group>"; };
+		5D0B0ABD18BD218D00949BF0 /* SingleCommitViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingleCommitViewController.xib; sourceTree = "<group>"; };
+		5D0B0AC218BD21A000949BF0 /* CommitCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitCell.h; sourceTree = "<group>"; };
+		5D0B0AC318BD21A000949BF0 /* CommitCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommitCell.m; sourceTree = "<group>"; };
+		5D0B0AC618BD21B500949BF0 /* CommitCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommitCell.xib; sourceTree = "<group>"; };
 		5D74FD6618AAA5BA00656E03 /* UserPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserPreferences.h; sourceTree = "<group>"; };
 		5D74FD6718AAA5BA00656E03 /* UserPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserPreferences.m; sourceTree = "<group>"; };
 		5D74FD6F18AAB94500656E03 /* CommitsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitsViewController.h; sourceTree = "<group>"; };
@@ -264,6 +278,12 @@
 			children = (
 				5D74FD6F18AAB94500656E03 /* CommitsViewController.h */,
 				5D74FD7018AAB94500656E03 /* CommitsViewController.m */,
+				5D0B0AC218BD21A000949BF0 /* CommitCell.h */,
+				5D0B0AC318BD21A000949BF0 /* CommitCell.m */,
+				5D0B0AC618BD21B500949BF0 /* CommitCell.xib */,
+				5D0B0ABB18BD218D00949BF0 /* SingleCommitViewController.h */,
+				5D0B0ABC18BD218D00949BF0 /* SingleCommitViewController.m */,
+				5D0B0ABD18BD218D00949BF0 /* SingleCommitViewController.xib */,
 			);
 			path = Commits;
 			sourceTree = "<group>";
@@ -546,8 +566,10 @@
 				5D74FD8818AABED300656E03 /* SingleIssueViewController.xib in Resources */,
 				0C5F18A818A5401E0035720D /* MergeRequestCell.xib in Resources */,
 				5D74FD9618AAE02600656E03 /* CreateProjectViewController.xib in Resources */,
+				5D0B0AC718BD21B500949BF0 /* CommitCell.xib in Resources */,
 				0CDA72D718BBD03500FE1E1D /* FileCell.xib in Resources */,
 				0C0F36DF18A5591B00AC65FA /* IssueCell.xib in Resources */,
+				5D0B0AC018BD218D00949BF0 /* SingleCommitViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,6 +578,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D74FD8918AABED300656E03 /* SingleIssueViewController.xib in Resources */,
+				5D0B0AC818BD21B500949BF0 /* CommitCell.xib in Resources */,
 				5D74FDB518AD53C000656E03 /* CreateMergeRequestViewController.xib in Resources */,
 				5D8A5AC118A4114E00D1D2B7 /* ProjectsCell.xib in Resources */,
 				5D8A585818A19F4400D1D2B7 /* LoginViewController.xib in Resources */,
@@ -564,6 +587,7 @@
 				5D8A584618A19E6400D1D2B7 /* InfoPlist.strings in Resources */,
 				5D74FDBC18AD748F00656E03 /* SingleMergeRequestViewController.xib in Resources */,
 				5D74FDA218AD343C00656E03 /* CreateIssueViewController.xib in Resources */,
+				5D0B0AC118BD218D00949BF0 /* SingleCommitViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,6 +632,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D0B0AAD18B6889800949BF0 /* INSimpleGraphView.m in Sources */,
+				5D0B0ABE18BD218D00949BF0 /* SingleCommitViewController.m in Sources */,
 				5D8A586F18A1A45A00D1D2B7 /* ProjectsViewController.m in Sources */,
 				5D8A588718A3318F00D1D2B7 /* MergeRequestsViewController.m in Sources */,
 				5D74FDAD18AD3F5B00656E03 /* GLNavigationController.m in Sources */,
@@ -630,6 +655,7 @@
 				5D0B0AB918B699FA00949BF0 /* GLNetworkGraph.m in Sources */,
 				5D74FD7D18AAB96800656E03 /* NetworkViewController.m in Sources */,
 				5D74FD7918AAB96000656E03 /* GraphsViewController.m in Sources */,
+				5D0B0AC418BD21A000949BF0 /* CommitCell.m in Sources */,
 				0C0C7B7218BCED1800CCF2DC /* FileViewController.m in Sources */,
 				0C5F18A618A540130035720D /* MergeRequestCell.m in Sources */,
 				0C5F18A218A53D150035720D /* BaseProjectDetailViewController.m in Sources */,
@@ -657,6 +683,7 @@
 				5D74FD7E18AAB96800656E03 /* NetworkViewController.m in Sources */,
 				5D74FD7A18AAB96000656E03 /* GraphsViewController.m in Sources */,
 				5D74FD8218AAB97100656E03 /* SettingsViewController.m in Sources */,
+				5D0B0AC518BD21A000949BF0 /* CommitCell.m in Sources */,
 				5D74FD8D18AAD25200656E03 /* Constants.m in Sources */,
 				5D8A588418A3316D00D1D2B7 /* IssuesViewController.m in Sources */,
 				5D8A585618A19F4400D1D2B7 /* LoginViewController.m in Sources */,
@@ -665,6 +692,7 @@
 				5D74FDA018AD343C00656E03 /* CreateIssueViewController.m in Sources */,
 				5D0B0ABA18B699FA00949BF0 /* GLNetworkGraph.m in Sources */,
 				5D74FD7218AAB94500656E03 /* CommitsViewController.m in Sources */,
+				5D0B0ABF18BD218D00949BF0 /* SingleCommitViewController.m in Sources */,
 				5D74FD6918AAA5BA00656E03 /* UserPreferences.m in Sources */,
 				5D0B0AAE18B6889800949BF0 /* INSimpleGraphView.m in Sources */,
 				5D74FD7618AAB95800656E03 /* FilesViewController.m in Sources */,
