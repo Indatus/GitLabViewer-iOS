@@ -14,6 +14,7 @@
 		0C5F18A218A53D150035720D /* BaseProjectDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F18A118A53D150035720D /* BaseProjectDetailViewController.m */; };
 		0C5F18A618A540130035720D /* MergeRequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F18A518A540130035720D /* MergeRequestCell.m */; };
 		0C5F18A818A5401E0035720D /* MergeRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5F18A718A5401E0035720D /* MergeRequestCell.xib */; };
+		0C9D87B618BD10880023EAEA /* FileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9D87B518BD10880023EAEA /* FileViewController.xib */; };
 		0CDA72D518BBD00F00FE1E1D /* FileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDA72D418BBD00F00FE1E1D /* FileCell.m */; };
 		0CDA72D718BBD03500FE1E1D /* FileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CDA72D618BBD03500FE1E1D /* FileCell.xib */; };
 		5D0B0AAD18B6889800949BF0 /* INSimpleGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B0AAC18B6889800949BF0 /* INSimpleGraphView.m */; };
@@ -124,6 +125,7 @@
 		0C5F18A418A540130035720D /* MergeRequestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergeRequestCell.h; sourceTree = "<group>"; };
 		0C5F18A518A540130035720D /* MergeRequestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergeRequestCell.m; sourceTree = "<group>"; };
 		0C5F18A718A5401E0035720D /* MergeRequestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MergeRequestCell.xib; sourceTree = "<group>"; };
+		0C9D87B518BD10880023EAEA /* FileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FileViewController.xib; sourceTree = "<group>"; };
 		0CDA72D318BBD00F00FE1E1D /* FileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileCell.h; sourceTree = "<group>"; };
 		0CDA72D418BBD00F00FE1E1D /* FileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileCell.m; sourceTree = "<group>"; };
 		0CDA72D618BBD03500FE1E1D /* FileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FileCell.xib; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 				0CDA72D618BBD03500FE1E1D /* FileCell.xib */,
 				0C0C7B7018BCED1800CCF2DC /* FileViewController.h */,
 				0C0C7B7118BCED1800CCF2DC /* FileViewController.m */,
+				0C9D87B518BD10880023EAEA /* FileViewController.xib */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -563,6 +566,7 @@
 				5D74FDA118AD343C00656E03 /* CreateIssueViewController.xib in Resources */,
 				5D8A585718A19F4400D1D2B7 /* LoginViewController.xib in Resources */,
 				5D74FDBB18AD748F00656E03 /* SingleMergeRequestViewController.xib in Resources */,
+				0C9D87B618BD10880023EAEA /* FileViewController.xib in Resources */,
 				5D74FD8818AABED300656E03 /* SingleIssueViewController.xib in Resources */,
 				0C5F18A818A5401E0035720D /* MergeRequestCell.xib in Resources */,
 				5D74FD9618AAE02600656E03 /* CreateProjectViewController.xib in Resources */,

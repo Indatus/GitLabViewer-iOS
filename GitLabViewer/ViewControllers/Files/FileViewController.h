@@ -6,12 +6,14 @@
 //  Copyright (c) 2014 Indatus. All rights reserved.
 //
 
-#import "BaseProjectDetailViewController.h"
+#import <UIKit/UIKit.h>
 
 @class GLFile;
+@class GLProject;
 
-@interface FileViewController : BaseProjectDetailViewController
+@interface FileViewController : UIViewController
 
+@property (nonatomic, strong) GLProject *project;
 @property (nonatomic, strong) GLFile *file;
 
 @end

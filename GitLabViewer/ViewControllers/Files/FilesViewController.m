@@ -79,7 +79,7 @@
             break;
             
         case GLFileTypeBlob:
-            controller = [FileViewController new];
+            controller = [[FileViewController alloc] init];
             ((FileViewController *)controller).file = file;
             break;
     }
