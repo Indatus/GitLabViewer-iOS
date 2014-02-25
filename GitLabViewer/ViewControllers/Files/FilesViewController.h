@@ -8,6 +8,10 @@
 
 #import "BaseProjectDetailViewController.h"
 
+@class GLFile;
+
 @interface FilesViewController : BaseProjectDetailViewController
+
+@property (nonatomic, strong) NSString *path;
 
 @end

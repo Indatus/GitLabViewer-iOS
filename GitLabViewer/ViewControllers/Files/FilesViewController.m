@@ -60,9 +60,30 @@
     return cell;
 }
 
+#pragma mark - UITableViewDelegate
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 75.f;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    BaseProjectDetailViewController *controller;
+    GLFile *file = _files[indexPath.row];
+    switch (file.type) {
+        case GLFileTypeTree:
+            controller = [[FilesViewController alloc] init];
+            ((FilesViewController *)controller).path = _path ? [_path stringByAppendingPathComponent:file.name] : file.name;
+            break;
+            
+        case GLFileTypeBlob:
+            // Load a file viewer
+            break;
+    }
+    controller.project = self.project;
+    [self.navigationController pushViewController:controller animated:YES];
+
 }
 
 #pragma mark - Private Methods
@@ -70,7 +91,7 @@
 - (void)fetchData
 {
     self.operation = [[GLGitlabApi sharedInstance] getRepositoryTreeForProjectId:self.project.projectId
-                                                                            path:nil
+                                                                            path:_path
                                                                       branchName:nil
                                                                 withSuccessBlock:^(NSArray *files) {
                                                                     self.files = files;
