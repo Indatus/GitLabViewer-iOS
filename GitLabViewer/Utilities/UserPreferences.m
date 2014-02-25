@@ -20,6 +20,7 @@ NSString * const kLoggedIn = @"logged_in";
 NSString * const kHostname = @"hostname";
 NSString * const kUsername = @"username";
 NSString * const kPassword = @"password";
+NSString * const kUser = @"user";
 
 static UserPreferences *_instance;
 
@@ -86,6 +87,17 @@ static UserPreferences *_instance;
 - (NSString *)password
 {
     return [_userDefaults objectForKey:kPassword];
+}
+
+- (void)setUser:(GLUser *)user
+{
+    [_userDefaults setObject:[user jsonRepresentation] forKey:kUser];
+    [_userDefaults synchronize];
+}
+
+- (GLUser *)user
+{
+    return [_userDefaults objectForKey:kUser];
 }
 
 

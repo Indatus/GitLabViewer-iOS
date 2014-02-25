@@ -79,6 +79,7 @@
                                           _userPrefs.username = username;
                                           _userPrefs.password = password;
                                           _userPrefs.loggedIn = YES;
+                                          _userPrefs.user = user;
                                           
                                           [[GLGitlabApi sharedInstance] getUsersProjectsSuccess:^(NSArray *projects) {
                                               NSLog(@"Projects: %@", projects);
