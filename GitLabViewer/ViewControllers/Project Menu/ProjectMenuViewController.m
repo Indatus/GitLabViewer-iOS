@@ -21,8 +21,7 @@ typedef NS_ENUM(NSInteger, ProjectMenuViewControllerOption) {
     ProjectOptionNetwork,
     ProjectOptionGraphs,
     ProjectOptionIssues,
-    ProjectOptionMergeRequests,
-    ProjectOptionSettings
+    ProjectOptionMergeRequests
 };
 
 static NSString *const kCellIdentifier = @"Cell";
@@ -50,8 +49,8 @@ static NSString *const kCellIdentifier = @"Cell";
     [super viewDidLoad];
 
     self.title = _project.name;
-    _menuOptions = @[@"Files", @"Commits", @"Network", @"Graphs", @"Issues", @"Merge Requests", @"Settings"];
-    
+
+    _menuOptions = @[@"Files", @"Commits", @"Network", @"Graphs", @"Issues", @"Merge Requests"];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellIdentifier];
 }
@@ -111,12 +110,10 @@ static NSString *const kCellIdentifier = @"Cell";
         case ProjectOptionMergeRequests:
             controller = [[MergeRequestsViewController alloc] initWithStyle:UITableViewStylePlain];
             break;
-        case ProjectOptionSettings:
-            controller = [[SettingsViewController alloc] initWithStyle:UITableViewStylePlain];
-            break;
     }
     
     [controller setProject:_project];
     [self.navigationController pushViewController:controller animated:YES];
 }
+
 @end
