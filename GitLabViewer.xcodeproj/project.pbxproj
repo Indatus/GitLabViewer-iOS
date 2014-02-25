@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C0C7B7218BCED1800CCF2DC /* FileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C0C7B7118BCED1800CCF2DC /* FileViewController.m */; };
 		0C0F36DD18A5590900AC65FA /* IssueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C0F36DC18A5590900AC65FA /* IssueCell.m */; };
 		0C0F36DF18A5591B00AC65FA /* IssueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C0F36DE18A5591B00AC65FA /* IssueCell.xib */; };
 		0C5F189618A52CAD0035720D /* ProjectMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F189518A52CAD0035720D /* ProjectMenuViewController.m */; };
@@ -103,6 +104,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C0C7B7018BCED1800CCF2DC /* FileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileViewController.h; sourceTree = "<group>"; };
+		0C0C7B7118BCED1800CCF2DC /* FileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileViewController.m; sourceTree = "<group>"; };
 		0C0F36DB18A5590900AC65FA /* IssueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IssueCell.h; sourceTree = "<group>"; };
 		0C0F36DC18A5590900AC65FA /* IssueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IssueCell.m; sourceTree = "<group>"; };
 		0C0F36DE18A5591B00AC65FA /* IssueCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IssueCell.xib; sourceTree = "<group>"; };
@@ -273,6 +276,8 @@
 				0CDA72D318BBD00F00FE1E1D /* FileCell.h */,
 				0CDA72D418BBD00F00FE1E1D /* FileCell.m */,
 				0CDA72D618BBD03500FE1E1D /* FileCell.xib */,
+				0C0C7B7018BCED1800CCF2DC /* FileViewController.h */,
+				0C0C7B7118BCED1800CCF2DC /* FileViewController.m */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -625,6 +630,7 @@
 				5D0B0AB918B699FA00949BF0 /* GLNetworkGraph.m in Sources */,
 				5D74FD7D18AAB96800656E03 /* NetworkViewController.m in Sources */,
 				5D74FD7918AAB96000656E03 /* GraphsViewController.m in Sources */,
+				0C0C7B7218BCED1800CCF2DC /* FileViewController.m in Sources */,
 				0C5F18A618A540130035720D /* MergeRequestCell.m in Sources */,
 				0C5F18A218A53D150035720D /* BaseProjectDetailViewController.m in Sources */,
 				5D74FD9F18AD343C00656E03 /* CreateIssueViewController.m in Sources */,

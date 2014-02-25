@@ -11,6 +11,7 @@
 #import <GLFile.h>
 #import <GLNetworkOperation.h>
 #import <GLGitlabApi+Files.h>
+#import "FileViewController.h"
 #import "FileCell.h"
 
 @interface FilesViewController ()
@@ -78,7 +79,8 @@
             break;
             
         case GLFileTypeBlob:
-            // Load a file viewer
+            controller = [FileViewController new];
+            ((FileViewController *)controller).file = file;
             break;
     }
     controller.project = self.project;
