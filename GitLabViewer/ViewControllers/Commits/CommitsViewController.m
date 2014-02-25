@@ -8,6 +8,7 @@
 
 #import "CommitsViewController.h"
 #import "Constants.h"
+#import "CommitCell.h"
 
 static NSString *const kCellIdentifier = @"Cell";
 static NSString * const kEmptyViewText = @"There are currently no\nCommits in this project.";
@@ -34,6 +35,9 @@ static NSString * const kEmptyViewText = @"There are currently no\nCommits in th
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UINib *nib = [UINib nibWithNibName:@"CommitCell" bundle:[NSBundle mainBundle]];
+    [self.tableView registerNib:nib forCellReuseIdentifier:kCellIdentifier];
 
     [self prepareEmptyView];
 }
@@ -67,10 +71,10 @@ static NSString * const kEmptyViewText = @"There are currently no\nCommits in th
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    IssueCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier forIndexPath:indexPath];
-//    GLIssue *issue = _commits[indexPath.row];
-//    [cell setupWithIssue:issue];
-    return [UITableViewCell new];
+    CommitCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier forIndexPath:indexPath];
+    [cell setUpWithCommit:_commits[indexPath.row]];
+
+    return cell;
 }
 
 
@@ -83,7 +87,7 @@ static NSString * const kEmptyViewText = @"There are currently no\nCommits in th
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 150.0;
+    return 100.0f;
 }
 
 
