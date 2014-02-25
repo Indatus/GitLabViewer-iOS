@@ -13,6 +13,7 @@
 #import "SingleMergeRequestViewController.h"
 #import "MergeRequestCell.h"
 
+static NSString * const kNibName = @"MergeRequestCell";
 static NSString * const kCellIdentifier = @"Cell";
 static NSString * const kEmptyViewText = @"There are currently no\nMerge Requests in this project.";
 
@@ -38,7 +39,7 @@ static NSString * const kEmptyViewText = @"There are currently no\nMerge Request
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UINib *nib = [UINib nibWithNibName:@"MergeRequestCell" bundle:[NSBundle mainBundle]];
+    UINib *nib = [UINib nibWithNibName:kNibName bundle:[NSBundle mainBundle]];
     [self.tableView registerNib:nib forCellReuseIdentifier:kCellIdentifier];
     
     self.title = @"Merge Requests";

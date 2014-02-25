@@ -14,6 +14,7 @@
 #import "CreateIssueViewController.h"
 #import "GLNavigationController.h"
 
+static NSString *const kNibName = @"IssueCell";
 static NSString *const kCellIdentifier = @"Cell";
 static NSString * const kEmptyViewText = @"There are currently no\nIssues in this project.";
 
@@ -42,7 +43,7 @@ static NSString * const kEmptyViewText = @"There are currently no\nIssues in thi
     
     self.title = @"Issues";
     
-    UINib *nib = [UINib nibWithNibName:@"IssueCell" bundle:[NSBundle mainBundle]];
+    UINib *nib = [UINib nibWithNibName:kNibName bundle:[NSBundle mainBundle]];
     [self.tableView registerNib:nib forCellReuseIdentifier:kCellIdentifier];
     [self prepareEmptyView];
     

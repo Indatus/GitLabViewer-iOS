@@ -10,6 +10,7 @@
 #import "Constants.h"
 #import "CommitCell.h"
 
+static NSString *const kNibName = @"CommitCell";
 static NSString *const kCellIdentifier = @"Cell";
 static NSString * const kEmptyViewText = @"There are currently no\nCommits in this project.";
 
@@ -36,7 +37,7 @@ static NSString * const kEmptyViewText = @"There are currently no\nCommits in th
 {
     [super viewDidLoad];
     
-    UINib *nib = [UINib nibWithNibName:@"CommitCell" bundle:[NSBundle mainBundle]];
+    UINib *nib = [UINib nibWithNibName:kNibName bundle:[NSBundle mainBundle]];
     [self.tableView registerNib:nib forCellReuseIdentifier:kCellIdentifier];
 
     [self prepareEmptyView];

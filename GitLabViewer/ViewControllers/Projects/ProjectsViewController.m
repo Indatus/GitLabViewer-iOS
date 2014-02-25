@@ -15,6 +15,7 @@
 #import "CreateProjectViewController.h"
 #import "GLNavigationController.h"
 
+static NSString *const kNibName = @"ProjectsCell";
 static NSString *const kCellIdentifier = @"Cell";
 
 @interface ProjectsViewController ()
@@ -39,11 +40,11 @@ static NSString *const kCellIdentifier = @"Cell";
 {
     [super viewDidLoad];
     
+    UINib *nib = [UINib nibWithNibName:kNibName bundle:[NSBundle mainBundle]];
+    [self.tableView registerNib:nib forCellReuseIdentifier:kCellIdentifier];
+    
     UIEdgeInsets inset = UIEdgeInsetsMake(20, 0, 0, 0);
     self.tableView.contentInset = inset;
-    
-    UINib *nib = [UINib nibWithNibName:@"ProjectsCell" bundle:[NSBundle mainBundle]];
-    [self.tableView registerNib:nib forCellReuseIdentifier:kCellIdentifier];
     
     UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithTitle:@"Log Out" style:UIBarButtonItemStylePlain target:self action:@selector(logOut)];
     self.navigationItem.leftBarButtonItem = logoutButton;
@@ -74,11 +75,6 @@ static NSString *const kCellIdentifier = @"Cell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ProjectsCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier forIndexPath:indexPath];
-    
-    if (!cell) {
-        cell = (ProjectsCell *) [ProjectsCell new];
-    }
-    
     [cell setProject:_projects[indexPath.section]];
     
     return cell;
