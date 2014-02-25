@@ -7,6 +7,16 @@
 //
 
 #import "CommitCell.h"
+#import "Constants.h"
+
+@interface CommitCell ()
+
+@property (weak, nonatomic) IBOutlet UILabel *lblSha;
+@property (weak, nonatomic) IBOutlet UILabel *lblMessage;
+@property (weak, nonatomic) IBOutlet UILabel *lblAuthor;
+@property (weak, nonatomic) IBOutlet UILabel *lblDate;
+
+@end
 
 @implementation CommitCell
 
@@ -24,6 +34,16 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)setUpWithCommit:(GLCommit *)commit;
+{
+    NSDateFormatter *formatter = [Constants standardFormatter];
+
+    _lblSha.text = commit.sha;
+    _lblMessage.text = commit.title;
+    _lblAuthor.text = commit.authorName;
+    _lblDate.text = [formatter stringFromDate:commit.createdAt];
 }
 
 @end

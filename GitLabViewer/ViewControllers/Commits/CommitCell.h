@@ -10,4 +10,6 @@
 
 @interface CommitCell : UITableViewCell
 
+- (void)setUpWithCommit:(GLCommit *)commit;
+
 @end
