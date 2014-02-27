@@ -47,7 +47,7 @@ static NSString *const kCellIdentifier = @"Cell";
 
     self.title = _project.name;
 
-    _menuOptions = @[@"Files", @"Commits", @"Network", @"Issues", @"Merge Requests"];
+    _menuOptions = @[@"Files", @"Commits", @"Issues", @"Merge Requests"];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellIdentifier];
 }

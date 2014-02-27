@@ -91,13 +91,19 @@ static UserPreferences *_instance;
 
 - (void)setUser:(GLUser *)user
 {
-    [_userDefaults setObject:[user jsonRepresentation] forKey:kUser];
+    [_userDefaults setObject:[user jsonString] forKey:kUser];
     [_userDefaults synchronize];
 }
 
 - (GLUser *)user
 {
-    return [_userDefaults objectForKey:kUser];
+    NSError *error;
+    NSDictionary *json =
+    [NSJSONSerialization JSONObjectWithData: [[_userDefaults objectForKey:kUser] dataUsingEncoding:NSUTF8StringEncoding]
+                                    options: NSJSONReadingMutableContainers
+                                      error: &error];
+    
+    return [[GLUser alloc] initWithJSON:json];
 }
 
 
