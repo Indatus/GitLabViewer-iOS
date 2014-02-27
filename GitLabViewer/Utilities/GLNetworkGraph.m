@@ -10,49 +10,68 @@
 #import "INVertex.h"
 #import "INEdge.h"
 
+@interface GLNetworkGraph ()
+{
+    NSArray *_commits;
+    NSArray *_branches;
+}
+
+@end
+
 @implementation GLNetworkGraph
 
 - (instancetype)initWithCommits:(NSArray *)commits andBranches:(NSArray *)branches
 {
     if (self = [super init]) {
-        [self createGraphFromCommits:commits andBranches:branches];
+        _commits = commits;
+        _branches = branches;
+        [self createGraph];
     }
     return self;
 }
 
 
-- (void)createGraphFromCommits:(NSArray *)commits andBranches:(NSArray *)branches
+- (void)createGraph
 {
     _vertices = [NSMutableArray new];
     _edges = [NSMutableArray new];
     
     int y = 0;
-    int x = 0;
+    int x = -1;
     
-    for (GLBranch *b in branches) {
-        INVertex *vHead = [INVertex new];
-        vHead.x = x++;
-        vHead.y = y++;
-        vHead.label = [[NSAttributedString alloc] initWithString:b.name];
+    for (GLBranch *b in _branches) {
+        INVertex *head = [INVertex new];
+        head.x = ++x;
+        head.y = y++;
+        head.label = [[NSAttributedString alloc] initWithString:b.name];
+        [_vertices addObject:head];
         
         GLCommit *c = b.commit;
         
-        while (c.parents) {
+        while (c) {
             NSString *parentSha = c.parents[0];
             
-            for (GLCommit *commit in commits) {
-                if ([commit.sha isEqualToString:parentSha]) {
-                    c = commit;
-                }
-            }
+            c = [self commitForSha:parentSha];
             
             INVertex *v = [INVertex new];
             v.x = x;
             v.y = y++;
+            [_vertices addObject:v];
         }
     }
     
 
+}
+
+- (GLCommit *)commitForSha:(NSString *)sha
+{
+    for (GLCommit *c in _commits) {
+        if ([c.sha isEqualToString:sha]) {
+            return c;
+        }
+    }
+    
+    return nil;
 }
 
 @end

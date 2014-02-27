@@ -48,8 +48,8 @@
     [[GLGitlabApi sharedInstance] getAllCommitsForProjectId:_project.projectId
                                            withSuccessBlock:^(NSArray *commits) {
                                                [[GLGitlabApi sharedInstance] getRepoBranchesForProject:_project
-                                                                                               success:^(id responseObject) {
-                                                                                                   GLNetworkGraph *networkGraph = [[GLNetworkGraph alloc] initWithCommits:commits];
+                                                                                               success:^(NSArray *branches) {
+                                                                                                   GLNetworkGraph *networkGraph = [[GLNetworkGraph alloc] initWithCommits:commits andBranches:branches];
             
             
                                                                                                    NSLog(@"vertices are: %@", networkGraph.vertices);
