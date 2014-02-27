@@ -12,31 +12,16 @@
 
 @implementation GLNetworkGraph
 
-- (instancetype)initWithCommits:(NSArray *)commits
+- (instancetype)initWithCommits:(NSArray *)commits andBranches:(NSArray *)branches
 {
     if (self = [super init]) {
-        [self createVerticesAndEdgesFromCommits:commits];
-    }
-    return self;
-}
-
-- (instancetype)initWithProjectId:(int64_t)projectId
-{
-    if (self = [super init]) {
-        [[GLGitlabApi sharedInstance] getAllCommitsForProjectId:projectId withSuccessBlock:^(NSArray *commits) {
-            NSLog(@"commits: %@", commits);
-            [self createVerticesAndEdgesFromCommits:commits];
-        } andFailureBlock:^(NSError *error) {
-            NSLog(@"Error retrieving commits...");
-            NSLog(@"Error: %@", error);
-        }];
+        [self createGraphFromCommits:commits andBranches:branches];
     }
     return self;
 }
 
 
-
-- (void)createVerticesAndEdgesFromCommits:(NSArray *)commits
+- (void)createGraphFromCommits:(NSArray *)commits andBranches:(NSArray *)branches
 {
     _vertices = [NSMutableArray new];
     int i = 0;

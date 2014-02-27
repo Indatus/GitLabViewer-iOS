@@ -45,24 +45,32 @@
                                                                                                           NSBackgroundColorAttributeName: [UIColor blackColor],
                                                                                                           NSStrokeColorAttributeName: [UIColor whiteColor]}];
     
-    [[GLGitlabApi sharedInstance] getAllCommitsForProjectId:_project.projectId withSuccessBlock:^(NSArray *commits) {
-        GLNetworkGraph *networkGraph = [[GLNetworkGraph alloc] initWithCommits:commits];
-        
-        
-        NSLog(@"vertices are: %@", networkGraph.vertices);
-        
-        UIScrollView *scollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
-        
-        INSimpleGraphView *graphView = [[INSimpleGraphView alloc] initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height)
-                                                                       vertices:networkGraph.vertices
-                                                                       andEdges:networkGraph.edges];
-        graphView.backgroundColor = [UIColor whiteColor];
-        
-        [scollView addSubview:graphView];
-        scollView.contentSize = graphView.frame.size;
-        [self.view addSubview:scollView];
- 
-    } andFailureBlock:^(NSError *error) {
+    [[GLGitlabApi sharedInstance] getAllCommitsForProjectId:_project.projectId
+                                           withSuccessBlock:^(NSArray *commits) {
+                                               [[GLGitlabApi sharedInstance] getRepoBranchesForProject:_project
+                                                                                               success:^(id responseObject) {
+                                                                                                   GLNetworkGraph *networkGraph = [[GLNetworkGraph alloc] initWithCommits:commits];
+            
+            
+                                                                                                   NSLog(@"vertices are: %@", networkGraph.vertices);
+            
+                                                                                                   UIScrollView *scollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+            
+                                                                                                   INSimpleGraphView *graphView = [[INSimpleGraphView alloc] initWithFrame:CGRectMake(0, 0, 320, self.view.frame.size.height)
+                                                                                                                                                                  vertices:networkGraph.vertices
+                                                                                                                                                                  andEdges:networkGraph.edges];
+                                                                                                   graphView.backgroundColor = [UIColor whiteColor];
+            
+                                                                                                   [scollView addSubview:graphView];
+                                                                                                   scollView.contentSize = graphView.frame.size;
+                                                                                                   [self.view addSubview:scollView];
+  
+                                                                                               }
+                                                                                               failure:^(NSError *error) {
+                                                                                                   NSLog(@"Failed to retrieve branches inside the NetworkViewController");
+                                                                                               }];
+    }
+                                            andFailureBlock:^(NSError *error) {
         NSLog(@"Failed to retrieve commits inside the NetworkViewController");
     }];
 }

@@ -13,7 +13,6 @@
 @property (nonatomic, strong) NSMutableArray *vertices;
 @property (nonatomic, strong) NSMutableArray *edges;
 
-- (instancetype)initWithCommits:(NSArray *)commits;
-- (instancetype)initWithProjectId:(int64_t)projectId;
+- (instancetype)initWithCommits:(NSArray *)commits andBranches:(NSArray *)branches;
 
 @end
