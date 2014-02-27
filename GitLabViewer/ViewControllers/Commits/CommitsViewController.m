@@ -9,6 +9,7 @@
 #import "CommitsViewController.h"
 #import "Constants.h"
 #import "CommitCell.h"
+#import "SingleCommitViewController.h"
 
 static NSString *const kNibName = @"CommitCell";
 static NSString *const kCellIdentifier = @"Cell";
@@ -83,7 +84,9 @@ static NSString * const kEmptyViewText = @"There are currently no\nCommits in th
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+    SingleCommitViewController *commitVC = [SingleCommitViewController new];
+    commitVC.commit = _commits[indexPath.row];
+    [self.navigationController pushViewController:commitVC animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
