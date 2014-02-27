@@ -7,8 +7,16 @@
 //
 
 #import "SingleCommitViewController.h"
+#import "Constants.h"
 
 @interface SingleCommitViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel *lblSha;
+@property (weak, nonatomic) IBOutlet UILabel *lblTitle;
+@property (weak, nonatomic) IBOutlet UILabel *lblAuthorName;
+@property (weak, nonatomic) IBOutlet UILabel *lblAuthorEmail;
+@property (weak, nonatomic) IBOutlet UILabel *lblCreatedAt;
+@property (weak, nonatomic) IBOutlet UILabel *lblParentSha;
 
 @end
 
@@ -26,7 +34,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+    _lblSha.text = _commit.sha;
+    _lblTitle.text = _commit.title;
+    _lblAuthorName.text = _commit.authorName;
+    _lblAuthorEmail.text = _commit.authorEmail;
+    _lblCreatedAt.text = [[Constants standardFormatter] stringFromDate:_commit.createdAt];
+    _lblParentSha.text = _commit.parents[0];
 }
 
 - (void)didReceiveMemoryWarning

@@ -10,4 +10,6 @@
 
 @interface SingleCommitViewController : UIViewController
 
+@property (nonatomic, strong) GLCommit *commit;
+
 @end
