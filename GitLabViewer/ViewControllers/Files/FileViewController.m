@@ -77,6 +77,7 @@
 
 - (void)showTextResponse:(NSString *)string
 {
+    UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
     UITextView *textView = [[UITextView alloc] initWithFrame:self.view.bounds];
     textView.editable = NO;
     textView.text = string;
