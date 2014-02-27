@@ -13,6 +13,7 @@
 #import <GLGitlabApi+Files.h>
 #import "FileViewController.h"
 #import "FileCell.h"
+#import "ProjectViewController.h"
 
 @interface FilesViewController ()
 @property (nonatomic, strong) GLNetworkOperation *operation;
@@ -70,22 +71,19 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    BaseProjectDetailViewController *controller;
+    UIViewController <ProjectViewController> *controller;
     GLFile *file = _files[indexPath.row];
     switch (file.type) {
         case GLFileTypeTree:
-            controller = [[FilesViewController alloc] init];
-            ((FilesViewController *)controller).path = _path ? [_path stringByAppendingPathComponent:file.name] : file.name;
+            controller = [self prepareFilesViewControllerWithPath:file.name];
             break;
             
         case GLFileTypeBlob:
-            controller = [[FileViewController alloc] init];
-            ((FileViewController *)controller).file = file;
+            controller = [self prepareVilewViewControllerWithFile:file];
             break;
     }
     controller.project = self.project;
     [self.navigationController pushViewController:controller animated:YES];
-
 }
 
 #pragma mark - Private Methods
@@ -102,6 +100,21 @@
                                                                  andFailureBlock:^(NSError *error) {
                                                                      NSLog(@"Error fetching files: %@", error);
                                                                  }];
+}
+
+- (UIViewController<ProjectViewController> *)prepareFilesViewControllerWithPath:(NSString *)path
+{
+    FilesViewController *controller = [[FilesViewController alloc] init];
+    controller.path = _path ? [_path stringByAppendingPathComponent:path] : path;
+    return controller;
+}
+
+- (UIViewController<ProjectViewController> *)prepareVilewViewControllerWithFile:(GLFile *)file
+{
+    FileViewController *controller = [[FileViewController alloc] init];
+    controller.file = file;
+    
+    return controller;
 }
 
 @end

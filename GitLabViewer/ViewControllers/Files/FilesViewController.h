@@ -7,10 +7,11 @@
 //
 
 #import "BaseProjectDetailViewController.h"
+#import "ProjectViewController.h"
 
 @class GLFile;
 
-@interface FilesViewController : BaseProjectDetailViewController
+@interface FilesViewController : BaseProjectDetailViewController <ProjectViewController>
 
 @property (nonatomic, strong) NSString *path;
 
