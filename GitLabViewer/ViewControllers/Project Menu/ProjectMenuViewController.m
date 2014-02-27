@@ -9,7 +9,6 @@
 #import "ProjectMenuViewController.h"
 #import "FilesViewController.h"
 #import "CommitsViewController.h"
-#import "NetworkViewController.h"
 #import "GraphsViewController.h"
 #import "IssuesViewController.h"
 #import "MergeRequestsViewController.h"
@@ -18,7 +17,6 @@
 typedef NS_ENUM(NSInteger, ProjectMenuViewControllerOption) {
     ProjectOptionFiles,
     ProjectOptionCommits,
-    ProjectOptionNetwork,
     ProjectOptionIssues,
     ProjectOptionMergeRequests
 };
@@ -92,13 +90,6 @@ static NSString *const kCellIdentifier = @"Cell";
             break;
         case ProjectOptionCommits:
             controller = [[CommitsViewController alloc] initWithStyle:UITableViewStylePlain];
-            break;
-        case ProjectOptionNetwork:{
-            NetworkViewController *networkVC = [NetworkViewController new];
-            networkVC.project = _project;
-            [self.navigationController pushViewController:networkVC animated:YES];
-            return;
-        }
             break;
         case ProjectOptionIssues:
             controller = [[IssuesViewController alloc] initWithStyle:UITableViewStylePlain];
