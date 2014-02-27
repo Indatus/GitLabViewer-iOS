@@ -18,12 +18,12 @@ NOTE:  This project is not fully functioning at the moment, and much of the UI i
 - Create a merge request for a project
 - View a single merge request in a project
 - View a list of all commits in a project
+- View single commit
+- View files
 
 ### In Progress/Partially Working
 
-- View network graph
-- View single commit
-- View files
+- Better formatting of files
 
 ### TODO
 
