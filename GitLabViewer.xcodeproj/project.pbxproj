@@ -117,6 +117,7 @@
 		0C5F18A418A540130035720D /* MergeRequestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergeRequestCell.h; sourceTree = "<group>"; };
 		0C5F18A518A540130035720D /* MergeRequestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergeRequestCell.m; sourceTree = "<group>"; };
 		0C5F18A718A5401E0035720D /* MergeRequestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MergeRequestCell.xib; sourceTree = "<group>"; };
+		0C9621D618BF849E00A257B9 /* ProjectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProjectViewController.h; sourceTree = "<group>"; };
 		0C9D87B518BD10880023EAEA /* FileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FileViewController.xib; sourceTree = "<group>"; };
 		0CDA72D318BBD00F00FE1E1D /* FileCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileCell.h; sourceTree = "<group>"; };
 		0CDA72D418BBD00F00FE1E1D /* FileCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileCell.m; sourceTree = "<group>"; };
@@ -403,6 +404,7 @@
 				5D8A585318A19F4400D1D2B7 /* LoginViewController.m */,
 				5D8A585418A19F4400D1D2B7 /* LoginViewController.xib */,
 				0C5F18A318A53D2B0035720D /* Base Project Details */,
+				0C9621D618BF849E00A257B9 /* ProjectViewController.h */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";

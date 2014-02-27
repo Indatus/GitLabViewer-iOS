@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ProjectViewController.h"
 
 @class GLFile;
 @class GLProject;
 
-@interface FileViewController : UIViewController
+@interface FileViewController : UIViewController <ProjectViewController>
 
 @property (nonatomic, strong) GLProject *project;
 @property (nonatomic, strong) GLFile *file;
