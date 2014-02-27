@@ -33,6 +33,8 @@
 
 - (void)createGraph
 {
+    NSLog(@"%@", _commits);
+    
     _vertices = [NSMutableArray new];
     _edges = [NSMutableArray new];
     
@@ -71,6 +73,7 @@
         }
     }
     
+    NSLog(@"returning nil");
     return nil;
 }
 
