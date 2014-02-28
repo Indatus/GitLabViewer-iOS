@@ -20,6 +20,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
+    [self moveSyntaxHighlighterFilesIfNeeded];
     [self setUpViews];
     [self presentLoginIfNeeded];
 
@@ -77,6 +78,31 @@
     } else {
         LoginViewController *loginView = [[LoginViewController alloc] initWithNibName:nil bundle:nil];
         [_navController.topViewController presentViewController:loginView animated:NO completion:nil];
+    }
+}
+
+- (void)moveSyntaxHighlighterFilesIfNeeded
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error;
+    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    
+    NSArray *files = [[NSBundle mainBundle] pathsForResourcesOfType:@"html" inDirectory:nil];
+    files = [files arrayByAddingObjectsFromArray:[[NSBundle mainBundle] pathsForResourcesOfType:@"css" inDirectory:nil]];
+    files = [files arrayByAddingObjectsFromArray:[[NSBundle mainBundle] pathsForResourcesOfType:@"js" inDirectory:nil]];
+
+    for (NSString *file in files) {
+        NSString *name = [file lastPathComponent];
+        NSString *targetPath = [documentsDirectory stringByAppendingPathComponent:name];
+        
+        if ([fileManager fileExistsAtPath:targetPath]) {
+            continue;
+        }
+        
+        if (![fileManager copyItemAtPath:file toPath:targetPath error:&error]) {
+            NSLog(@"Error copying %@\n%@", file, error);
+            error = nil;
+        }
     }
 }
 

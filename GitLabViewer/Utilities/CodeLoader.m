@@ -17,7 +17,7 @@ static NSString *template;
 + (void)load
 {
     NSString *url = [[NSBundle mainBundle] pathForResource:@"template" ofType:@"html"];
-    syntaxHighlighterDirectory = [url stringByDeletingLastPathComponent];
+    syntaxHighlighterDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
     template = [NSString stringWithContentsOfFile:url encoding:NSUTF8StringEncoding error:nil];
 }
 
@@ -30,14 +30,18 @@ static NSString *template;
     NSString *generateCodeBlock = [self generateCodeBlockForFileExtension:extension andContent:content];
     
     html = [NSString stringWithFormat:html, generateCodeBlock];
-    [html writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
+    NSError *error;
+    if (![html writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:&error]) {
+        NSLog(@"Error writting file: %@", error);
+    }
+        
 
     return filePath;
 }
 
 + (NSString *)generateCodeBlockForFileExtension:(NSString *)extension andContent:(NSString *)content
 {
-    return [NSString stringWithFormat:@"<pre class=\"brush: %@\"%@</pre>", extension, [self textToHtml:content]];
+    return [NSString stringWithFormat:@"<pre class=\"brush: %@\">%@</pre>", extension, [self textToHtml:content]];
 }
 
 + (NSString*)textToHtml:(NSString*)htmlString {
@@ -46,7 +50,7 @@ static NSString *template;
     htmlString = [htmlString stringByReplacingOccurrencesOfString:@">"  withString:@"&gt;"];
     htmlString = [htmlString stringByReplacingOccurrencesOfString:@"""" withString:@"&quot;"];
     htmlString = [htmlString stringByReplacingOccurrencesOfString:@"'"  withString:@"&#039;"];
-    htmlString = [htmlString stringByReplacingOccurrencesOfString:@"\n" withString:@"<br>"];
+//    htmlString = [htmlString stringByReplacingOccurrencesOfString:@"\n" withString:@"<br>"];
     return htmlString;
 }
 
