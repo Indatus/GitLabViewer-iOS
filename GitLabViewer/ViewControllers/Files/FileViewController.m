@@ -9,6 +9,7 @@
 #import "FileViewController.h"
 #import <GLFile.h>
 #import <GLGitlabApi+Files.h>
+#import "CodeLoader.h"
 
 @interface FileViewController () <UIAlertViewDelegate>
 
@@ -78,12 +79,12 @@
 - (void)showTextResponse:(NSString *)string
 {
     UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
-    UITextView *textView = [[UITextView alloc] initWithFrame:self.view.bounds];
-    textView.editable = NO;
-    textView.text = string;
-    textView.alpha = 0;
-    [self.view addSubview:textView];
-    [self fadeInView:textView];
+    NSString *htmlPath = [CodeLoader createHtmlFor:_file withContent:string];
+    NSURL *url = [NSURL fileURLWithPath:htmlPath];
+    [webView loadRequest:[NSURLRequest requestWithURL:url]];
+    webView.alpha = 0;
+    [self.view addSubview:webView];
+    [self fadeInView:webView];
 }
 
 - (void)fadeInView:(UIView *)view
