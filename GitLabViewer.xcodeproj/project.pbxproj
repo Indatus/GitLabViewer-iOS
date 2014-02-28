@@ -60,6 +60,7 @@
 		0C4694F918C0C84A00523912 /* shCore.js in Resources */ = {isa = PBXBuildFile; fileRef = 0C14AE7618BFE5D30068ECA9 /* shCore.js */; };
 		0C4694FA18C0C84A00523912 /* shLegacy.js in Resources */ = {isa = PBXBuildFile; fileRef = 0C14AE7718BFE5D30068ECA9 /* shLegacy.js */; };
 		0C4694FD18C0CA8300523912 /* CodeLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4694FC18C0CA8300523912 /* CodeLoader.m */; };
+		0C4694FF18C121D000523912 /* shBrushObjC.js in Resources */ = {isa = PBXBuildFile; fileRef = 0C4694FE18C121D000523912 /* shBrushObjC.js */; };
 		0C5F189618A52CAD0035720D /* ProjectMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F189518A52CAD0035720D /* ProjectMenuViewController.m */; };
 		0C5F18A218A53D150035720D /* BaseProjectDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F18A118A53D150035720D /* BaseProjectDetailViewController.m */; };
 		0C5F18A618A540130035720D /* MergeRequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F18A518A540130035720D /* MergeRequestCell.m */; };
@@ -207,6 +208,7 @@
 		0C14AE8A18BFE5D30068ECA9 /* template.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template.html; sourceTree = "<group>"; };
 		0C4694FB18C0CA8300523912 /* CodeLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeLoader.h; sourceTree = "<group>"; };
 		0C4694FC18C0CA8300523912 /* CodeLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeLoader.m; sourceTree = "<group>"; };
+		0C4694FE18C121D000523912 /* shBrushObjC.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shBrushObjC.js; sourceTree = "<group>"; };
 		0C5F189418A52CAD0035720D /* ProjectMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectMenuViewController.h; sourceTree = "<group>"; };
 		0C5F189518A52CAD0035720D /* ProjectMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectMenuViewController.m; sourceTree = "<group>"; };
 		0C5F18A018A53D150035720D /* BaseProjectDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseProjectDetailViewController.h; path = "Base Project Details/BaseProjectDetailViewController.h"; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 		0C14AE5718BFE5D30068ECA9 /* scripts */ = {
 			isa = PBXGroup;
 			children = (
+				0C4694FE18C121D000523912 /* shBrushObjC.js */,
 				0C14AE5818BFE5D30068ECA9 /* shAutoloader.js */,
 				0C14AE5918BFE5D30068ECA9 /* shBrushAppleScript.js */,
 				0C14AE5A18BFE5D30068ECA9 /* shBrushAS3.js */,
@@ -762,6 +765,7 @@
 				0C14AEB918BFE5D30068ECA9 /* shThemeMidnight.css in Resources */,
 				0CDA72D718BBD03500FE1E1D /* FileCell.xib in Resources */,
 				0C14AEB318BFE5D30068ECA9 /* shThemeDefault.css in Resources */,
+				0C4694FF18C121D000523912 /* shBrushObjC.js in Resources */,
 				0C14AEAF18BFE5D30068ECA9 /* shCoreFadeToGrey.css in Resources */,
 				0C0F36DF18A5591B00AC65FA /* IssueCell.xib in Resources */,
 				5D0B0AC018BD218D00949BF0 /* SingleCommitViewController.xib in Resources */,

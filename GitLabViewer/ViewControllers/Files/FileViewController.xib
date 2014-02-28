@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5051" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FileViewController">
             <connections>
                 <outlet property="activityIndicator" destination="QBL-1N-2AM" id="dTi-1J-eQm"/>
                 <outlet property="view" destination="1" id="BhJ-KL-2HU"/>
+                <outlet property="webView" destination="5WD-9I-4CA" id="Acg-Yy-FsB"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -15,6 +16,11 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5WD-9I-4CA">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </webView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="QBL-1N-2AM">
                     <rect key="frame" x="150" y="274" width="20" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -23,6 +29,10 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="centerY" secondItem="QBL-1N-2AM" secondAttribute="centerY" id="0iD-A7-xU4"/>
+                <constraint firstItem="5WD-9I-4CA" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="QUE-tS-sGa"/>
+                <constraint firstItem="5WD-9I-4CA" firstAttribute="top" secondItem="1" secondAttribute="top" id="XCF-LD-IIj"/>
+                <constraint firstAttribute="bottom" secondItem="5WD-9I-4CA" secondAttribute="bottom" id="XNK-9T-2Xn"/>
+                <constraint firstAttribute="trailing" secondItem="5WD-9I-4CA" secondAttribute="trailing" id="awF-ke-XRZ"/>
                 <constraint firstAttribute="centerX" secondItem="QBL-1N-2AM" secondAttribute="centerX" id="cr6-uF-tbb"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

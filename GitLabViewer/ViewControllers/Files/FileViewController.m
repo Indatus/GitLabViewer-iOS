@@ -14,6 +14,7 @@
 @interface FileViewController () <UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @end
 
@@ -78,13 +79,12 @@
 
 - (void)showTextResponse:(NSString *)string
 {
-    UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
     NSString *htmlPath = [CodeLoader createHtmlFor:_file withContent:string];
     NSURL *url = [NSURL fileURLWithPath:htmlPath];
-    [webView loadRequest:[NSURLRequest requestWithURL:url]];
-    webView.alpha = 0;
-    [self.view addSubview:webView];
-    [self fadeInView:webView];
+    [_webView loadRequest:[NSURLRequest requestWithURL:url]];
+    _webView.alpha = 0;
+    [self.view addSubview:_webView];
+    [self fadeInView:_webView];
 }
 
 - (void)fadeInView:(UIView *)view
