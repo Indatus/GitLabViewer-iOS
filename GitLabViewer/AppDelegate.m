@@ -96,7 +96,7 @@
         NSString *targetPath = [documentsDirectory stringByAppendingPathComponent:name];
         
         if ([fileManager fileExistsAtPath:targetPath]) {
-            continue;
+            [fileManager removeItemAtPath:targetPath error:nil];
         }
         
         if (![fileManager copyItemAtPath:file toPath:targetPath error:&error]) {
