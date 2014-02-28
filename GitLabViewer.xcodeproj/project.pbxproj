@@ -61,6 +61,7 @@
 		0C4694FA18C0C84A00523912 /* shLegacy.js in Resources */ = {isa = PBXBuildFile; fileRef = 0C14AE7718BFE5D30068ECA9 /* shLegacy.js */; };
 		0C4694FD18C0CA8300523912 /* CodeLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4694FC18C0CA8300523912 /* CodeLoader.m */; };
 		0C4694FF18C121D000523912 /* shBrushObjC.js in Resources */ = {isa = PBXBuildFile; fileRef = 0C4694FE18C121D000523912 /* shBrushObjC.js */; };
+		0C46950118C1254E00523912 /* xregexp-min.js in Sources */ = {isa = PBXBuildFile; fileRef = 0C46950018C1254E00523912 /* xregexp-min.js */; };
 		0C5F189618A52CAD0035720D /* ProjectMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F189518A52CAD0035720D /* ProjectMenuViewController.m */; };
 		0C5F18A218A53D150035720D /* BaseProjectDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F18A118A53D150035720D /* BaseProjectDetailViewController.m */; };
 		0C5F18A618A540130035720D /* MergeRequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F18A518A540130035720D /* MergeRequestCell.m */; };
@@ -209,6 +210,7 @@
 		0C4694FB18C0CA8300523912 /* CodeLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeLoader.h; sourceTree = "<group>"; };
 		0C4694FC18C0CA8300523912 /* CodeLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeLoader.m; sourceTree = "<group>"; };
 		0C4694FE18C121D000523912 /* shBrushObjC.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = shBrushObjC.js; sourceTree = "<group>"; };
+		0C46950018C1254E00523912 /* xregexp-min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "xregexp-min.js"; sourceTree = "<group>"; };
 		0C5F189418A52CAD0035720D /* ProjectMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectMenuViewController.h; sourceTree = "<group>"; };
 		0C5F189518A52CAD0035720D /* ProjectMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectMenuViewController.m; sourceTree = "<group>"; };
 		0C5F18A018A53D150035720D /* BaseProjectDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseProjectDetailViewController.h; path = "Base Project Details/BaseProjectDetailViewController.h"; sourceTree = "<group>"; };
@@ -365,6 +367,7 @@
 		0C14AE7418BFE5D30068ECA9 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				0C46950018C1254E00523912 /* xregexp-min.js */,
 				0C14AE7518BFE5D30068ECA9 /* shAutoloader.js */,
 				0C14AE7618BFE5D30068ECA9 /* shCore.js */,
 				0C14AE7718BFE5D30068ECA9 /* shLegacy.js */,
@@ -847,6 +850,7 @@
 				0CDA72D518BBD00F00FE1E1D /* FileCell.m in Sources */,
 				5D8A588318A3316D00D1D2B7 /* IssuesViewController.m in Sources */,
 				5D74FDB918AD748F00656E03 /* SingleMergeRequestViewController.m in Sources */,
+				0C46950118C1254E00523912 /* xregexp-min.js in Sources */,
 				5D74FD7518AAB95800656E03 /* FilesViewController.m in Sources */,
 				5D74FDA518AD3D6F00656E03 /* UIAlertView+Blocks.m in Sources */,
 				5D74FD7918AAB96000656E03 /* GraphsViewController.m in Sources */,

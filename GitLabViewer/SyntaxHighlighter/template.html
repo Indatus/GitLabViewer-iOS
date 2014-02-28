@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script type="text/javascript" src="shCore.js"></script>
+    <script type="text/javascript" src="xregexp-min.js"></script>
+    <script type="text/javascript" src="shCore.js"></script>
     <script type="text/javascript" src="shAutoloader.js"></script>
 	<link rel="stylesheet" type="text/css" href="shCore.css" />
 	<link rel="stylesheet" type="text/css" href="shThemeDefault.css" />
@@ -35,8 +36,9 @@
         'sql                    shBrushSql.js',
         'vb vbnet               shBrushVb.js',
         'xml xhtml xslt html    shBrushXml.js',
-        'h m                    shBrushObjC.js'
+        'objc obj-c h m         shBrushObjC.js'
       );
+      SyntaxHighlighter.defaults['gutter'] = false;
       SyntaxHighlighter.all();
 </script>
 </html>
