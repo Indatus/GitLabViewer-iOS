@@ -13,6 +13,10 @@
 		0C5F18A218A53D150035720D /* BaseProjectDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F18A118A53D150035720D /* BaseProjectDetailViewController.m */; };
 		0C5F18A618A540130035720D /* MergeRequestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5F18A518A540130035720D /* MergeRequestCell.m */; };
 		0C5F18A818A5401E0035720D /* MergeRequestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C5F18A718A5401E0035720D /* MergeRequestCell.xib */; };
+		50143ED218C773B80000FECA /* btnLargel.png in Resources */ = {isa = PBXBuildFile; fileRef = 50143ECE18C773B80000FECA /* btnLargel.png */; };
+		50143ED318C773B80000FECA /* btnLargelActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 50143ECF18C773B80000FECA /* btnLargelActive.png */; };
+		50143ED418C773B80000FECA /* btnSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 50143ED018C773B80000FECA /* btnSmall.png */; };
+		50143ED518C773B80000FECA /* btnSmallActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 50143ED118C773B80000FECA /* btnSmallActive.png */; };
 		5D1F5A32A83F440EA1A0E702 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 135504ED168842DAADBC91EC /* libPods.a */; };
 		5D74FD6818AAA5BA00656E03 /* UserPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FD6718AAA5BA00656E03 /* UserPreferences.m */; };
 		5D74FD6918AAA5BA00656E03 /* UserPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FD6718AAA5BA00656E03 /* UserPreferences.m */; };
@@ -104,6 +108,10 @@
 		0C5F18A518A540130035720D /* MergeRequestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergeRequestCell.m; sourceTree = "<group>"; };
 		0C5F18A718A5401E0035720D /* MergeRequestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MergeRequestCell.xib; sourceTree = "<group>"; };
 		135504ED168842DAADBC91EC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		50143ECE18C773B80000FECA /* btnLargel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnLargel.png; sourceTree = "<group>"; };
+		50143ECF18C773B80000FECA /* btnLargelActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnLargelActive.png; sourceTree = "<group>"; };
+		50143ED018C773B80000FECA /* btnSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnSmall.png; sourceTree = "<group>"; };
+		50143ED118C773B80000FECA /* btnSmallActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnSmallActive.png; sourceTree = "<group>"; };
 		5D74FD6618AAA5BA00656E03 /* UserPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserPreferences.h; sourceTree = "<group>"; };
 		5D74FD6718AAA5BA00656E03 /* UserPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserPreferences.m; sourceTree = "<group>"; };
 		5D74FD6F18AAB94500656E03 /* CommitsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitsViewController.h; sourceTree = "<group>"; };
@@ -321,6 +329,10 @@
 		5D8A582918A19E6400D1D2B7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				50143ECE18C773B80000FECA /* btnLargel.png */,
+				50143ECF18C773B80000FECA /* btnLargelActive.png */,
+				50143ED018C773B80000FECA /* btnSmall.png */,
+				50143ED118C773B80000FECA /* btnSmallActive.png */,
 				5D8A582A18A19E6400D1D2B7 /* GitLabViewer-Info.plist */,
 				5D8A582B18A19E6400D1D2B7 /* InfoPlist.strings */,
 				5D8A582E18A19E6400D1D2B7 /* main.m */,
@@ -502,13 +514,17 @@
 				5D8A582D18A19E6400D1D2B7 /* InfoPlist.strings in Resources */,
 				5D74FDB418AD53C000656E03 /* CreateMergeRequestViewController.xib in Resources */,
 				5D8A583518A19E6400D1D2B7 /* Images.xcassets in Resources */,
+				50143ED218C773B80000FECA /* btnLargel.png in Resources */,
 				5D74FD8F18AAD88600656E03 /* NetworkViewController.xib in Resources */,
 				5D74FDA118AD343C00656E03 /* CreateIssueViewController.xib in Resources */,
 				5D8A585718A19F4400D1D2B7 /* LoginViewController.xib in Resources */,
+				50143ED418C773B80000FECA /* btnSmall.png in Resources */,
 				5D74FDBB18AD748F00656E03 /* SingleMergeRequestViewController.xib in Resources */,
+				50143ED318C773B80000FECA /* btnLargelActive.png in Resources */,
 				5D74FD8818AABED300656E03 /* SingleIssueViewController.xib in Resources */,
 				0C5F18A818A5401E0035720D /* MergeRequestCell.xib in Resources */,
 				5D74FD9618AAE02600656E03 /* CreateProjectViewController.xib in Resources */,
+				50143ED518C773B80000FECA /* btnSmallActive.png in Resources */,
 				0C0F36DF18A5591B00AC65FA /* IssueCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
