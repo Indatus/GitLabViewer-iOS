@@ -1,5 +1,5 @@
 PODS:
-  - ObjcGitlabApi (1.0.2)
+  - ObjcGitlabApi (1.1.0)
 
 DEPENDENCIES:
   - ObjcGitlabApi (from `https://github.com/Indatus/objc-gitlab-api.git`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :git: https://github.com/Indatus/objc-gitlab-api.git
 
 SPEC CHECKSUMS:
-  ObjcGitlabApi: 642102bfe7976d98ddf388f47e760c2bacf852d9
+  ObjcGitlabApi: 3fd4f6d8a80f7516f9f8ec538be7300d837b5c8b
 
 COCOAPODS: 0.29.0

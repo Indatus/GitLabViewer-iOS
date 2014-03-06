@@ -77,6 +77,10 @@
 		5D0B0AC518BD21A000949BF0 /* CommitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B0AC318BD21A000949BF0 /* CommitCell.m */; };
 		5D0B0AC718BD21B500949BF0 /* CommitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B0AC618BD21B500949BF0 /* CommitCell.xib */; };
 		5D0B0AC818BD21B500949BF0 /* CommitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D0B0AC618BD21B500949BF0 /* CommitCell.xib */; };
+		50143ED218C773B80000FECA /* btnLargel.png in Resources */ = {isa = PBXBuildFile; fileRef = 50143ECE18C773B80000FECA /* btnLargel.png */; };
+		50143ED318C773B80000FECA /* btnLargelActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 50143ECF18C773B80000FECA /* btnLargelActive.png */; };
+		50143ED418C773B80000FECA /* btnSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 50143ED018C773B80000FECA /* btnSmall.png */; };
+		50143ED518C773B80000FECA /* btnSmallActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 50143ED118C773B80000FECA /* btnSmallActive.png */; };
 		5D1F5A32A83F440EA1A0E702 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 135504ED168842DAADBC91EC /* libPods.a */; };
 		5D74FD6818AAA5BA00656E03 /* UserPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FD6718AAA5BA00656E03 /* UserPreferences.m */; };
 		5D74FD6918AAA5BA00656E03 /* UserPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D74FD6718AAA5BA00656E03 /* UserPreferences.m */; };
@@ -230,6 +234,10 @@
 		5D0B0AC218BD21A000949BF0 /* CommitCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitCell.h; sourceTree = "<group>"; };
 		5D0B0AC318BD21A000949BF0 /* CommitCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommitCell.m; sourceTree = "<group>"; };
 		5D0B0AC618BD21B500949BF0 /* CommitCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommitCell.xib; sourceTree = "<group>"; };
+		50143ECE18C773B80000FECA /* btnLargel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnLargel.png; sourceTree = "<group>"; };
+		50143ECF18C773B80000FECA /* btnLargelActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnLargelActive.png; sourceTree = "<group>"; };
+		50143ED018C773B80000FECA /* btnSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnSmall.png; sourceTree = "<group>"; };
+		50143ED118C773B80000FECA /* btnSmallActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnSmallActive.png; sourceTree = "<group>"; };
 		5D74FD6618AAA5BA00656E03 /* UserPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserPreferences.h; sourceTree = "<group>"; };
 		5D74FD6718AAA5BA00656E03 /* UserPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserPreferences.m; sourceTree = "<group>"; };
 		5D74FD6F18AAB94500656E03 /* CommitsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommitsViewController.h; sourceTree = "<group>"; };
@@ -531,6 +539,10 @@
 		5D8A582918A19E6400D1D2B7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				50143ECE18C773B80000FECA /* btnLargel.png */,
+				50143ECF18C773B80000FECA /* btnLargelActive.png */,
+				50143ED018C773B80000FECA /* btnSmall.png */,
+				50143ED118C773B80000FECA /* btnSmallActive.png */,
 				5D8A582A18A19E6400D1D2B7 /* GitLabViewer-Info.plist */,
 				5D8A582B18A19E6400D1D2B7 /* InfoPlist.strings */,
 				5D8A582E18A19E6400D1D2B7 /* main.m */,
@@ -748,6 +760,8 @@
 				0C14AEAE18BFE5D30068ECA9 /* shCoreEmacs.css in Resources */,
 				5D8A583518A19E6400D1D2B7 /* Images.xcassets in Resources */,
 				0C14AEB718BFE5D30068ECA9 /* shThemeFadeToGrey.css in Resources */,
+				50143ED218C773B80000FECA /* btnLargel.png in Resources */,
+				5D74FD8F18AAD88600656E03 /* NetworkViewController.xib in Resources */,
 				5D74FDA118AD343C00656E03 /* CreateIssueViewController.xib in Resources */,
 				0C14AEB618BFE5D30068ECA9 /* shThemeEmacs.css in Resources */,
 				0C14AEBB18BFE5D30068ECA9 /* template.html in Resources */,
@@ -757,6 +771,9 @@
 				0C14AEAA18BFE5D30068ECA9 /* shCore.css in Resources */,
 				5D74FDBB18AD748F00656E03 /* SingleMergeRequestViewController.xib in Resources */,
 				0C9D87B618BD10880023EAEA /* FileViewController.xib in Resources */,
+				50143ED418C773B80000FECA /* btnSmall.png in Resources */,
+				5D74FDBB18AD748F00656E03 /* SingleMergeRequestViewController.xib in Resources */,
+				50143ED318C773B80000FECA /* btnLargelActive.png in Resources */,
 				5D74FD8818AABED300656E03 /* SingleIssueViewController.xib in Resources */,
 				0C14AEB818BFE5D30068ECA9 /* shThemeMDUltra.css in Resources */,
 				0C14AEB118BFE5D30068ECA9 /* shCoreMidnight.css in Resources */,
@@ -770,6 +787,7 @@
 				0C14AEB318BFE5D30068ECA9 /* shThemeDefault.css in Resources */,
 				0C4694FF18C121D000523912 /* shBrushObjC.js in Resources */,
 				0C14AEAF18BFE5D30068ECA9 /* shCoreFadeToGrey.css in Resources */,
+				50143ED518C773B80000FECA /* btnSmallActive.png in Resources */,
 				0C0F36DF18A5591B00AC65FA /* IssueCell.xib in Resources */,
 				5D0B0AC018BD218D00949BF0 /* SingleCommitViewController.xib in Resources */,
 				0C14AEAD18BFE5D30068ECA9 /* shCoreEclipse.css in Resources */,
